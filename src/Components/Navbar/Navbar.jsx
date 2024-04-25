@@ -24,7 +24,7 @@ export default function Navbar() {
           <Link className={` nav-link text-center   ${style.varelaRegular}`} to='/about'>About</Link>
         </li>
      <Link className="navbar-brand mx-2 " to='home'>
-<img src={logo} alt="TRT-Log" className={`text-danger  ${style.logo}`} />
+<img src={logo} alt="TRT-Log" className={`${style.logo}`} />
     </Link>
         <li className="nav-item mt-3 ">
           <Link className={` nav-link text-center   ${style.varelaRegular}`} to='/contact'>Contact</Link>
