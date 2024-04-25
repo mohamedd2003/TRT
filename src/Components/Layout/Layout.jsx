@@ -7,7 +7,7 @@ import video from '../../assets/Video/bgVideo.mp4'
 
 export default function Layout() {
   const videoRef= useRef();
-  const [playbackRate] = useState(2);
+  const [playbackRate] = useState(3);
   const [showSection, setShowSection] = useState(true);
 
   useEffect(() => {
