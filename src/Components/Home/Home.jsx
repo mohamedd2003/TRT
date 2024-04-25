@@ -33,7 +33,7 @@ export default function Home() {
         }}
         modules={[Pagination,]}
       >
-        <SwiperSlide className='bg-danger position-relative '>
+        <SwiperSlide className='  position-relative '>
           <img src={slide1} alt="Opel Astra " className='w-100' />
 
           <div className={`${style.overlay} d-flex  align-items-center `}>
@@ -78,25 +78,25 @@ export default function Home() {
               <div className={`${style.overlay}`}></div>
 
             </SwiperSlide>
-            <SwiperSlide className='bg-danger position-relative '>
+            <SwiperSlide className='  position-relative '>
               <img src={slide3} alt="Dodge Car" className='w-100' />
 
               <div className={`${style.overlay}`}></div>
 
             </SwiperSlide>
-            <SwiperSlide className='bg-danger position-relative '>
+            <SwiperSlide className='  position-relative '>
               <img src={slide4} alt="Dodge Car" className='w-100' />
 
               <div className={`${style.overlay}`}></div>
 
             </SwiperSlide>
-            <SwiperSlide className='bg-danger position-relative '>
+            <SwiperSlide className='  position-relative '>
               <img src={slide5} alt="Dodge Car" className='w-100' />
 
               <div className={`${style.overlay}`}></div>
 
             </SwiperSlide>
-            <SwiperSlide className='bg-danger position-relative '>
+            <SwiperSlide className='  position-relative '>
               <img src={slide6} alt="Dodge Car" className='w-100' />
 
               <div className={`${style.overlay}`}></div>
@@ -105,7 +105,7 @@ export default function Home() {
 
           </Swiper>
         </SwiperSlide>
-        <SwiperSlide className='bg-danger position-relative '>
+        <SwiperSlide className='  position-relative '>
           <img src={slide7} alt="VW Golf Car" className='w-100' />
 
           <div className={`${style.overlay}`}></div>
