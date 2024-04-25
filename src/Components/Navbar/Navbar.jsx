@@ -17,7 +17,7 @@ export default function Navbar() {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav m-auto  ">
         <li className="nav-item mt-3 ">
-          <Link className={` nav-link text-center  active ${style.varelaRegular}`}  aria-current="page" to='/home'>Home</Link>
+          <Link className={` nav-link text-center text-danger  active ${style.varelaRegular}`}  aria-current="page" to='/home'>Home</Link>
         </li>
    
         <li className="nav-item mt-3 ">
