@@ -31,7 +31,7 @@ export default function Home() {
         pagination={{
           clickable: true,
         }}
-        modules={[Pagination,]}
+        modules={[Pagination,Autoplay]}
       >
         <SwiperSlide className='  position-relative '>
           <img src={slide1} alt="Opel Astra " className='w-100' />
