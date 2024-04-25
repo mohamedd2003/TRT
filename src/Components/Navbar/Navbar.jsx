@@ -19,16 +19,13 @@ export default function Navbar() {
         <li className="nav-item mt-3 ">
           <Link className={` nav-link text-center  active ${style.varelaRegular}`}  aria-current="page" to='/home'>Home</Link>
         </li>
-    <Link className="navbar-brand mx-2 " to='home'>
-
-    
-<img src={logo} alt="TRT-Log" className={`  ${style.logo}`} />
-
-    </Link>
+   
         <li className="nav-item mt-3 ">
           <Link className={` nav-link text-center   ${style.varelaRegular}`} to='/about'>About</Link>
         </li>
-    
+     <Link className="navbar-brand mx-2 " to='home'>
+<img src={logo} alt="TRT-Log" className={`  ${style.logo}`} />
+    </Link>
         <li className="nav-item mt-3 ">
           <Link className={` nav-link text-center   ${style.varelaRegular}`} to='/contact'>Contact</Link>
         </li>
