@@ -24,7 +24,7 @@ export default function Home() {
       <Swiper
         className="mySwiper vh-100 "
         autoplay={{
-          delay: 6000,
+          delay: 4800,
           disableOnInteraction: false,
         }}
         spaceBetween={50}
