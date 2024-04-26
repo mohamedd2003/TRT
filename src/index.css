@@ -8,7 +8,11 @@
     width: 100%;
     height: 100%;
   }
-  
+  .main-font {
+  font-family:"URW Franklin Gothic" ;
+  font-weight: 900 !important;
+ 
+}
   .swiper-slide {
     text-align: center;
     font-size: 18px;
