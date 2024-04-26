@@ -7,12 +7,13 @@
     --fa-rotate-angle: -28deg;
     color: white;
 }
+
 .logo{
 width: 120px;
 height: 60px;
 }
 .varelaRegular {
-    font-family: "Montserrat", sans-serif;
+     font-family:"URW Franklin Gothic" ;
     font-size: 22px !important;
     font-weight: 600;
   }
