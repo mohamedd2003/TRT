@@ -47,18 +47,20 @@ export default function Home() {
                 initial={{ x: -1000 }}
                 animate={{ x: 0 }}
                 transition={{ duration: 6 }}
-                className=' text-white' ><i class="fa-solid fa-t fa-3x"></i></motion.h1>
+                className=' text-white' ><i className="fa-solid fa-t fa-3x"></i></motion.h1>
 
               <motion.h1
                 initial={{ y: -1000 ,x:0}}
                 animate={{ y: 0 ,x:0}}
-                transition={{ duration: 6 }}
-                className=' text-main' ><i class="fa-brands fa-r-project fa-3x my-5"></i></motion.h1>
+                transition={{ duration: 6 }} >
+                <i className="fa-brands text-main fa-r-project fa-3x my-5"></i>
+              </motion.h1>
+              
               <motion.h1
                 initial={{ x: 5000 }}
                 animate={{ x: 0 }}
                 transition={{ duration: 6 }}
-                className=' text-white' ><i class="fa-solid fa-t fa-3x"></i></motion.h1>
+                className=' text-white' ><i className="fa-solid fa-t fa-3x"></i></motion.h1>
 
 
 
