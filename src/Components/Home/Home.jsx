@@ -22,6 +22,7 @@
   import slide7 from '../../assets/Images/slide7.jpg'
   import slide8 from '../../assets/Images/slide8.jpg'
   import TRT from '../../assets/Images/TRT.jpg'
+  import fordEvent from '../../assets/Images/fordEvent.jpg'
   import { Link } from 'react-router-dom';
 
   export default function Home() {
@@ -34,12 +35,7 @@
     };
     return (
       <>
-
-
-
-        <section id='hero'>
-
-          
+  <section id='hero'>
         <Swiper
             grabCursor={true}
             effect={'creative'}
@@ -61,8 +57,9 @@
           navigation={true}
           pagination={pagination}
           modules={[Pagination,Autoplay,Navigation,EffectCreative]}>
-          <SwiperSlide  className=' position-relative '>
-            <img src={slide1} alt="Opel Astra " className='w-100' />
+
+          <SwiperSlide  className=' position-relative mobile '>
+            <img src={fordEvent} alt="Ford QatarEvent" className='w-100' />
 
             <div className={`${style.overlay} d-flex  align-items-center justify-content-center  `}>
 
@@ -91,6 +88,38 @@
             </div>
 
           </SwiperSlide>
+
+          <SwiperSlide  className=' position-relative laptop '>
+            <img src={slide1} alt="opel Astra Car" className='w-100' />
+
+            <div className={`${style.overlay} d-flex  align-items-center justify-content-center  `}>
+
+              <div className="caption  ">
+                <motion.h1
+                  initial={{ x: -1000 }}
+                  animate={{ x: 0 }}
+                  transition={{ duration: 6 }}
+                  className=' text-white' ><i className="fa-solid fa-t fa-3x"></i></motion.h1>
+
+                <motion.h1
+                  initial={{ y: -1000 ,x:0}}
+                  animate={{ y: 0 ,x:0}}
+                  transition={{ duration: 6 }} >
+                    <i className="fa-brands text-main fa-r-project fa-3x my-5"></i>
+                    </motion.h1>
+                <motion.h1
+                  initial={{ x: 5000 }}
+                  animate={{ x: 0 }}
+                  transition={{ duration: 6 }}
+                  className=' text-white' ><i className="fa-solid fa-t fa-3x"></i></motion.h1>
+
+
+
+              </div>
+            </div>
+
+          </SwiperSlide>
+
           <SwiperSlide>
             <Swiper
           grabCursor={true}
