@@ -9,6 +9,31 @@ export default function Layout() {
   const videoRef = useRef();
   const [playbackRate] = useState(2);
   const [showSection, setShowSection] = useState(true);
+  const [lazyLoading, setLazyLoading] = useState(true);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setLazyLoading(false);
+          console.log('Lazy Loading:', lazyLoading);
+          console.log('Is Intersecting:', entries[0].isIntersecting);
+          observer.disconnect(); // Stop observing once the video is in view
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      if (observer) {
+        observer.disconnect();
+      }
+    };
+  }, [lazyLoading]);
 
   useEffect(() => {
     videoRef.current.playbackRate = playbackRate;
@@ -25,7 +50,9 @@ export default function Layout() {
   }, []);
 
 
- 
+
+
+
 
   const text = "Powered By Thunder Agency";
   const parentVarient = {
@@ -50,6 +77,8 @@ export default function Layout() {
   return (
     <>
       <AnimatePresence>
+
+        {lazyLoading?<div className={lazyLoading==false?'w-100 vh-100  position-absolute z-3 hidden ':'w-100 vh-100  position-absolute z-3 d-flex align-items-center justify-content-center '}> <i class="fa-solid fa-circle-notch text-info fa-spin fa-10x"></i></div>:''}
         {showSection && (
           <motion.section
             key="section"
@@ -74,7 +103,7 @@ export default function Layout() {
                   variants={parentVarient}
                   initial="hidden"
                   animate="show"
-                  className={`${style.thunder} text-white    `}
+                  className={`${style.thunder} text-white`}
                 >
                   {text.split('').map((char, index) => (
                     <motion.span variants={spanVariants} key={index}>
