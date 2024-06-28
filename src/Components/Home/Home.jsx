@@ -284,8 +284,8 @@
   <div className="collapse collapse-vertical " id="collapseWidthExample">
     <p className='text-white'>
     <span className='text-main'>Our Mission </span>: is to continue organizing outstanding events that cater to the interests of car enthusiasts and owners of modified cars, providing a platform for them to showcase their passion and connect with like-minded individuals.
-    We are committed to upholding the highest standards of professionalism and creating a safe and enjoyable environment for all participants. With a focus on innovation and creativity, we aim to set new benchmarks in the industry and establish ourselves as a leader in event organizing for car enthusiasts in the Arab Republic of Egypt. "Make your passion safe" is not just a slogan for us, but a guiding principle that drives everything we do.
-    "Make your passion safe
+    We are committed to upholding the highest standards of professionalism and creating a safe and enjoyable environment for all participants. With a focus on innovation and creativity, we aim to set new benchmarks in the industry and establish ourselves as a leader in event organizing for car enthusiasts in the Arab Republic of Egypt. <span className='text-main'>"Make your passion safe"</span>
+    
     </p>
   </div>
 </div>
