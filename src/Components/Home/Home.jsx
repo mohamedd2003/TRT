@@ -272,7 +272,7 @@
   <span className='text-white ms-lg-5 h5'><i className="fa-solid fa-t fa-sm"></i><i className="fa-brands  fa-r-project fa-sm my-5"></i><i className="fa-solid fa-t fa-sm"></i></span>
   <h3 className='main-font h1   mb-4 text-white '>ABOUT U<i className="fa-solid fa-bolt fa-md text-main"></i></h3>
 
-  <p className='text-white ms-lg-5'><span className='text-main'>  TRT </span> exhibition organizing team was established in <span className='text-main'>2022</span> , where we organized our first event on <span className='text-main'>2022</span>, 
+  <p className='text-white ms-lg-5 lead'><span className='text-main'>  TRT </span> exhibition organizing team was established in <span className='text-main'>2022</span> , where we organized our first event on <span className='text-main'>2022</span>, 
   and it was under a graduation project for media students of the Public Relations Department. Many influencers in the field of cars on social media attended, and many companies specializing in car modification attended.
   We participated in organizing an event for modified cars at one of the universities in the Administrative Capital, and this is an indication of our success in this work."
   <p>
