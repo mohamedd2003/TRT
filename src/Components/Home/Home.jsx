@@ -26,14 +26,7 @@
   import slide8 from '../../assets/Images/slide8.jpg'
   import TRT from '../../assets/Images/TRT.jpg'
   import fordEvent from '../../assets/Images/fordEvent.jpg'
-  import bmw from '../../assets/Images/bmw.jpg'
-  import seat from '../../assets/Images/seat.jpg'
-  import vw from '../../assets/Images/vw.jpg'
-  import skoda from '../../assets/Images/skoda.jpg'
-  import cars from '../../assets/Images/cars.jpg'
-  // image Audio
-  // import audio from '../../assets/Audio/audio.mp3'
-//********************************************* */
+ 
 
 
   export default function Home() {
