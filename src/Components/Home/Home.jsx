@@ -91,9 +91,9 @@
                     <i className="fa-brands text-main fa-r-project fa-3x my-5"></i>
                     </motion.h1>
                 <motion.h1
-                  initial={{ x: 3800 }}
+                  initial={{ x: 4000 }}
                   animate={{ x: 0 }}
-                  transition={{ duration:6}}
+                  transition={{ duration: 6 }}
                   className=' text-white' ><i className="fa-solid fa-t fa-3x"></i></motion.h1>
 
 
@@ -122,7 +122,7 @@
                     <i className="fa-brands text-main fa-r-project fa-3x my-5"></i>
                     </motion.h1>
                 <motion.h1
-                  initial={{ x: 5000 }}
+                  initial={{ x: 4000 }}
                   animate={{ x: 0 }}
                   transition={{ duration: 6 }}
                   className=' text-white' ><i className="fa-solid fa-t fa-3x"></i></motion.h1>
@@ -272,13 +272,13 @@
           </section>
 
           <div className='bg-black'>
-<h2   data-aos-duration='1000' data-aos="fade-down" className={`main-font bg-black text-center   mb-0 pb--lg-4 ${styles.trt}`}>TRT</h2>
-<h2   data-aos-duration='1000' data-aos="fade-up" className={`main-font bg-black text-center mb-0 ${styles.trt}`}>THE RIDE TRACK</h2>
+<h2   data-aos-duration='1000' data-aos="fade-down" className={`main-font bg-black text-center  mb-0 pb--lg-4 ${styles.trt}`}>TRT</h2>
+<h2   data-aos-duration='1000' data-aos="fade-up" className={`main-font bg-black text-center   mb-0 ${styles.trt}`}>THE RIGHT TRACK</h2>
 
           </div>
         <section id='about' className='py-5 bg-black  '>
-          <div className="container bg-black  shadowLg rounded-5 p-4">
-            <div className="row  gx-4">
+          <div  data-aos-duration='1000' data-aos="fade"className="container bg-black  shadowLg rounded-5 p-4">
+            <div className="row align-items-center  gx-2">
               <div className="col-lg-6 ps-0 "   >
                 <div className="cards">
                 <Swiper
@@ -286,9 +286,9 @@
         grabCursor={true}
         modules={[EffectCards]}
         className="swiper-card"
-        data-aos-duration='1000' data-aos="fade-right" >
+        data-aos-duration='1000' data-aos="fade-right"   >
         <SwiperSlide className='swiper-slide-card'><img src={dodge} alt="DODGE CAR" className='w-100 position-relative ' />
-        <div className='overlay main-font text-white '> SWIPE</div>
+        <div className='overlay main-font text-white '> SWIPE <i class="fa-regular fa-hand-point-right fa-lg"></i></div>
         </SwiperSlide>
         <SwiperSlide className='swiper-slide-card'><img src={slide2} alt="DODGE CAR" className='w-100 ' /></SwiperSlide>
         <SwiperSlide className='swiper-slide-card'><img src={slide3} alt="DODGE CAR" className='w-100 ' /></SwiperSlide>
@@ -299,22 +299,18 @@
         <SwiperSlide className='swiper-slide-card'><img src={bmw} alt="BMW CAR" className='w-100 ' /></SwiperSlide>
         <SwiperSlide className='swiper-slide-card'><img src={c} alt="CAR" className='w-100 ' /></SwiperSlide>
       </Swiper>
-                  {/* <img  data-aos-duration='1000' data-aos="fade-right" src={TRT} alt="Elshrouk Academy" className='w-100 rounded rounded-4' /> */}
                 </div>
               </div>
-              <div className="col-lg-6 ">
-                <div className="breif"  data-aos-duration='1000' data-aos="fade-left">
-  <span className='text-white ms-lg-5 h5'><i className="fa-solid fa-t fa-sm"></i><i className="fa-brands  fa-r-project fa-sm my-5"></i><i className="fa-solid fa-t fa-sm"></i></span>
-  <h3 className='main-font h1   mb-4 text-white '>ABOUT U<i className="fa-solid fa-bolt fa-md text-main"></i></h3>
+              <div className="col-lg-6  ">
+                <div className="breif"  >
+  <h2 data-aos="fade-down" data-aos-duration="1000" className={`main-font pt-3 ${styles.readMore} ${styles.title}   mb-4 text-white `}>ABOUT U<i className="fa-solid fa-bolt fa-md text-main"></i></h2>
 
-  <p className='text-white ms-lg-5 lead'><span className='text-main'>  TRT </span> exhibition organizing team was established in <span className='text-main'>2022</span> , where we organized our first event on <span className='text-main'>2022</span>, 
+  <p data-aos-duration='1000' data-aos-delay="500" data-aos="fade-left" className=' ms-lg-5  oxygen '><span className='text-main'>  TRT </span> exhibition organizing team was established in <span className='text-main'>2022</span> , where we organized our first event on <span className='text-main'>2022</span>, 
   and it was under a graduation project for media students of the Public Relations Department. Many influencers in the field of cars on social media attended, and many companies specializing in car modification attended.
-  We participated in organizing an event for modified cars at one of the universities in the Administrative Capital, and this is an indication of our success in this work."
-  <p>
-  <button className="btn btn-outline-danger rounded-end-pill mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
-    Read More
-  </button>
-</p>
+  We participated in organizing an event for modified cars at one of the universities in the Administrative Capital, and this is an indication of our success in this work.
+  <h5  className={`my-2 text-main ${styles.readMore} oxygen-700`}   type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+  <i class="fa-solid fa-angles-right text-main"></i> Read More
+  </h5>
 <div >
   <div className="collapse collapse-vertical " id="collapseWidthExample">
     <p className='text-white'>
@@ -333,6 +329,30 @@
           </div>
           </section>
 
+<section id='gallery' className='bg-black py-5'>
+<h6 className=' text-center text-decoration-line-through oswald-titles main-font'><span className=' text-main'>O</span>UR GALLERY</h6>
+
+<div className="d-flex justify-content-center mt-5">
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">BMW</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">VW</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">OPEL</button>
+  </li>
+</ul>
+</div>
+<div class="tab-content text-danger" id="pills-tabContent">
+  <div class="tab-pane fade show active " id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+
+  </div>
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">...</div>
+  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">...</div>
+</div>
+</section>
    
 
       </>

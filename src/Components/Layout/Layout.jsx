@@ -42,7 +42,7 @@ export default function Layout() {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setShowSection(false);
-    }, 3500);
+    }, 3900);
 
 
     // Clear the timeout when the component unmounts

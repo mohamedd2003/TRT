@@ -20,11 +20,11 @@ export default function Navbar() {
     <div className={`collapse navbar-collapse  ${style.navbar_collapse} ${style.font} `}id="navbarSupportedContent">
       <ul className="navbar-nav ms-auto  ">
         <li className="nav-item mt-3 ">
-          <Link className=' nav-link text-center  main-font text-main active ' aria-current="page" to='/home'>Home</Link>
+          <a className=' nav-link text-center  main-font text-main active ' aria-current="page" href='#hero'>Home</a>
         </li>
  
         <li className="nav-item mt-3 ">
-          <Link className={` nav-link text-center  main-font  `} to='/about'>About</Link>
+          <a className={` nav-link text-center  main-font  `} href='#about'>About</a>
         </li>
       
     
