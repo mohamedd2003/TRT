@@ -93,7 +93,7 @@
                 <motion.h1
                   initial={{ x: 4000 }}
                   animate={{ x: 0 }}
-                  transition={{ duration: 4 }}
+                  transition={{ duration: 5 }}
                   className=' text-white' ><i className="fa-solid fa-t fa-3x"></i></motion.h1>
 
 
