@@ -286,7 +286,7 @@
         grabCursor={true}
         modules={[EffectCards]}
         className="swiper-card"
-        data-aos='fade-right ' >
+        data-aos-duration='1000' data-aos="fade-right" >
         <SwiperSlide className='swiper-slide-card'><img src={dodge} alt="DODGE CAR" className='w-100 position-relative ' />
         <div className='overlay main-font text-white '> SWIPE</div>
         </SwiperSlide>
