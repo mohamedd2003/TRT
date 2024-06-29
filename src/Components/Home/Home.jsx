@@ -91,9 +91,9 @@
                     <i className="fa-brands text-main fa-r-project fa-3x my-5"></i>
                     </motion.h1>
                 <motion.h1
-                  initial={{ x: 4000 }}
+                  initial={{ x: 3800 }}
                   animate={{ x: 0 }}
-                  transition={{ duration: 5 }}
+                  transition={{ duration:6}}
                   className=' text-white' ><i className="fa-solid fa-t fa-3x"></i></motion.h1>
 
 
