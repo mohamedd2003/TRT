@@ -22,7 +22,7 @@
 box-shadow: 0 0 30px rgba(255, 0, 0, 0.7); /* Large drop shadow */;
 }
 .text-shadowLg{
-  text-shadow: 0 0 10px rgba(255, 0, 0, 0.7); /* Large drop shadow */;
+  text-shadow: 0 0 60px rgba(255, 0, 0, 0.7); /* Large drop shadow */;
   }
 .main-font {
   font-family: "Oswald", sans-serif;
