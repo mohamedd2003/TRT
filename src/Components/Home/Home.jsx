@@ -272,8 +272,8 @@
           </section>
 
           <div className='bg-black'>
-<h2   data-aos-duration='1000' data-aos="fade-down" className={`main-font bg-black text-center text-shadowLg  mb-0 pb--lg-4 ${styles.trt}`}>TRT</h2>
-<h2   data-aos-duration='1000' data-aos="fade-up" className={`main-font bg-black text-center text-shadowLg  mb-0 ${styles.trt}`}>THE RIDE TRACK</h2>
+<h2   data-aos-duration='1000' data-aos="fade-down" className={`main-font bg-black text-center   mb-0 pb--lg-4 ${styles.trt}`}>TRT</h2>
+<h2   data-aos-duration='1000' data-aos="fade-up" className={`main-font bg-black text-center mb-0 ${styles.trt}`}>THE RIDE TRACK</h2>
 
           </div>
         <section id='about' className='py-5 bg-black  '>
