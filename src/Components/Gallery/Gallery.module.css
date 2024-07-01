@@ -1,0 +1,27 @@
+.header{
+    min-height: 79vh;
+    background-color: rgba(0, 0, 0, 0.5);
+ 
+}
+.backGround{
+    background-image: url("../../assets/Images/purple/SEAT/3.jpg");
+    background-position: center center;
+    background-size: cover ;
+    position: relative;
+}
+.line {
+    width: 80px;
+    height: 5px;
+    margin: 0 20px;
+    margin-right: 40px;
+    padding: 0px;
+    border-radius: 50%;
+    display: inline-block;
+    transform: translateY(-20px);
+    border-radius: 0;
+    background: linear-gradient(to right, rgb(39, 1, 1), #733095);
+}
+.logo{
+    width: 100px;
+    height: 100px;
+}

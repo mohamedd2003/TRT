@@ -1,21 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Oxygen&family=Prompt:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+ES+Deco&display=swap');
 .overlay{
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   position: absolute;
 }
-
+.nav-pills .nav-link.active{
+  background-color: transparent !important;
+}
+#id
+{
+  box-sizing: none !important;
+}
 ::selection {
   color: red;
 
 }
+
 .bg-main {
-  background-color: red;
+  background-color: red !important;
+}
+.text-orange {
+  color: #fc6a25 !important;
+}
+.text-blue {
+  color: #4a45ea !important;
+}
+.text-yellow {
+  color: #e6bb00 !important;
 }
 .text-main {
   color: red !important;
 }
+.text-purple{
+  color: #733095;
+}
+.readMore{
+  transition: all 1s !important;
+}
+.readMore:hover{
+text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+scale: .9;
 
+}
+.title{
+  font-size: 50px;
+}
+.colourFont{
+  font-family: "Playwrite ES Deco", cursive;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
 .shadowLg{
 box-shadow: 0 0 30px rgba(255, 0, 0, 0.7); /* Large drop shadow */;
 }
@@ -28,6 +64,7 @@ box-shadow: 0 0 30px rgba(255, 0, 0, 0.7); /* Large drop shadow */;
   font-weight: 700 !important;
   font-style: normal !important;
 }
+
 
 .oswald-titles{
   font-size: 85px;

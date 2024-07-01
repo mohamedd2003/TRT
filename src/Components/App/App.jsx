@@ -5,6 +5,7 @@ import Home from '../Home/Home'
 import Events from '../Events/Events'
 import About from '../About/About';
 import Contact from '../Contact/Contact';
+import Gallery from '../Gallery/Gallery';
 
 let routes=createBrowserRouter(
     [{
@@ -13,8 +14,8 @@ let routes=createBrowserRouter(
             {index:true,element:<Home/>},
             {path:'home',element:<Home/>},
             {path:'events',element:<Events/>},
-            {path:'about',element:<About/>},
             {path:'contact',element:<Contact/>},
+            {path:'gallery',element:<Gallery/>},
         ]
     }]
 )

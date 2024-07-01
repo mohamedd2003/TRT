@@ -11,7 +11,7 @@ export default function Navbar() {
  return (
    <>
    
-   <nav  className="navbar navbar-expand-lg   navbar-dark fixed-top  z-2">
+   <nav  className="navbar navbar-expand-lg    navbar-dark fixed-top  z-2">
   <div className="container-fluid  py-1">
   <img src={logo} alt="TRT-Log" className={`  ${style.logo}`} />
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,11 +20,11 @@ export default function Navbar() {
     <div className={`collapse navbar-collapse  ${style.navbar_collapse} ${style.font} `}id="navbarSupportedContent">
       <ul className="navbar-nav ms-auto  ">
         <li className="nav-item mt-3 ">
-          <a className=' nav-link text-center  main-font text-main active ' aria-current="page" href='#hero'>Home</a>
+          <Link className=' nav-link text-center  main-font text-main active ' aria-current="page" to='/home#hero'>Home</Link>
         </li>
  
         <li className="nav-item mt-3 ">
-          <a className={` nav-link text-center  main-font  `} href='#about'>About</a>
+          <a className={` nav-link text-center  main-font  `} href='/home#about'>About</a>
         </li>
       
     

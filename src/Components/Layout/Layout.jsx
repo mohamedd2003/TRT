@@ -16,8 +16,6 @@ export default function Layout() {
       (entries) => {
         if (entries[0].isIntersecting) {
           setLazyLoading(false);
-          console.log('Lazy Loading:', lazyLoading);
-          console.log('Is Intersecting:', entries[0].isIntersecting);
           observer.disconnect(); // Stop observing once the video is in view
         }
       },

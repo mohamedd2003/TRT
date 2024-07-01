@@ -5,17 +5,7 @@
     height: 50px;
     background-color: red;
 }
-.readMore{
-    transition: all 1s !important;
-}
-.readMore:hover{
-text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
-scale: .9;
 
-}
-.title{
-    font-size: 50px;
-}
 .trt{
     font-size: 100px;
     line-height: 100px;
