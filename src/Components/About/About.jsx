@@ -86,7 +86,7 @@ export default function About() {
                   data-aos-duration='1000' data-aos="fade-right"   >
 
 
-                  {images.map((image) => <SwiperSlide key={image.id}  className='swiper-slide-card'><img fetchPriority='high' src={image.src} loading='lazy' alt={image.alt} className='w-100 position-relative ' />
+                  {images.map((image) => <SwiperSlide key={image.id}  className='swiper-slide-card'><img src={image.src}  alt={image.alt} className='w-100 position-relative ' />
                     <div className='overlay main-font text-white '> SWIPE <i class="fa-regular fa-hand-point-right fa-lg"></i></div>
                   </SwiperSlide>)}
                 </Swiper>
