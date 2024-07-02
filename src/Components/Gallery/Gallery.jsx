@@ -427,33 +427,33 @@ borderRadius: '0',
 
                 <div data-aos='fade-down' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
                   <div className="car p-1">
-                    <img src={images.ibiza1} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
+                    <img src={images.ibiza1} className='w-100 rounded-4 '  alt="SEAT IBIZA CAR" />
                   </div>
                   <div className="car p-1">
-                    <img src={images.ibiza2} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
-                  </div>
-                </div>
-
-                <div data-aos='fade-right' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
-                  <div className="car p-1">
-                    <img src={images.ibiza6} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
-                  </div>
-                  <div className="car p-1">
-                    <img src={images.ibiza4} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
-                  </div>
-                </div>
-                <div data-aos='fade-right' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
-                  <div className="car p-1">
-                    <img src={images.ibiza5} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
-                  </div>
-                  <div className="car p-1">
-                    <img src={images.ibiza3} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
+                    <img src={images.ibiza2} className='w-100 rounded-4 '  alt="SEAT IBIZA CAR" />
                   </div>
                 </div>
 
                 <div data-aos='fade-right' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
                   <div className="car p-1">
-                    <img src={images.ibiza7} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
+                    <img src={images.ibiza6} className='w-100 rounded-4 '  alt="SEAT IBIZA CAR" />
+                  </div>
+                  <div className="car p-1">
+                    <img src={images.ibiza4} className='w-100 rounded-4 '  alt="SEAT IBIZA CAR" />
+                  </div>
+                </div>
+                <div data-aos='fade-right' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
+                  <div className="car p-1">
+                    <img src={images.ibiza5} className='w-100 rounded-4 '  alt="SEAT IBIZA CAR" />
+                  </div>
+                  <div className="car p-1">
+                    <img src={images.ibiza3} className='w-100 rounded-4 '  alt="SEAT IBIZA CAR" />
+                  </div>
+                </div>
+
+                <div data-aos='fade-right' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
+                  <div className="car p-1">
+                    <img src={images.ibiza7} className='w-100 rounded-4 '  alt="SEAT IBIZA CAR" />
                   </div>
                   <div className="car p-1">
                     <img src={images.ibiza6} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
