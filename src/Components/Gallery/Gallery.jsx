@@ -456,43 +456,43 @@ borderRadius: '0',
                     <img src={images.ibiza7} className='w-100 rounded-4 '  alt="SEAT IBIZA CAR" />
                   </div>
                   <div className="car p-1">
-                    <img src={images.ibiza6} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
+                    <img src={images.ibiza6} className='w-100 rounded-4 '  alt="SEAT IBIZA CAR" />
                   </div>
                 </div>
 
                 <div data-aos='fade-right' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
                   <div className="car p-1">
-                    <img src={images.ibiza9} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
+                    <img src={images.ibiza9} className='w-100 rounded-4 '  alt="SEAT IBIZA CAR" />
                   </div>
                   <div className="car p-1">
-                    <img src={images.ibiza10} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
+                    <img src={images.ibiza10} className='w-100 rounded-4 '  alt="SEAT IBIZA CAR" />
                   </div>
                 </div>
 
                 <div data-aos='fade-left' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
                   <div className="car p-1">
-                    <img src={images.ibiza11} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
+                    <img src={images.ibiza11} className='w-100 rounded-4 ' alt="SEAT IBIZA CAR" />
                   </div>
                   <div className="car p-1">
-                    <img src={images.purpleVw} className='w-100 rounded-4 ' loading='lazy' alt="opel CAR" />
+                    <img src={images.purpleVw} className='w-100 rounded-4 '  alt="opel CAR" />
                   </div>
                 </div>
 
                 <div data-aos='fade-up' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
                   <div className="car p-1">
-                    <img src={images.opel01} className='w-100 rounded-4 ' loading='lazy' alt="OPEL CAR" />
+                    <img src={images.opel01} className='w-100 rounded-4 '  alt="OPEL CAR" />
                   </div>
                   <div className="car p-1">
-                    <img src={images.opel02} className='w-100 rounded-4 ' loading='lazy' alt="VW CAR" />
+                    <img src={images.opel02} className='w-100 rounded-4 '  alt="VW CAR" />
                   </div>
                 </div>
 
                 <div data-aos='fade-down' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
                   <div className="car p-1">
-                    <img src={images.opel03} className='w-100 rounded-4 ' loading='lazy' alt="OPEL CAR" />
+                    <img src={images.opel03} className='w-100 rounded-4 '  alt="OPEL CAR" />
                   </div>
                   <div className="car p-1">
-                    <img src={images.opel04} className='w-100 rounded-4 ' loading='lazy' alt="VW CAR" />
+                    <img src={images.opel04} className='w-100 rounded-4 '  alt="VW CAR" />
                   </div>
                 </div>
 
