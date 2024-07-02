@@ -4,7 +4,7 @@ import 'swiper/css/effect-creative';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
-import { Autoplay, EffectCards } from 'swiper/modules';
+import {  EffectCards } from 'swiper/modules';
 
 //******************import Images******************
 import golf from '../../assets/Images/golf.jpg'
@@ -81,13 +81,15 @@ export default function About() {
                 <Swiper
                   effect={'cards'}
                   grabCursor={true}
-                  modules={[EffectCards, Autoplay]}
+                  modules={[EffectCards] }
                   className="swiper-card"
                   data-aos-duration='1000' data-aos="fade-right"   >
 
 
-                  {images.map((image) => <SwiperSlide key={image.id}  className='swiper-slide-card'><img src={image.src}  alt={image.alt} className='w-100 position-relative ' />
-                    <div className='overlay main-font text-white '> SWIPE <i class="fa-regular fa-hand-point-right fa-lg"></i></div>
+                  {images.map((image) => <SwiperSlide key={image.id}  className='swiper-slide-card'>
+                    <img fetchPriority='high' src={image.src} loading='lazy' alt={image.alt} className='w-100 position-relative ' />
+                    <div className='overlay main-font text-white '> SWIPE <i className="fa-regular fa-hand-point-right fa-lg"></i>
+                    </div>
                   </SwiperSlide>)}
                 </Swiper>
               </div>
@@ -111,7 +113,7 @@ export default function About() {
                   </ul>
 
                   <h5 className={`my-2 text-main readMore oxygen-700`} type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
-                    <i class="fa-solid fa-angles-right text-main"></i> Read More
+                    <i className="fa-solid fa-angles-right text-main"></i> Read More
                   </h5>
                   <div >
                     <div className="collapse collapse-vertical " id="collapseWidthExample">

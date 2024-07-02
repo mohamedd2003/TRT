@@ -26,7 +26,9 @@ export default function Navbar() {
         <li className="nav-item mt-3 ">
           <a className={` nav-link text-center  main-font  `} href='/home#about'>About</a>
         </li>
-      
+        <li className="nav-item mt-3 ">
+          <Link className={` nav-link text-center  main-font  `} to='/gallery'>Gallery</Link>
+        </li>
     
         <li className="nav-item mt-3 ">
           <Link className={` nav-link text-center  main-font  `} to='/events'>Events</Link>

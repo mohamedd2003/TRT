@@ -76,7 +76,7 @@ export default function Layout() {
     <>
       <AnimatePresence>
 
-        {lazyLoading?<div className={lazyLoading==false?'w-100 vh-100  position-absolute z-3 hidden ':'w-100 vh-100  position-absolute z-3 d-flex align-items-center justify-content-center '}> <i class="fa-solid fa-circle-notch text-info fa-spin fa-10x"></i></div>:''}
+        {lazyLoading?<div className={lazyLoading==false?'w-100 vh-100  position-absolute z-3 hidden ':'w-100 vh-100  position-absolute z-3 d-flex align-items-center justify-content-center '}> <i className="fa-solid fa-circle-notch text-info fa-spin fa-10x"></i></div>:''}
         {showSection && (
           <motion.section
             key="section"
