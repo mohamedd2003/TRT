@@ -64,7 +64,7 @@ export default function About() {
 
     },
     {
-      id: "8",
+      id: "9",
       src: slide5,
       alt: "Dodge Car"
     },
