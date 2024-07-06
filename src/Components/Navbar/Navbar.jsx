@@ -1,7 +1,7 @@
 import React, { useRef,useState ,useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import style from './Navbar.module.css'
-import logo from '../../assets/Images/trans.jpg'
+import logo from '../../assets/Images/trans.png'
 
 
 
