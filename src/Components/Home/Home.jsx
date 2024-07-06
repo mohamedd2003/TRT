@@ -25,6 +25,12 @@ import Marquee from '../slider/slider'
 
 
 export default function Home() {
+ const pagination = {
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + '</span>';
+    },
+  };
  
   const lineStyle={
     background: 'linear-gradient(to right, rgb(39, 1, 1), #ff0014)',
@@ -39,12 +45,7 @@ export default function Home() {
     borderRadius: '0',
        }
 
-  const pagination = {
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<span className="' + className + '">' + (index + 1) + '</span>';
-    },
-  };
+  
   return (
     <>
       <section id='hero'  >
@@ -253,31 +254,31 @@ export default function Home() {
 
                 <div  data-aos-duration='1000' data-aos='fade-right' className=" col-lg-3 col-6 ">
                   <div className="car p-1">
-                    <img fetchPriority='high' src={images.BMW3} className='w-100 rounded-4 ' loading='lazy' alt="BMW CAR" />
+                    <img  src={images.BMW3} className='w-100 rounded-4 ' loading='lazy' alt="BMW CAR" />
                   </div>
                   <div className="car p-1">
-                    <img fetchPriority='high' src={images.BMW4} className='w-100 rounded-4 ' loading='lazy' alt="BMW CAR" />
+                    <img  src={images.BMW4} className='w-100 rounded-4 ' loading='lazy' alt="BMW CAR" />
                   </div>
                 </div>
 
                 <div  data-aos-duration='1000'   data-aos='fade-up' className=" col-lg-3 col-6">
                   <div className="car p-1">
-                    <img fetchPriority='high' src={images.BMW1} className='w-100 rounded-4 ' loading='lazy' alt="BMW CAR" />
+                    <img  src={images.BMW1} className='w-100 rounded-4 ' loading='lazy' alt="BMW CAR" />
                   </div>
                 </div>
 
                 <div  data-aos-duration='1000'  data-aos='fade-down' className=" col-lg-3 col-6">
                   <div className="car p-1">
-                    <img fetchPriority='high' src={images.porscha} className='w-100 rounded-4 ' loading='lazy' alt="Porscha CAR" />
+                    <img  src={images.porscha} className='w-100 rounded-4 ' loading='lazy' alt="Porscha CAR" />
                   </div>
                 </div>
 
                 <div  data-aos-duration='1000'  data-aos='fade-left' className=" col-lg-3 col-6">
                   <div className="car p-1">
-                    <img fetchPriority='high' src={images.seat} className='w-100 rounded-4 ' loading='lazy' alt="seat CAR" />
+                    <img  src={images.seat} className='w-100 rounded-4 ' loading='lazy' alt="seat CAR" />
                   </div>
                   <div className="car p-1">
-                    <img fetchPriority='high' src={images.skoda} className='w-100 rounded-4 ' loading='lazy' alt="skoda CAR" />
+                    <img  src={images.skoda} className='w-100 rounded-4 ' loading='lazy' alt="skoda CAR" />
                   </div>
 
 
