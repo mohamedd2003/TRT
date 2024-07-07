@@ -1,11 +1,4 @@
-.T{
-    --fa-rotate-angle: 28deg;
-    color: white;
-}
-.t{
-    --fa-rotate-angle: -28deg;
-    color: white;
-}
+
 .logo{
 width: 120px;
 height: 60px;
@@ -16,10 +9,16 @@ height: 60px;
   font-size: 25px;
   }
 
+  
+
+  .scrolled {
+    background-color: black; /* Change this to whatever color you want the navbar to be when scrolled */
+    transition: background-color 0.7s ease-in-out;
+  }
   @media screen and (max-width:767px) {
     
     .navbar_collapse{
-        border-radius: 30%;
+        border-radius: 30% !important;
         background-color: rgba(0, 0, 0, 0.8) ;
     }
   }
