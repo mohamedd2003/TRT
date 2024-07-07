@@ -8,7 +8,7 @@ import video from '../../assets/Video/bgVideo.mp4';
 const Layout = () => {
   const videoRef = useRef();
   const [playbackRate] = useState(2);
-  const [showSection, setShowSection] = useState(false);
+  const [showSection, setShowSection] = useState(true);
   const [lazyLoading, setLazyLoading] = useState(true);
   useEffect(() => {
     if (videoRef.current) {
