@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import video from '../../assets/Video/bgVideo.mp4';
 
-export default function Layout() {
+const Layout = () => {
   const videoRef = useRef();
   const [playbackRate] = useState(2);
   const [showSection, setShowSection] = useState(true);
@@ -16,7 +16,7 @@ export default function Layout() {
       (entries) => {
         if (entries[0].isIntersecting) {
           setLazyLoading(false);
-          observer.disconnect(); // Stop observing once the video is in view
+          observer.disconnect();
         }
       },
       { threshold: 0.1 }
@@ -26,15 +26,13 @@ export default function Layout() {
       observer.observe(videoRef.current);
     }
 
-    return () => {
-      if (observer) {
-        observer.disconnect();
-      }
-    };
-  }, [lazyLoading]);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
-    videoRef.current.playbackRate = playbackRate;
+    if (videoRef.current) {
+      videoRef.current.playbackRate = playbackRate;
+    }
   }, [playbackRate]);
 
   useEffect(() => {
@@ -42,15 +40,8 @@ export default function Layout() {
       setShowSection(false);
     }, 3900);
 
-
-    // Clear the timeout when the component unmounts
     return () => clearTimeout(timeoutId);
   }, []);
-
-
-
-
-
 
   const text = "Powered By Thunder Agency";
   const parentVarient = {
@@ -75,12 +66,15 @@ export default function Layout() {
   return (
     <>
       <AnimatePresence>
-
-        {lazyLoading?<div className={lazyLoading==false?'w-100 vh-100  position-absolute z-3 hidden ':'w-100 vh-100  position-absolute z-3 d-flex align-items-center justify-content-center '}> <i className="fa-solid fa-circle-notch text-info fa-spin fa-10x"></i></div>:''}
+        {lazyLoading && (
+          <div className='w-100 vh-100 position-absolute z-3 d-flex align-items-center justify-content-center'>
+            <i className="fa-solid fa-circle-notch text-info fa-spin fa-10x"></i>
+          </div>
+        )}
         {showSection && (
           <motion.section
             key="section"
-            className="w-100 vh-100  position-absolute z-3"
+            className="w-100 vh-100 position-absolute z-3"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -95,7 +89,7 @@ export default function Layout() {
               muted
               autoPlay
             ></video>
-            <div className="position-absolute start-0 bottom-0 end-0 top-0 overlay ">
+            <div className="position-absolute start-0 bottom-0 end-0 top-0 overlay">
               <div className="caption d-flex justify-content-center align-items-center vh-100">
                 <motion.h4
                   variants={parentVarient}
@@ -115,11 +109,10 @@ export default function Layout() {
           </motion.section>
         )}
       </AnimatePresence>
-      
-            <Navbar/>
-            <Outlet/>
-        
-
+      <Navbar />
+      <Outlet />
     </>
   );
 }
+
+export default Layout;
