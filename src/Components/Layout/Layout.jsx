@@ -17,16 +17,17 @@ const Layout = () => {
   }, [playbackRate]);
 
 
+ 
   useEffect(() => {
     const firstTimeoutId = setTimeout(() => {
       setLazyLoading(false);
       setShowSection(true);
       const secondTimeoutId = setTimeout(() => {
         setShowSection(false);
-      }, 4000);
+      }, 4500);
 
       return () => clearTimeout(secondTimeoutId);
-    }, 1500);
+    }, 2000);
 
     return () => clearTimeout(firstTimeoutId);
   }, []);
@@ -53,46 +54,7 @@ const Layout = () => {
 
   return (
     <>
-      {/* <div>
-       
-        {showSection && (
-          <motion.section
-            key="section"
-            className="w-100 vh-100 position-absolute z-3"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            <video
-              ref={videoRef}
-              className={`${style.home_video}`}
-              src={video}
-              type="video/mp4"
-              loop
-              playsInline
-              muted
-              autoPlay
-            ></video>
-            <div className="position-absolute start-0 bottom-0 end-0 top-0 overlay">
-              <div className="caption d-flex justify-content-center align-items-center vh-100">
-                <motion.h4
-                  variants={parentVarient}
-                  initial="hidden"
-                  animate="show"
-                  className={`${style.thunder} thunderFont text-white`}
-                >
-                  {text.split('').map((char, index) => (
-                    <motion.span variants={spanVariants} key={index}>
-                      {char}
-                    </motion.span>
-                  ))}
-                  <i className="fa-solid fa-bolt fa-2xl text-info"></i>
-                </motion.h4>
-              </div>
-            </div>
-          </motion.section>
-        )}
-      </div> */}
+   
 
 
 {lazyLoading&&
