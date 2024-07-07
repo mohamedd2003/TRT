@@ -351,8 +351,8 @@ borderRadius: '0',
 
                   </div>
                 <div data-aos='fade-down'  data-aos-duration='1000'   className=" col-lg-3 col-6">
-                  <div className="car pt-1 h-100 ">
-                    <img src={images.vrs} className='w-100 rounded-4 h-75' loading='lazy' alt="SKODA VRS CAR" />
+                  <div className="car pt-1 ">
+                    <img src={images.vrs} className='w-100 rounded-4 ' loading='lazy' alt="SKODA VRS CAR" />
                   </div>
                
                 </div>
