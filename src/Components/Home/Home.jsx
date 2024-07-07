@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './Home.module.css';
+
 import { Link } from 'react-router-dom';
 import styles from "../Home/Home.module.css"
 //********************************************* */
@@ -25,7 +26,8 @@ import Marquee from '../slider/slider'
 
 
 export default function Home() {
- const pagination = {
+
+  const pagination = {
     clickable: true,
     renderBullet: function (index, className) {
       return '<span class="' + className + '">' + (index + 1) + '</span>';
@@ -39,13 +41,11 @@ export default function Home() {
     margin: '0 20px',
     marginRight: '40px',
     padding: '0px',
-    borderRadius: '50%',
     display:' inline-block',
     transform: 'translateY(-20px)',
     borderRadius: '0',
        }
 
-  
   return (
     <>
       <section id='hero'  >
@@ -62,11 +62,9 @@ export default function Home() {
             },
           }}
           className="mySwiper vh-100"
-          animating={true}
-        
           navigation={true}
           pagination={pagination}
-          modules={[Pagination, Navigation, EffectCreative]} >
+          modules={[Pagination, Navigation, EffectCreative]}  >
 
           <SwiperSlide className=' position-relative mobile '>
             <img src={images.fordEvent} alt="Ford QatarEvent" className='w-100 ' />
@@ -77,19 +75,20 @@ export default function Home() {
                 <motion.h1
                   initial={{ x: -1000 }}
                   animate={{ x: 0 }}
-                  transition={{ duration: 6 }}
+                  transition={{ duration: 6 ,delay:4}}
+                  
                   className=' text-white' ><i className="fa-solid fa-t fa-3x"></i></motion.h1>
 
                 <motion.h1
                   initial={{ y: -1000, x: 0 }}
                   animate={{ y: 0, x: 0 }}
-                  transition={{ duration: 6 }} >
+                  transition={{ duration: 6 ,delay:4}} >
                   <i className="fa-brands text-main fa-r-project fa-3x my-5"></i>
                 </motion.h1>
                 <motion.h1
                   initial={{ x: 4000 }}
                   animate={{ x: 0 }}
-                  transition={{ duration: 6 }}
+                  transition={{ duration: 6 ,delay:4}}
                   className=' text-white' ><i className="fa-solid fa-t fa-3x"></i></motion.h1>
 
 
@@ -108,19 +107,19 @@ export default function Home() {
                 <motion.h1
                   initial={{ x: -1000 }}
                   animate={{ x: 0 }}
-                  transition={{ duration: 6 }}
+                  transition={{ duration: 6 ,delay:4}}
                   className=' text-white' ><i className="fa-solid fa-t fa-3x"></i></motion.h1>
 
                 <motion.h1
                   initial={{ y: -1000, x: 0 }}
                   animate={{ y: 0, x: 0 }}
-                  transition={{ duration: 6 }} >
+                  transition={{ duration: 6 ,delay:4}} >
                   <i className="fa-brands text-main fa-r-project fa-3x my-5"></i>
                 </motion.h1>
                 <motion.h1
                   initial={{ x: 4000 }}
                   animate={{ x: 0 }}
-                  transition={{ duration: 6 }}
+                  transition={{ duration: 6 ,delay:4}}
                   className=' text-white' ><i className="fa-solid fa-t fa-3x"></i></motion.h1>
 
 
