@@ -24,10 +24,10 @@ const Layout = () => {
       setShowSection(true);
       const secondTimeoutId = setTimeout(() => {
         setShowSection(false);
-      }, 4500);
+      }, 3900);
 
       return () => clearTimeout(secondTimeoutId);
-    }, 2000);
+    }, 1500);
 
     return () => clearTimeout(firstTimeoutId);
   }, []);
