@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import style from './Layout.module.css';
 import Navbar from '../Navbar/Navbar';
 import { Outlet } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, delay } from 'framer-motion';
 import video from '../../assets/Video/bgVideo.mp4';
 
 const Layout = () => {
@@ -17,14 +17,13 @@ const Layout = () => {
   }, [playbackRate]);
 
 
- 
   useEffect(() => {
     const firstTimeoutId = setTimeout(() => {
       setLazyLoading(false);
       setShowSection(true);
       const secondTimeoutId = setTimeout(() => {
         setShowSection(false);
-      }, 3900);
+      }, 4000);
 
       return () => clearTimeout(secondTimeoutId);
     }, 1500);
@@ -59,13 +58,15 @@ const Layout = () => {
 
 {lazyLoading&&
 <div className='w-100 bg-black vh-100 position-absolute z-3 d-flex align-items-center justify-content-center'>
-            <i className="fa-solid fa-circle-notch text-info fa-spin fa-10x"></i>
+    <span class="loader  m-auto"></span>
+           
+            
           </div>}
 
           {showSection && (
           <motion.section
             key="section"
-            className="w-100 vh-100 position-absolute z-3"
+            className="w-100 vh-100 position-absolute z-2"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -91,8 +92,7 @@ const Layout = () => {
                   {text.split('').map((char, index) => (
                     <motion.span variants={spanVariants} key={index}>
                       {char}
-                    </motion.span>
-                  ))}
+                    </motion.span>))}
                   <i className="fa-solid fa-bolt fa-2xl text-info"></i>
                 </motion.h4>
               </div>
@@ -101,6 +101,7 @@ const Layout = () => {
         )}
       <Navbar />
       <Outlet />
+
     </>
   );
 }

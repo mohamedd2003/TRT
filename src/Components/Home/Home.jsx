@@ -191,7 +191,7 @@ export default function Home() {
 
             <div className="overlay">
               <div data-aos="fade-down" data-aos-duration='1500' className="caption d-flex justify-content-center align-items-center vh-100">
-        <h2   className={`main-font  text-center  mb-0 pb--lg-4 ${styles.trt}`}>AUTOVROOM EVENT</h2>
+        <h2   className={`main-font  text-center  mb-0 pb-lg-4 ${styles.trt}`}>AUTOVROOM EVENT</h2>
               </div>
             </div>
 
@@ -364,8 +364,11 @@ export default function Home() {
 
                   </div>
                 <div data-aos='fade-down'  data-aos-duration='1000'   className=" col-lg-3 col-6">
-                  <div className="car pt-1 h-100 ">
-                    <img src={images.vrs} className='w-100 rounded-4 h-100' loading='lazy' alt="SKODA VRS CAR" />
+                  <div className="car pt-1  ">
+                    <img src={images.vrs} className='w-100 rounded-4 ' loading='lazy' alt="SKODA VRS CAR" />
+                  </div>
+                  <div className="car p-1">
+                    <img src={images.Seat4} className='w-100 rounded-4 ' loading='lazy' alt="seat CAR" />
                   </div>
                
                 </div>
@@ -485,7 +488,203 @@ export default function Home() {
 
       </section>
 
+      <section id='events' className='bg-black py-5'>
+        <div className='m-auto text-center'>
+        <h2 data-aos='fade-down' data-aos-duration='1000' className='  text-decoration-line-through  oswald-titles main-font'><span className=' text-main'>O</span>UR EVENTS</h2>
+          
+        </div>
 
+        
+
+
+<div className="container overflow-hidden ">
+  <div className="row  ">
+    <div  className="col-12 col-lg-5  vh-85 position-relative   rounded-4 mt-lg-3 mt-2">
+      <div className="event ">
+      <video
+              src={images.video2}
+              type="video/mp4"
+              className='rounded-4  start-0 end-0'
+               loop
+              playsInline
+              muted
+              autoPlay
+            ></video>
+
+<div className="overlay">
+              <div  className="caption d-flex justify-content-center align-items-center vh-100">
+        <h2  data-aos='fade-down' data-aos-duration='1000'  className={`main-font  text-center  mb-0 pb-lg-4 ${styles.trt}`}>AUTOVROOM EVENT</h2>
+              </div>
+            </div>
+      </div>
+    </div>
+
+    <div className={`col-lg-2  d-flex align-items-center   ${styles.hide} `}>
+<div >
+
+    <Marquee lineStyle={lineStyle} />
+</div>
+</div>
+    <div  className="col-12  mt-5 mt-sm-0 col-lg-5 vh-85 position-relative   rounded-4 mt-lg-3 mt-2">
+      <div className="event   ">
+
+      <video
+              src={images.video2}
+              type="video/mp4"
+              className='rounded-4  start-0 end-0'
+               loop
+              playsInline
+              muted
+              autoPlay
+            ></video>
+
+<div className="overlay">
+              <div  className="caption d-flex justify-content-center align-items-center vh-100">
+        <h2  data-aos='fade-down' data-aos-duration='1000'  className={`main-font  text-center  mb-0 pb-lg-4 ${styles.trt}`}>ELSHROUK EVENT</h2>
+              </div>
+            </div>
+      </div>
+    </div>
+
+    <div  className="col-12 col-lg-5  vh-85 position-relative   rounded-4 mt-lg-3 mt-3">
+      <div className="event ">
+
+      <video
+              src={images.video2}
+              type="video/mp4"
+              className='rounded-4  start-0 end-0'
+               loop
+              playsInline
+              muted
+              autoPlay
+            ></video>
+
+<div className="overlay">
+              <div  className="caption d-flex justify-content-center align-items-center vh-100">
+        <h2  data-aos='fade-down' data-aos-duration='1000'  className={`main-font  text-center  mb-0 pb-lg-4 ${styles.trt}`}>FORD QATAR EVENT</h2>
+              </div>
+            </div>
+      </div>
+    </div>
+    <div className={`col-lg-2  d-flex align-items-center   ${styles.hide} `}>
+<div  >
+
+    <Marquee lineStyle={lineStyle}  />
+</div>
+</div>
+
+    <div  className="col-12  mt-5 mt-sm-0 col-lg-5 vh-85 position-relative   rounded-4 mt-lg-3 mt-2">
+      <div className="event   ">
+
+      <video
+              src={images.video2}
+              type="video/mp4"
+              className='rounded-4  start-0 end-0'
+               loop
+              playsInline
+              muted
+              autoPlay
+            ></video>
+
+<div className="overlay">
+              <div  className="caption d-flex justify-content-center align-items-center vh-100">
+        <h2  data-aos='fade-down' data-aos-duration='1000'  className={`main-font  text-center  mb-0 pb-lg-4 ${styles.trt}`}>CIC EVENT</h2>
+              </div>
+            </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  
+</div>
+
+
+      </section>
+ 
+      <section id='sponsers' className='bg-black py-5'>
+        <div className='m-auto text-center'>
+        <h2 data-aos='fade-down' 
+        data-aos-duration='1000' 
+        className='  text-decoration-line-through  oswald-titles main-font'><span className=' text-main'>O</span>UR SPONSERS</h2>
+        </div>
+
+        <div className="marquee bg-black  mt-5">
+          <div className="marquee-content-logos">
+            
+            <img src={images.logo1} className='mx-3 mx-sm-5'  width={250}  height={150} />
+            <img src={images.logo2} className='mx-3 mx-sm-5' width={250}  height={150} />
+            <img src={images.logo3} className='mx-3 mx-sm-5' width={250}  height={100} />
+            <img src={images.logo4} className='mx-3 mx-sm-5' width={250}  height={80} />
+          </div>
+        </div>
+
+              
+
+
+
+
+      </section>
+
+      <section id='tickets' className='bg-black py-5'>
+       
+      <div className='m-auto text-center'>
+        <h2 data-aos='fade-down' 
+        data-aos-duration='1000' 
+        className='  text-decoration-line-through  oswald-titles main-font'><span className=' text-main'>G</span>ET TICKETS</h2>
+        </div>
+<div className="container">
+  <div className="row mt-3 g-3 text-white">
+      <div className="col-md-4 " data-aos='fade-down' data-aos-duration='1000'>
+    <div className="ticket gradient rounded-bottom-circle p-3">
+    <div className="text-center">
+    <h2 className={`main-font  Text-white text-center  ${styles.trtSmall}`}>CAR OWNER</h2>
+
+        <h5  className='main-font text-main'>TICKET</h5>
+         <div className="d-flex justify-content-center main-font ">
+
+        <h2 className='text-decoration-line-through me-5'>350 LE</h2>
+        <h2>300 LE</h2>
+        </div>
+
+      <a href='' className='btn btn-outline-danger text-white main-font rounded-pill'> Get Ticket</a>
+    </div>
+      </div>
+    </div>
+    <div className="col-md-4" data-aos='fade-down' data-aos-duration='1000'>
+    <div className="ticket gradient rounded-bottom-circle p-3">
+    <div className="text-center">
+    <h2 className={`main-font  Text-white text-center  ${styles.trtSmall}`}>PHOTOGRAPHER</h2>
+        <h5  className='main-font text-main'>TICKET</h5>
+         <div className="d-flex justify-content-center main-font ">
+
+        <h2 className='text-decoration-line-through me-5'>350 LE</h2>
+        <h2>300 LE</h2>
+        </div>
+
+      <a href='' className='btn btn-outline-danger text-white main-font rounded-pill'> Get Ticket</a>
+    </div>
+      </div>
+    </div>
+    <div className="col-md-4" data-aos='fade-down' data-aos-duration='1000'>
+    <div className="ticket gradient rounded-bottom-circle p-3">
+    <div className="text-center">
+    <h2 className={`main-font  Text-white text-center  ${styles.trtSmall}`}>Fans</h2>
+        <h5  className='main-font text-main'>TICKET</h5>
+        <div className="d-flex justify-content-center main-font ">
+
+        <h2 className='text-decoration-line-through me-5'>350 LE</h2>
+        <h2>300 LE</h2>
+        </div>
+
+      <a href='' className='btn btn-outline-danger text-white main-font rounded-pill'> Get Ticket</a>
+    </div>
+      </div>
+    </div>
+  </div>
+</div>
+      </section>
     </>
   )
 }

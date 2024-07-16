@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import style from './Navbar.module.css';
 import logo from '../../assets/Images/trans.png';
 
@@ -32,19 +32,20 @@ export default function Navbar() {
           <div className={`collapse navbar-collapse ${style.navbar_collapse} ${style.font}`} id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item mt-3">
-                <Link className="nav-link text-center main-font text-main active" aria-current="page" to="/home#hero">Home</Link>
+                <NavLink className="nav-link text-center main-font " aria-current="page" to="">Home</NavLink>
               </li>
               <li className="nav-item mt-3">
-                <a className="nav-link text-center main-font" href="/home#about">About</a>
+                <NavLink className="nav-link text-center main-font" to="aboutPage">About</NavLink>
               </li>
               <li className="nav-item mt-3">
-                <Link className="nav-link text-center main-font" to="/gallery">Gallery</Link>
+                <NavLink className="nav-link text-center main-font" to="gallery">Gallery</NavLink>
+              </li>
+
+              <li className="nav-item mt-3">
+                <NavLink className="nav-link text-center main-font" to="events">Events</NavLink>
               </li>
               <li className="nav-item mt-3">
-                <Link className="nav-link text-center main-font" to="/events">Events</Link>
-              </li>
-              <li className="nav-item mt-3">
-                <Link className="nav-link text-center main-font" to="/contact">Contact</Link>
+                <NavLink className="nav-link text-center main-font" to="contact">Contact</NavLink>
               </li>
               <li className="nav-item mt-4 text-center main-font">
                 <Link className="rounded-pill btn btn-outline-danger mx-3" to="">Get Ticket</Link>

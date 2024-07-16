@@ -14,8 +14,8 @@ import slide2 from '../../assets/Images/slide2.jpg'
 import slide3 from '../../assets/Images/slide3.jpg'
 import slide4 from '../../assets/Images/slide4.jpg'
 import slide5 from '../../assets/Images/slide5.jpg'
-import ford from '../../assets/Images/red/FORD/ford.jpg'
-import opel from '../../assets/Images/red/OPEL/opel.jpg'
+import ford from '../../assets/Images/red/FORD/ford.webp'
+import opel from '../../assets/Images/red/OPEL/opel.webp'
 
 
 export default function About() {
@@ -87,7 +87,7 @@ export default function About() {
 
 
                   {images.map((image) => <SwiperSlide key={image.id}  className='swiper-slide-card'>
-                    <img fetchPriority='high' src={image.src} loading='lazy' alt={image.alt} className='w-100 position-relative ' />
+                    <img  src={image.src} loading='lazy' alt={image.alt} className='w-100 position-relative ' />
                     <div className='overlay main-font text-white '> SWIPE <i className="fa-regular fa-hand-point-right fa-lg"></i>
                     </div>
                   </SwiperSlide>)}
@@ -98,16 +98,16 @@ export default function About() {
               <div className="breif"  >
                 <h2 data-aos="fade-down" data-aos-duration="1000" className={`main-font pt-3 readMore title  mb-4 text-white `}>ABOUT U<i className="fa-solid fa-bolt fa-md text-main"></i></h2>
 
-                <div data-aos-duration='1000' data-aos-delay="500" data-aos="fade-left" className=' ms-lg-5  oxygen '>
+                <div  className=' ms-lg-5  oxygen '>
                   <ul>
-                    <li>
+                    <li data-aos-duration='1000'  data-aos="fade-right">
                       <span className='text-main'>  TRT </span> exhibition organizing team was established in <span className='text-main'>2022</span> , where we organized our first event on <span className='text-main'>2022</span>and it was under a graduation project for media students of the Public Relations Department
                     </li>
-                    <li className='my-2'>
+                    <li data-aos-duration='1000' data-aos="fade-left" className='my-2'>
                       Many influencers in the field of cars on social media attended, and many companies specializing in car modification attended.
 
                     </li>
-                    <li>
+                    <li data-aos-duration='1000' data-aos="fade-right">
                       We participated in organizing an event for modified cars at one of the universities in the Administrative Capital, and this is an indication of our success in this work.
                     </li>
                   </ul>
@@ -118,12 +118,12 @@ export default function About() {
                   <div >
                     <div className="collapse collapse-vertical " id="collapseWidthExample">
                       <div className='text-white'>
-                        <ul>
+                        <ul >
                           <span className='text-main'>Our Mission :</span>
                           <li >
                             Continue organizing outstanding events that cater to the interests of car enthusiasts and owners of modified cars, providing a platform for them to showcase their passion and connect with like-minded individuals.
                           </li>
-                          <li>
+                          <li data-aos-duration='1000'  data-aos="fade-down">
                             Committed to upholding the highest standards of professionalism and creating a safe and enjoyable environment for all participants. With a focus on innovation and creativity, we aim to set new benchmarks in the industry and establish ourselves as a leader in event organizing for car enthusiasts in the Arab Republic of Egypt. <span className='text-main'>"Make your passion safe"</span>
 
                           </li>

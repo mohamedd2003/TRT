@@ -106,11 +106,19 @@ import slide5 from "../../assets/Images/slide5.jpg";
 import slide6 from "../../assets/Images/slide6.jpg";
 import slide8 from "../../assets/Images/slide8.jpg";
 import video from "../../assets/Video/AUTOVROOM.mp4";
+import video2 from "../../assets/Video/AUTOV2.mp4";
 import fordEvent from "../../assets/Images/fordEvent.jpg";
+//**************LOGOS **************************************
+import logo1 from "../../assets/Images/LOGO/autologo.png";
+import logo2 from "../../assets/Images/LOGO/dropslogo.png";
+import logo3 from "../../assets/Images/LOGO/eaglelogo.png";
+import logo4 from "../../assets/Images/LOGO/phantomlogo.png";
+import logo5 from "../../assets/Images/LOGO/Phantom Balck.png";
+
 
 const images = 
 { 
-   BMW1,insgnia1 ,blueBmw5,  insgnia2 ,insgnia4,  insgnia3 ,  BMW3,  BMW4,  porscha,  seat,
+   BMW1,insgnia1 ,blueBmw5,  insgnia2 ,insgnia4,  insgnia3 ,  BMW3,  BMW4,  porscha,  seat,video2,
     skoda,  opel1,  opel2,  opel3,  opel4,  opel5,  hyndai,  vw,  Seat,  honda,  Hyndai,  blueBmw,
       KIA,  vrs,  MIT1,  MIT2,  MIT3,  vw4,  vw5,  yellowBmw,  yellowBmw2,  ibiza1,  ibiza2,  ibiza3, 
  ibiza4,  purpleVw,  opel01,  opel02,  opel03,  whiteVw01,  whiteVw02,  whiteSeat01,  whiteSeat02,
@@ -118,6 +126,6 @@ const images =
     slide6,  E92,  E921,  E922,  MOTO,  slide8,  honda1,  honda2,  honda3,  puma,  khonfsa,  skoda1,
       skoda2,skodaa7,ibiza5, ibiza6 ,ibiza7, ibiza8 ,ibiza9 , ibiza10, ibiza11 ,opel6,opel7,opel8,opel9,
       orangeBmw01,orangeBmw02,orangeBmw03,orangeBmw04,Seat2,  Seat3,blueBmw1,  blueBmw2,  blueBmw3,  blueBmw4 ,Seat4,
-      honda01,Hyndai1 ,vrs1,vrs2   };
+      honda01,Hyndai1 ,vrs1,vrs2 , logo1,  logo2,  logo3,  logo4,  logo5 };
 
 export default images;
