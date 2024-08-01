@@ -1,0 +1,22 @@
+.header{
+    min-height: 79vh;
+    background-color: rgba(0, 0, 0, 0.5);
+ 
+}
+.backGround{
+    background-image: url("../../assets/Images/Autovroom/AutvroomBanner.jpg");
+    background-position: center center;
+    background-size: cover ;
+    position: relative;
+} 
+
+.logo{
+    width: 100px;
+    height: 100px;
+}
+.swiper-card {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  

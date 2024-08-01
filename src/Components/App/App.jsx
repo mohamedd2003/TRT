@@ -7,6 +7,8 @@ import AboutPage from '../AboutPage/AboutPage';
 import Contact from '../Contact/Contact';
 import Gallery from '../Gallery/Gallery';
 import NotFound from '../NotFound/NotFound';
+import AutovroomEvent from '../AutovroomEvent/AutovroomEvent';
+import QatarEvent from '../QatarEvent/QatarEvent';
 
 let routes=createBrowserRouter(
     [{
@@ -17,6 +19,8 @@ let routes=createBrowserRouter(
             {path:'events',element:<Events/>},
             {path:'contact',element:<Contact/>},
             {path:'gallery',element:<Gallery/>},
+            {path:'autovroomEvent',element:<AutovroomEvent/>},
+            {path:'QatarEvent',element:<QatarEvent/>},
             {path:'*',element:<NotFound/>},
         ]
     }]

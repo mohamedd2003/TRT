@@ -114,11 +114,20 @@ import logo2 from "../../assets/Images/LOGO/dropslogo.png";
 import logo3 from "../../assets/Images/LOGO/eaglelogo.png";
 import logo4 from "../../assets/Images/LOGO/phantomlogo.png";
 import logo5 from "../../assets/Images/LOGO/Phantom Balck.png";
+import ministry from "../../assets/Images/LOGO/ministry.png";
+import trt from "../../assets/Images/LOGO/trt.png";
+
+
+
+import Atv from "../../assets/Images/EventsSectionImg/road Autovrroom.webp";
+import elshrouk from "../../assets/Images/EventsSectionImg/elshroukEvent.webp";
+import qatar from "../../assets/Images/EventsSectionImg/QatarEvent.webp";
+
 
 
 const images = 
 { 
-   BMW1,insgnia1 ,blueBmw5,  insgnia2 ,insgnia4,  insgnia3 ,  BMW3,  BMW4,  porscha,  seat,video2,
+   BMW1,insgnia1 ,blueBmw5,  insgnia2 ,insgnia4,  insgnia3 ,  BMW3,  BMW4,  porscha,  seat,video2,ministry,trt,Atv,qatar,elshrouk,
     skoda,  opel1,  opel2,  opel3,  opel4,  opel5,  hyndai,  vw,  Seat,  honda,  Hyndai,  blueBmw,
       KIA,  vrs,  MIT1,  MIT2,  MIT3,  vw4,  vw5,  yellowBmw,  yellowBmw2,  ibiza1,  ibiza2,  ibiza3, 
  ibiza4,  purpleVw,  opel01,  opel02,  opel03,  whiteVw01,  whiteVw02,  whiteSeat01,  whiteSeat02,

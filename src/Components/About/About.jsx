@@ -74,15 +74,15 @@ export default function About() {
 
     <>
       <section id='about' className='py-5 bg-black w-100  '>
-        <div data-aos-duration='1000' data-aos="fade" className="container bg-black  shadowLg rounded-5 p-4">
-          <div className="row align-items-center  gx-2">
-            <div className="col-lg-6  "   >
-              <div className="cards">
+        <div data-aos-duration='1000' data-aos="fade" className="container bg-black   shadowLg rounded-5 p-4">
+          <div className="row align-items-center  gx-lg-2">
+            <div className="col-lg-6  ps-0"   >
+              <div className="cards ">
                 <Swiper
                   effect={'cards'}
                   grabCursor={true}
                   modules={[EffectCards] }
-                  className="swiper-card"
+                  className="swiper-card "
                   data-aos-duration='1000' data-aos="fade-right"   >
 
 
@@ -123,7 +123,7 @@ export default function About() {
                           <li >
                             Continue organizing outstanding events that cater to the interests of car enthusiasts and owners of modified cars, providing a platform for them to showcase their passion and connect with like-minded individuals.
                           </li>
-                          <li data-aos-duration='1000'  data-aos="fade-down">
+                          <li data-aos-duration='1000'  data-aos="fade-down" className='mt-2'>
                             Committed to upholding the highest standards of professionalism and creating a safe and enjoyable environment for all participants. With a focus on innovation and creativity, we aim to set new benchmarks in the industry and establish ourselves as a leader in event organizing for car enthusiasts in the Arab Republic of Egypt. <span className='text-main'>"Make your passion safe"</span>
 
                           </li>

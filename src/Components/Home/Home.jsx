@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Home.module.css';
 
 import { Link } from 'react-router-dom';
@@ -26,7 +26,9 @@ import Marquee from '../slider/slider'
 
 
 export default function Home() {
+  
 
+  
   const pagination = {
     clickable: true,
     renderBullet: function (index, className) {
@@ -48,6 +50,8 @@ export default function Home() {
 
   return (
     <>
+
+      
       <section id='hero'  >
         <Swiper
           grabCursor={true}
@@ -97,7 +101,7 @@ export default function Home() {
             </div>
 
           </SwiperSlide>
-
+            {/************** /* 1 */}
           <SwiperSlide className=' position-relative laptop  '>
             <img src={images.slide1} alt="opel Astra Car" className='w-100' />
 
@@ -127,7 +131,8 @@ export default function Home() {
               </div>
             </div>
 
-          </SwiperSlide>
+          </SwiperSlide> 
+            {/************** /* 2 */}
 
           <SwiperSlide>
             <Swiper
@@ -182,7 +187,9 @@ export default function Home() {
               </SwiperSlide>
 
             </Swiper>
-          </SwiperSlide>
+          </SwiperSlide> 
+            {/************** /* 3 */}
+
           <SwiperSlide className=' position-relative '>
 
             <video   src={images.video} type="video/mp4" className='w-100' loop muted playsInline   autoPlay >
@@ -190,30 +197,54 @@ export default function Home() {
             </video>
 
             <div className="overlay">
-              <div data-aos="fade-down" data-aos-duration='1500' className="caption d-flex justify-content-center align-items-center vh-100">
+              <div  className="caption d-flex justify-content-center align-items-center vh-100">
         <h2   className={`main-font  text-center  mb-0 pb-lg-4 ${styles.trt}`}>AUTOVROOM EVENT</h2>
               </div>
             </div>
 
-          </SwiperSlide>
+          </SwiperSlide> 
+            {/************** /* 4 */}
+
+          <SwiperSlide className=' position-relative '>
+
+<video   src={images.video} type="video/mp4" className='w-100' loop muted playsInline   autoPlay >
+
+</video>
+
+<div className="overlay">
+  <div  className="caption d-flex justify-content-center align-items-center vh-100">
+<div>
+<h2   className={`main-font  text-center  mb-0 pb-lg-4 ${styles.trt}`}>AUTOVROOM EVENT 02</h2>
+<h2   className={`main-font  text-center  mt-2 mb-0 pb-lg-4 ${styles.trt}`}>SOON</h2>
+
+
+
+</div>
+  </div>
+</div>
+
+            </SwiperSlide> 
+            {/************** /* 5 */}
 
           <SwiperSlide className=' position-relative '>
             <img loading='lazy' src={images.slide8} alt="BMW Motocycle" className='w-100' />
 
             <div className={`overlay`}></div>
 
-          </SwiperSlide>
+          </SwiperSlide> 
 
         </Swiper>
       </section>
 <Marquee lineStyle={lineStyle}/>
       
 
+      <section id='title'>
       <div className='bg-black'>
         <h2 data-aos-duration='1000' data-aos="fade-down" className={`main-font bg-black text-center  mb-0 pb--lg-4 ${styles.trt}`}>TRT</h2>
         <h2 data-aos-duration='1000' data-aos="fade-up" className={`main-font bg-black text-center   mb-0 ${styles.trt}`}>THE RIGHT TRACK</h2>
 
       </div>
+      </section>
       <About />
 
       <section id='gallery' className='bg-black py-5'>
@@ -488,7 +519,7 @@ export default function Home() {
 
       </section>
 
-      <section id='events' className='bg-black py-5'>
+     {/* <section id='events' className='bg-black py-5'>
         <div className='m-auto text-center'>
         <h2 data-aos='fade-down' data-aos-duration='1000' className='  text-decoration-line-through  oswald-titles main-font'><span className=' text-main'>O</span>UR EVENTS</h2>
           
@@ -599,6 +630,56 @@ export default function Home() {
 
   
 </div>
+
+
+      </section>  */}
+{/* /********************************* ************************************ */}
+<section id='events' className='bg-black py-5'>
+        <div className='m-auto text-center'>
+        <h2 data-aos='fade-down' data-aos-duration='1000' className='  text-decoration-line-through  oswald-titles main-font'><span className=' text-main'>O</span>UR EVENTS</h2>
+        </div>
+
+        <div className="container">
+          <div className="row g-0" >
+           <div className="col-md-6  position-relative">
+           <Link to={'/autovroomEvent'}>
+          <div>
+          <img src={images.Atv} alt="AutvRoom Event" className='w-100 rounded-start-pill  ' />
+           <div className="overlay " >
+        <h2  data-aos='fade-down' data-aos-duration='1000' className={`main-font text-center  position-relative top-50 translate-middle-y  mb-0 pb-lg-4 ${styles.trt}`}>AUTOVROOM EVENT </h2>
+        <i  data-aos='fade-down' data-aos-duration='1000' class={`fa-solid fa-hand-pointer  position-absolute top-50 translate-middle-y end-0 fa-3x ${styles.trt}`}></i>
+            </div>
+          </div>
+           </Link>
+            </div>
+            <div className="col-md-6   position-relative">
+         <Link to={'/QatarEvent'}>
+         <img src={images.qatar} className='w-100 rounded-end-pill h-100' />
+            <div className="overlay " >
+        <h2   data-aos='fade-down' data-aos-duration='1000'  className={`main-font text-center  position-relative top-50 translate-middle-y  mb-0 pb-lg-4 ${styles.trt}`}>FORD QATAR EVENT</h2>
+        <i  data-aos='fade-down' data-aos-duration='1000' class={`fa-solid fa-hand-pointer  position-absolute top-50 translate-middle-y  start fa-3x ${styles.trt}`}></i>
+            </div>
+         </Link>
+            </div>
+            <div className="col-md-6  position-relative">
+            <img src={images.elshrouk} className='w-100 rounded-start-pill h-100' />
+            <div className="overlay " >
+        <h2  data-aos='fade-down' data-aos-duration='1000'  className={`main-font text-center  position-relative top-50 translate-middle-y  mb-0 pb-lg-4 ${styles.trt}`}>ELSHROUK <br /> EVENT </h2>
+        <i  data-aos='fade-down' data-aos-duration='1000' class={`fa-solid fa-hand-pointer  position-absolute top-50 translate-middle-y end-0 fa-3x ${styles.trt}`}></i>
+            </div>
+            </div>
+            <div className="col-md-6  position-relative">
+            <img src={images.BMW3} className='w-100 rounded-end-pill' />
+            <div className="overlay " >
+        <h2   data-aos='fade-down' data-aos-duration='1000'  className={`main-font text-center  position-relative top-50 translate-middle-y  mb-0 pb-lg-4 ${styles.trt}`}>CIC EVENT</h2>
+        <i  data-aos='fade-down' data-aos-duration='1000' class={`fa-solid fa-hand-pointer  position-absolute top-50 translate-middle-y start-0 fa-3x ${styles.trt}`}></i>
+            </div>
+            </div>
+          </div>
+        </div>
+
+
+
 
 
       </section>

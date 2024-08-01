@@ -59,8 +59,6 @@ const Layout = () => {
 {lazyLoading&&
 <div className='w-100 bg-black vh-100 position-absolute z-3 d-flex align-items-center justify-content-center'>
     <span class="loader  m-auto"></span>
-           
-            
           </div>}
 
           {showSection && (
