@@ -671,7 +671,7 @@ export default function Home() {
             <div className="col-md-6  position-relative">
             <img src={images.BMW3} className='w-100 rounded-end-pill' />
             <div className="overlay " >
-        <h2   data-aos='fade-down' data-aos-duration='1000'  className={`main-font text-center  position-relative top-50 translate-middle-y  mb-0 pb-lg-4 ${styles.trt}`}>CIC EVENT</h2>
+        <h2   data-aos='fade-down' data-aos-duration='1000'  className={`main-font text-center  position-relative top-50 translate-middle-y  mb-0 pb-lg-4 ${styles.trt}`}>CIC<br />EVENT</h2>
         <i  data-aos='fade-down' data-aos-duration='1000' class={`fa-solid fa-hand-pointer  position-absolute top-50 translate-middle-y start-0 fa-3x ${styles.trt}`}></i>
             </div>
             </div>
