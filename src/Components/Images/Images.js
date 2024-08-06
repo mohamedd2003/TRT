@@ -116,26 +116,13 @@ import trt from "../../assets/Images/LOGO/trt.png";
 
 
 
-//**************AutovRoom Event Page **************************************
-
-
-//**************Qatar Event Page **************************************
-import Q1   from "../../assets/Images/QatarEvent/Q1.webp";
-import Q2   from "../../assets/Images/QatarEvent/Q2.webp";
-import Q3   from "../../assets/Images/QatarEvent/Q3.webp";
-import Q4   from "../../assets/Images/QatarEvent/Q4.webp";
-import Q5   from "../../assets/Images/QatarEvent/Q5.webp";
-import Q6   from "../../assets/Images/QatarEvent/Q6.webp";
-import Q7   from "../../assets/Images/QatarEvent/Q7.webp";
-import Q8   from "../../assets/Images/QatarEvent/Q8.webp";
-import QVID   from "../../assets/Images/QatarEvent/QVID.mp4";
 
 
 const images = 
 { 
    BMW1,insgnia1 ,blueBmw5,  insgnia2 ,insgnia4,  insgnia3 ,  BMW3,  BMW4,  porscha,  seat,video2,ministry,trt,
     skoda,  opel1,  opel2,  opel3,  opel4,  opel5,  hyndai,  vw,  Seat,  honda,  Hyndai,  blueBmw,
-     Q1  ,Q2  ,Q3  ,Q4  ,Q5  ,Q6  ,Q7  ,Q8  ,QVID,KIA,  vrs,  MIT1,  MIT2,  MIT3,  vw4,  vw5,  yellowBmw,  yellowBmw2,  ibiza1,  ibiza2,  ibiza3, 
+  KIA,  vrs,  MIT1,  MIT2,  MIT3,  vw4,  vw5,  yellowBmw,  yellowBmw2,  ibiza1,  ibiza2,  ibiza3, 
  ibiza4,  purpleVw,  opel01,  opel02,  opel03,  whiteVw01,  whiteVw02,  whiteSeat01,  whiteSeat02,
    whiteBmw,  HYNDAI,  Dayoo,  toyota,  video,  fordEvent,  slide1, 
     E92,  E921,  E922,  MOTO,  honda1,  honda2,  honda3,  puma,  khonfsa,  skoda1,
