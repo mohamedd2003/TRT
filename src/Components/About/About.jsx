@@ -9,11 +9,6 @@ import {  EffectCards } from 'swiper/modules';
 //******************import Images******************
 import golf from '../../assets/Images/golf.jpg'
 import vw from '../../assets/Images/vw.jpeg'
-import dodge from '../../assets/Images/dodge.jpeg'
-import slide2 from '../../assets/Images/slide2.jpg'
-import slide3 from '../../assets/Images/slide3.jpg'
-import slide4 from '../../assets/Images/slide4.jpg'
-import slide5 from '../../assets/Images/slide5.jpg'
 import ford from '../../assets/Images/red/FORD/ford.webp'
 import opel from '../../assets/Images/red/OPEL/opel.webp'
 
@@ -22,14 +17,10 @@ export default function About() {
   let images = [
     {
       id: "1",
-      src: dodge,
-      alt: "Dodge Car"
-    },
-    {
-      id: "2",
       src: vw,
       alt: "VW Car"
     },
+   
     {
       id: "3",
       src: ford,
@@ -46,28 +37,8 @@ export default function About() {
       src: opel,
       alt: "Opel Car"
     },
-    {
-      id: "6",
-      src: slide2,
-      alt: "Dodge Car"
-    },
-    {
-      id: "7",
-      src: slide3,
-      alt: "Dodge Car"
-
-    },
-    {
-      id: "8",
-      src: slide4,
-      alt: "Dodge Car"
-
-    },
-    {
-      id: "9",
-      src: slide5,
-      alt: "Dodge Car"
-    },
+  
+   
 
   ]
   return (

@@ -4,10 +4,9 @@
  
 }
 .backGround{
-    background-image: url("../../assets/Images/QatarEvent/QatarEvent.jpg");
+    background-image: url("https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722976871/a8u0y5tpcp6kuiwlbvho.webp");
     background-position: center center;
     background-size: cover ;
-    position: relative;
 } 
 
 .logo{

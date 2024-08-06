@@ -26,7 +26,8 @@ export default function Navbar() {
       <nav className={`navbar navbar-expand-lg navbar-dark fixed-top z-2 ${navBackground ? style.scrolled : ''}`}>
         <div className="container-fluid py-1 ">
           <img src={images.ministry} alt="Ministry Logo"   width={100} height={100} />
-          <img src={images.trt} alt="TRT-Log" width={180} />
+
+          <img src={images.trt} alt="TRT-Log" className='m-auto' width={180} />
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -41,10 +42,24 @@ export default function Navbar() {
               <li className="nav-item mt-3">
                 <NavLink className="nav-link text-center main-font" to="gallery">Gallery</NavLink>
               </li>
-
-              <li className="nav-item mt-3">
-                <NavLink className="nav-link text-center main-font" to="events">Events</NavLink>
+              <li className="nav-item dropdown">
+          <a className="nav-link dropdown-toggle text-center main-font pt-4"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Events
+          </a>
+          <ul className="dropdown-menu bg-black ">
+              <li className="nav-item mt-3 ">
+                <NavLink className="nav-link text-center main-font " to="/autovroomEvent">Autovroom Event</NavLink>
               </li>
+              <li className="nav-item mt-3 ">
+                <NavLink className="nav-link text-center main-font" to="/QatarEvent">Ford QatarEvent</NavLink>
+              </li>
+              <li className="nav-item mt-3 ">
+                <NavLink className="nav-link text-center main-font" to="/ElshroukEvent">ElShrouk Event</NavLink>
+              </li>
+             
+            
+          </ul>
+        </li>
               <li className="nav-item mt-3">
                 <NavLink className="nav-link text-center main-font" to="contact">Contact</NavLink>
               </li>

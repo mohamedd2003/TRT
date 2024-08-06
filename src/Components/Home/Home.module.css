@@ -6,34 +6,13 @@
     background-color: red;
 }
 
-.trt{
-    font-size: 100px;
-    line-height: 100px;
-    font-weight: 700;
-    padding-right: 8px;
-    font-style: normal;
-    user-select: none;
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.71);
-}
 
-.trtSmall{
-    font-size:40px;
-    line-height: 50px;
-    font-weight: 700;
-    padding-right: 8px;
-    font-style: normal;
-    user-select: none;
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.71);
-}
 @media screen and (max-width:576px) {
-    .trt{
-        font-size: 50px;
-        line-height: 90px;
-    } 
+   
     .hide{
         display: none !important;
     }
 }
+
+
 

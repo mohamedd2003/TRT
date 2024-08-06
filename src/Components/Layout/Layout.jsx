@@ -58,7 +58,7 @@ const Layout = () => {
 
 {lazyLoading&&
 <div className='w-100 bg-black vh-100 position-absolute z-3 d-flex align-items-center justify-content-center'>
-    <span class="loader  m-auto"></span>
+    <span className="loader  m-auto"></span>
           </div>}
 
           {showSection && (
@@ -72,7 +72,7 @@ const Layout = () => {
             <video
               ref={videoRef}
               className={`${style.home_video}`}
-              src={video}
+              src='https://res.cloudinary.com/dnmwmrxmr/video/upload/v1722979057/gjsh9na7vqmbzodahcyz.mp4 '
               type="video/mp4"
               loop
               playsInline

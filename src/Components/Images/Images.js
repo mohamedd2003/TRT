@@ -99,12 +99,7 @@ import HYNDAI from "../../assets/Images/white/HYNDAI/7.webp";
 import Dayoo from "../../assets/Images/white/DAWOO/8.webp";
 
 import slide1 from "../../assets/Images/slide1.jpg";
-import slide2 from "../../assets/Images/slide2.jpg";
-import slide3 from "../../assets/Images/slide3.jpg";
-import slide4 from "../../assets/Images/slide4.jpg";
-import slide5 from "../../assets/Images/slide5.jpg";
-import slide6 from "../../assets/Images/slide6.jpg";
-import slide8 from "../../assets/Images/slide8.jpg";
+
 import video from "../../assets/Video/AUTOVROOM.mp4";
 import video2 from "../../assets/Video/AUTOV2.mp4";
 import fordEvent from "../../assets/Images/fordEvent.jpg";
@@ -119,20 +114,34 @@ import trt from "../../assets/Images/LOGO/trt.png";
 
 
 
-import Atv from "../../assets/Images/EventsSectionImg/road Autovrroom.webp";
-import elshrouk from "../../assets/Images/EventsSectionImg/elshroukEvent.webp";
-import qatar from "../../assets/Images/EventsSectionImg/QatarEvent.webp";
 
+
+//**************AutovRoom Event Page **************************************
+import wael   from "../../assets/Images/Autovroom/wael.webp";
+import badr    from "../../assets/Images/Autovroom/badr.webp";
+import nasser from "../../assets/Images/Autovroom/nasser.webp";
+import atv2 from "../../assets/Images/Autovroom/2.webp";
+
+//**************Qatar Event Page **************************************
+import Q1   from "../../assets/Images/QatarEvent/Q1.webp";
+import Q2   from "../../assets/Images/QatarEvent/Q2.webp";
+import Q3   from "../../assets/Images/QatarEvent/Q3.webp";
+import Q4   from "../../assets/Images/QatarEvent/Q4.webp";
+import Q5   from "../../assets/Images/QatarEvent/Q5.webp";
+import Q6   from "../../assets/Images/QatarEvent/Q6.webp";
+import Q7   from "../../assets/Images/QatarEvent/Q7.webp";
+import Q8   from "../../assets/Images/QatarEvent/Q8.webp";
+import QVID   from "../../assets/Images/QatarEvent/QVID.mp4";
 
 
 const images = 
 { 
-   BMW1,insgnia1 ,blueBmw5,  insgnia2 ,insgnia4,  insgnia3 ,  BMW3,  BMW4,  porscha,  seat,video2,ministry,trt,Atv,qatar,elshrouk,
-    skoda,  opel1,  opel2,  opel3,  opel4,  opel5,  hyndai,  vw,  Seat,  honda,  Hyndai,  blueBmw,
-      KIA,  vrs,  MIT1,  MIT2,  MIT3,  vw4,  vw5,  yellowBmw,  yellowBmw2,  ibiza1,  ibiza2,  ibiza3, 
+   BMW1,insgnia1 ,blueBmw5,  insgnia2 ,insgnia4,  insgnia3 ,  BMW3,  BMW4,  porscha,  seat,video2,ministry,trt,
+    skoda,  opel1,  opel2,  opel3,  opel4,  opel5,  hyndai,  vw,  Seat,  honda,  Hyndai,  blueBmw,wael  ,
+    badr,atv2,nasser, Q1  ,Q2  ,Q3  ,Q4  ,Q5  ,Q6  ,Q7  ,Q8  ,QVID,KIA,  vrs,  MIT1,  MIT2,  MIT3,  vw4,  vw5,  yellowBmw,  yellowBmw2,  ibiza1,  ibiza2,  ibiza3, 
  ibiza4,  purpleVw,  opel01,  opel02,  opel03,  whiteVw01,  whiteVw02,  whiteSeat01,  whiteSeat02,
-   whiteBmw,  HYNDAI,  Dayoo,  toyota,  video,  fordEvent,  slide1,  slide2,  slide3,  slide4,  slide5, 
-    slide6,  E92,  E921,  E922,  MOTO,  slide8,  honda1,  honda2,  honda3,  puma,  khonfsa,  skoda1,
+   whiteBmw,  HYNDAI,  Dayoo,  toyota,  video,  fordEvent,  slide1, 
+    E92,  E921,  E922,  MOTO,  honda1,  honda2,  honda3,  puma,  khonfsa,  skoda1,
       skoda2,skodaa7,ibiza5, ibiza6 ,ibiza7, ibiza8 ,ibiza9 , ibiza10, ibiza11 ,opel6,opel7,opel8,opel9,
       orangeBmw01,orangeBmw02,orangeBmw03,orangeBmw04,Seat2,  Seat3,blueBmw1,  blueBmw2,  blueBmw3,  blueBmw4 ,Seat4,
       honda01,Hyndai1 ,vrs1,vrs2 , logo1,  logo2,  logo3,  logo4,  logo5 };
