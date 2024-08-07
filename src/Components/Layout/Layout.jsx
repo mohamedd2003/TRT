@@ -3,7 +3,6 @@ import style from './Layout.module.css';
 import Navbar from '../Navbar/Navbar';
 import { Outlet } from 'react-router-dom';
 import { motion, AnimatePresence, delay } from 'framer-motion';
-import video from '../../assets/Video/bgVideo.mp4';
 
 const Layout = () => {
   const videoRef = useRef();
