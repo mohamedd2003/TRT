@@ -2,7 +2,8 @@ import React, { useRef, useState, useEffect } from 'react';
 import style from './Layout.module.css';
 import Navbar from '../Navbar/Navbar';
 import { Outlet } from 'react-router-dom';
-import { motion, AnimatePresence, delay } from 'framer-motion';
+import { Analytics } from "@vercel/analytics/react"
+import { motion,} from 'framer-motion';
 
 const Layout = () => {
   const videoRef = useRef();
@@ -53,7 +54,7 @@ const Layout = () => {
   return (
     <>
    
-
+<Analytics/>
 
 {lazyLoading&&
 <div className='w-100 bg-black vh-100 position-absolute z-3 d-flex align-items-center justify-content-center'>
