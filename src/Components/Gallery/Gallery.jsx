@@ -1,13 +1,11 @@
-import React from 'react'
+import React ,{useState} from 'react'
 import styles from "../Gallery/Gallery.module.css"
 import images from '../Images/Images';
 import Marquee from '../slider/slider';
-//******************imports Swiper Library*************************
-import 'swiper/css/effect-creative';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/effect-cards';
-import {  EffectCards } from 'swiper/modules';
+import { MoonLoader } from 'react-spinners';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 //*********************************************************** */
 export default function Gallery() {
    const lineStyle={
@@ -21,6 +19,16 @@ display:' inline-block',
 transform: 'translateY(-20px)',
 borderRadius: '0',
    }
+
+   const [loading, setLoading] = useState(true);
+
+   const handleBeforeLoad = () => {
+     setLoading(true);
+   };
+ 
+   const handleonLoad = () => {
+     setLoading(false);
+   };
   return (
    <>
    
@@ -72,36 +80,36 @@ borderRadius: '0',
               <div className="row gy-2 ">
 
                 <div  data-aos-duration='1000' data-aos='fade-right' className=" col-lg-3 col-6 ">
-                  <div className="car p-1">
-                    <img src={images.BMW3} className='w-100 rounded-4 ' loading='lazy' alt="BMW CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.BMW3} className='w-100 rounded-4 ' loading='lazy' alt="BMW CAR" />
                   </div>
-                  <div className="car p-1">
-                    <img src={images.MOTO} className='w-100 rounded-4 mt-2' loading='lazy' alt="BMW RACE" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.MOTO} className='w-100 rounded-4 mt-2' loading='lazy' alt="BMW RACE" />
                   </div>
                 
                  
                 </div>
 
                 <div  data-aos-duration='1000'   data-aos='fade-up' className=" col-lg-3 col-6">
-                  <div className="car p-1">
-                    <img src={images.BMW1} className='w-100 rounded-4 ' loading='lazy' alt="BMW CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.BMW1} className='w-100 rounded-4 ' loading='lazy' alt="BMW CAR" />
                   </div>
 
                   
                 </div>
 
                 <div  data-aos-duration='1000'  data-aos='fade-down' className=" col-lg-3 col-6">
-                  <div className="car p-1">
-                    <img src={images.porscha} className='w-100 rounded-4 ' loading='lazy' alt="Porscha CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.porscha} className='w-100 rounded-4 ' loading='lazy' alt="Porscha CAR" />
                   </div>
                 </div>
 
                 <div  data-aos-duration='1000'  data-aos='fade-left' className=" col-lg-3 col-6">
-                  <div className="car p-1">
-                    <img src={images.seat} className='w-100 rounded-4 ' loading='lazy' alt="seat CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.seat} className='w-100 rounded-4 ' loading='lazy' alt="seat CAR" />
                   </div>
-                  <div className="car p-1">
-                    <img src={images.khonfsa} className='w-100 rounded-4 ' loading='lazy' alt="OLD VW CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.khonfsa} className='w-100 rounded-4 ' loading='lazy' alt="OLD VW CAR" />
                   </div>
 
 
@@ -112,42 +120,42 @@ borderRadius: '0',
               <div className="row gy-2 ">
 
                 <div  data-aos-duration='1000' data-aos='fade-right' className=" col-lg-3 col-6 ">
-                  <div className="car p-1">
-                    <img src={images.E92} className='w-100 rounded-4 ' loading='lazy' alt="BMW CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.E92} className='w-100 rounded-4 ' loading='lazy' alt="BMW CAR" />
                   </div>
-                  <div className="car p-1">
-                    <img src={images.E921} className='w-100 rounded-4  ' loading='lazy' alt="BMW CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.E921} className='w-100 rounded-4  ' loading='lazy' alt="BMW CAR" />
                   </div>
                 
                  
                 </div>
 
                 <div  data-aos-duration='1000'   data-aos='fade-up' className=" col-lg-3 col-6">
-                  <div className="car p-1">
-                    <img src={images.BMW4} className='w-100 rounded-4 ' loading='lazy' alt="BMW CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.BMW4} className='w-100 rounded-4 ' loading='lazy' alt="BMW CAR" />
                   </div>
-                  <div className="car p-1">
-                    <img src={images.E922} className='w-100 rounded-4 ' loading='lazy' alt="BMW CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.E922} className='w-100 rounded-4 ' loading='lazy' alt="BMW CAR" />
                   </div>
 
                   
                 </div>
 
                 <div  data-aos-duration='1000'  data-aos='fade-down' className=" col-lg-3 col-6">
-                  <div className="car p-1">
-                    <img src={images.honda1} className='w-100 rounded-4 ' loading='lazy' alt="HONDA CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.honda1} className='w-100 rounded-4 ' loading='lazy' alt="HONDA CAR" />
                   </div>
-                  <div className="car p-1">
-                    <img src={images.honda2} className='w-100 rounded-4 ' loading='lazy' alt="HONDA CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.honda2} className='w-100 rounded-4 ' loading='lazy' alt="HONDA CAR" />
                   </div>
                 </div>
 
                 <div  data-aos-duration='1000'  data-aos='fade-left' className=" col-lg-3 col-6">
-                  <div className="car p-1">
-                    <img src={images.honda3} className='w-100 rounded-4 ' loading='lazy' alt="HONDA CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.honda3} className='w-100 rounded-4 ' loading='lazy' alt="HONDA CAR" />
                   </div>
-                  <div className="car p-1">
-                    <img src={images.puma} className='w-100 rounded-4 ' loading='lazy' alt="LANCER  CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.puma} className='w-100 rounded-4 ' loading='lazy' alt="LANCER  CAR" />
                   </div>
 
 
@@ -158,11 +166,11 @@ borderRadius: '0',
               <div className="row gy-2 ">
 
 <div  data-aos-duration='1000' data-aos='fade-right' className=" col-lg-3 col-6 ">
-  <div className="car p-1">
-  <img src={images.skoda} className='w-100 rounded-4 ' loading='lazy' alt="SKODA CAR" />
+  <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
+  <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.skoda} className='w-100 rounded-4 ' loading='lazy' alt="SKODA CAR" />
   </div>
-  <div className="car p-1">
-  <img src={images.skodaa7} className='w-100 rounded-4 ' loading='lazy' alt="SKODA CAR" />
+  <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
+  <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.skodaa7} className='w-100 rounded-4 ' loading='lazy' alt="SKODA CAR" />
   </div>
   
 
@@ -170,31 +178,31 @@ borderRadius: '0',
 </div>
 
 <div  data-aos-duration='1000'   data-aos='fade-up' className=" col-lg-3 col-6">
-  <div className="car p-1">
-    <img src={images.skoda1} className='w-100 rounded-4 ' loading='lazy' alt="skoda CAR" />
+  <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
+    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.skoda1} className='w-100 rounded-4 ' loading='lazy' alt="skoda CAR" />
   </div>
-  <div className="car p-1">
-    <img src={images.skoda2} className='w-100 rounded-4 ' loading='lazy' alt="skoda CAR" />
+  <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
+    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.skoda2} className='w-100 rounded-4 ' loading='lazy' alt="skoda CAR" />
   </div>
 
   
 </div>
 
 <div  data-aos-duration='1000'  data-aos='fade-down' className=" col-lg-3 col-6">
-  <div className="car p-1">
-    <img src={images.insgnia1} className='w-100 rounded-4 ' loading='lazy' alt="OPEL CAR" />
+  <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
+    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.insgnia1} className='w-100 rounded-4 ' loading='lazy' alt="OPEL CAR" />
   </div>
-  <div className="car p-1">
-    <img src={images.insgnia2} className='w-100 rounded-4 ' loading='lazy' alt="OPEL CAR" />
+  <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
+    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.insgnia2} className='w-100 rounded-4 ' loading='lazy' alt="OPEL CAR" />
   </div>
 </div>
 
 <div  data-aos-duration='1000'  data-aos='fade-left' className=" col-lg-3 col-6">
   <div className="car p-1">
-    <img src={images.insgnia3} className='w-100 rounded-4 ' loading='lazy' alt="OPEL CAR" />
+    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.insgnia3} className='w-100 rounded-4 ' loading='lazy' alt="OPEL CAR" />
   </div>
   <div className="car p-1">
-    <img src={images.insgnia4} className='w-100 rounded-4 ' loading='lazy' alt="OPEL  CAR" />
+    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.insgnia4} className='w-100 rounded-4 ' loading='lazy' alt="OPEL  CAR" />
   </div>
 
 
@@ -212,71 +220,71 @@ borderRadius: '0',
           <div className="container " data-aos='fade-down'>
               <div className="row gy-2 ">
               <div data-aos='fade-left' data-aos-duration='1000'   className=" col-lg-3 col-6">
-                  <div className="car p-1">
-                    <img src={images.opel1} className='w-100 rounded-4 ' loading='lazy' alt="OPEL CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"orange"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.opel1} className='w-100 rounded-4 ' loading='lazy' alt="OPEL CAR" />
                   </div>
-                  <div className="car p-1">
-                    <img src={images.opel5} className='w-100 rounded-4 ' loading='lazy' alt="OPEL CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"orange"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.opel5} className='w-100 rounded-4 ' loading='lazy' alt="OPEL CAR" />
                   </div>
 
 
                 </div>
 
                 <div data-aos='fade-right'  data-aos-duration='1000'   className=" col-lg-3 col-6">
-                  <div className="car p-1">
-                    <img src={images.opel4} className='w-100 rounded-4 ' loading='lazy' alt="OPEL CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"orange"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.opel4} className='w-100 rounded-4 ' loading='lazy' alt="OPEL CAR" />
                   </div>
-                  <div className="car p-1">
-                    <img src={images.opel2} className='w-100 rounded-4 ' loading='lazy' alt="OPEL CAR" />
-                  </div>
-                </div>
-                <div data-aos='fade-down'  data-aos-duration='1000'   className=" col-lg-3 col-6">
-                  <div className="car p-1">
-                    <img src={images.opel6} className='w-100 rounded-4 ' loading='lazy' alt="OPEL CAR" />
-                  </div>
-                  <div className="car p-1">
-                    <img src={images.opel7} className='w-100 rounded-4 ' loading='lazy' alt="OPEL CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"orange"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.opel2} className='w-100 rounded-4 ' loading='lazy' alt="OPEL CAR" />
                   </div>
                 </div>
                 <div data-aos='fade-down'  data-aos-duration='1000'   className=" col-lg-3 col-6">
-                  <div className="car p-1">
-                    <img src={images.opel8} className='w-100 rounded-4 ' loading='lazy' alt="OPEL CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"orange"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.opel6} className='w-100 rounded-4 ' loading='lazy' alt="OPEL CAR" />
                   </div>
-                  <div className="car p-1">
-                    <img src={images.opel9} className='w-100 rounded-4 ' loading='lazy' alt="OPEL CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"orange"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.opel7} className='w-100 rounded-4 ' loading='lazy' alt="OPEL CAR" />
+                  </div>
+                </div>
+                <div data-aos='fade-down'  data-aos-duration='1000'   className=" col-lg-3 col-6">
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"orange"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.opel8} className='w-100 rounded-4 ' loading='lazy' alt="OPEL CAR" />
+                  </div>
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"orange"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.opel9} className='w-100 rounded-4 ' loading='lazy' alt="OPEL CAR" />
                   </div>
                 </div>
                 <div data-aos='fade-left'  data-aos-duration='1000'   className=" col-lg-3 col-6">
-                  <div className="car p-1">
-                    <img src={images.orangeBmw01} className='w-100 rounded-4 ' loading='lazy' alt="BMW CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"orange"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.orangeBmw01} className='w-100 rounded-4 ' loading='lazy' alt="BMW CAR" />
                   </div>
-                  <div className="car p-1">
-                    <img src={images.orangeBmw02} className='w-100 rounded-4 ' loading='lazy' alt="BMW CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"orange"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.orangeBmw02} className='w-100 rounded-4 ' loading='lazy' alt="BMW CAR" />
                   </div>
                 </div>
                 <div data-aos='fade-right'  data-aos-duration='1000'   className=" col-lg-3 col-6">
-                  <div className="car p-1">
-                    <img src={images.orangeBmw03} className='w-100 rounded-4 ' loading='lazy' alt="BMW CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"orange"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.orangeBmw03} className='w-100 rounded-4 ' loading='lazy' alt="BMW CAR" />
                   </div>
-                  <div className="car p-1">
-                    <img src={images.orangeBmw04} className='w-100 rounded-4 ' loading='lazy' alt="BMW CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"orange"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.orangeBmw04} className='w-100 rounded-4 ' loading='lazy' alt="BMW CAR" />
                   </div>
                 </div>
 
 
 
                 <div data-aos='fade-right' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
-                  <div className="car p-1">
-                    <img src={images.hyndai} className='w-100 rounded-4 ' loading='lazy' alt="HYNDAI CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"orange"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.hyndai} className='w-100 rounded-4 ' loading='lazy' alt="HYNDAI CAR" />
                   </div>
-                  <div className="car p-1">
-                    <img src={images.opel3} className='w-100 rounded-4 ' loading='lazy' alt="OPEL CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"orange"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.opel3} className='w-100 rounded-4 ' loading='lazy' alt="OPEL CAR" />
                   </div>
                 </div>
 
                 <div data-aos='fade-up' data-aos-duration='1000'    className=" col-lg-3 col-6">
-                  <div className="car pt-1 h-100">
-                    <img src={images.vw} className='w-100 rounded-4 h-100 ' loading='lazy' alt="vw CAR" />
+                  <div className="car pt-1 h-100 d-flex align-items-stretch">{loading && <MoonLoader size={100} color={"orange"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.vw} className='w-100 rounded-4 h-100 ' loading='lazy' alt="vw CAR" />
                   </div>
                 </div>
 
@@ -295,74 +303,74 @@ borderRadius: '0',
               <div className="row gy-2 ">
 
                 <div data-aos='fade-left' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
-                  <div className="car p-1">
-                    <img src={images.blueBmw5} className='w-100 rounded-4 ' loading='lazy' alt="blue BMW CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"blue"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.blueBmw5} className='w-100 rounded-4 ' loading='lazy' alt="blue BMW CAR" />
                   </div>
-                  <div className="car p-1">
-                    <img src={images.blueBmw2} className='w-100 rounded-4 ' loading='lazy' alt="blue BMW CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"blue"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.blueBmw2} className='w-100 rounded-4 ' loading='lazy' alt="blue BMW CAR" />
                   </div>
                 </div>
                 <div data-aos='fade-right' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
-                  <div className="car p-1">
-                    <img src={images.blueBmw1} className='w-100 rounded-4 ' loading='lazy' alt="blue BMW CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"blue"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.blueBmw1} className='w-100 rounded-4 ' loading='lazy' alt="blue BMW CAR" />
                   </div>
-                  <div className="car p-1">
-                    <img src={images.blueBmw4} className='w-100 rounded-4 ' loading='lazy' alt="blue BMW CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"blue"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.blueBmw4} className='w-100 rounded-4 ' loading='lazy' alt="blue BMW CAR" />
                   </div>
                 </div>
 
                 <div data-aos='fade-left' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
-                  <div className="car p-1">
-                    <img src={images.Seat} className='w-100 rounded-4 ' loading='lazy' alt="SEAT CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"blue"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.Seat} className='w-100 rounded-4 ' loading='lazy' alt="SEAT CAR" />
                   </div>
-                  <div className="car p-1">
-                    <img src={images.Seat2} className='w-100 rounded-4 ' loading='lazy' alt="seat CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"blue"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.Seat2} className='w-100 rounded-4 ' loading='lazy' alt="seat CAR" />
                   </div>
                 </div>
                 <div data-aos='fade-right' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
-                  <div className="car p-1">
-                    <img src={images.Seat3} className='w-100 rounded-4 ' loading='lazy' alt="SEAT CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"blue"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.Seat3} className='w-100 rounded-4 ' loading='lazy' alt="SEAT CAR" />
                   </div>
-                  <div className="car p-1">
-                    <img src={images.Seat4} className='w-100 rounded-4 ' loading='lazy' alt="seat CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"blue"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.Seat4} className='w-100 rounded-4 ' loading='lazy' alt="seat CAR" />
                   </div>
                 </div>
 
             
 
                   <div data-aos='fade-left' data-aos-duration='1000'   className=" col-lg-3 col-6">
-                    <div className="car p-1">
-                      <img src={images.Hyndai} className='w-100 rounded-4 ' loading='lazy' alt="HYNDAI CAR" />
+                    <div className="car p-1">{loading && <MoonLoader size={100} color={"blue"} loading={loading} />}
+                      <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.Hyndai} className='w-100 rounded-4 ' loading='lazy' alt="HYNDAI CAR" />
                     </div>
-                    <div className="car p-1">
-                      <img src={images.honda} className='w-100 rounded-4 ' loading='lazy' alt="HONDA CAR" />
+                    <div className="car p-1">{loading && <MoonLoader size={100} color={"blue"} loading={loading} />}
+                      <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.honda} className='w-100 rounded-4 ' loading='lazy' alt="HONDA CAR" />
                     </div>
 
 
                   </div>
                   <div data-aos='fade-right' data-aos-duration='1000'   className=" col-lg-3 col-6">
-                    <div className="car p-1">
-                      <img src={images.Hyndai1} className='w-100 rounded-4 ' loading='lazy' alt="HYNDAI CAR" />
+                    <div className="car p-1">{loading && <MoonLoader size={100} color={"blue"} loading={loading} />}
+                      <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.Hyndai1} className='w-100 rounded-4 ' loading='lazy' alt="HYNDAI CAR" />
                     </div>
-                    <div className="car p-1">
-                      <img src={images.honda01} className='w-100 rounded-4 ' loading='lazy' alt="HONDA CAR" />
+                    <div className="car p-1">{loading && <MoonLoader size={100} color={"blue"} loading={loading} />}
+                      <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.honda01} className='w-100 rounded-4 ' loading='lazy' alt="HONDA CAR" />
                     </div>
 
 
                   </div>
                 <div data-aos='fade-down'  data-aos-duration='1000'   className=" col-lg-3 col-6">
-                  <div className="car pt-1 ">
-                    <img src={images.vrs} className='w-100 rounded-4 ' loading='lazy' alt="SKODA VRS CAR" />
+                  <div className="car pt-1 ">{loading && <MoonLoader size={100} color={"blue"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.vrs} className='w-100 rounded-4 ' loading='lazy' alt="SKODA VRS CAR" />
                   </div>
                
                 </div>
 
                 <div data-aos='fade-UP' data-aos-duration='1000'   className=" col-lg-3 col-6">
-                    <div className="car p-1">
-                      <img src={images.vrs1} className='w-100 rounded-4 ' loading='lazy' alt="VRS CAR" />
+                    <div className="car p-1">{loading && <MoonLoader size={100} color={"blue"} loading={loading} />}
+                      <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.vrs1} className='w-100 rounded-4 ' loading='lazy' alt="VRS CAR" />
                     </div>
-                    <div className="car p-1">
-                      <img src={images.vrs2} className='w-100 rounded-4 ' loading='lazy' alt="VRS CAR" />
+                    <div className="car p-1">{loading && <MoonLoader size={100} color={"blue"} loading={loading} />}
+                      <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.vrs2} className='w-100 rounded-4 ' loading='lazy' alt="VRS CAR" />
                     </div>
 
 
@@ -380,35 +388,35 @@ borderRadius: '0',
               <div className="row gy-2 ">
 
                 <div data-aos='fade-right' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
-                  <div className="car p-1">
-                    <img src={images.MIT1} className='w-100 rounded-4 ' loading='lazy' alt="MITSUBISHI CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"yellow"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.MIT1} className='w-100 rounded-4 ' loading='lazy' alt="MITSUBISHI CAR" />
                   </div>
-                  <div className="car p-1">
-                    <img src={images.MIT2} className='w-100 rounded-4 ' loading='lazy' alt="MITSUBISHI CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"yellow"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.MIT2} className='w-100 rounded-4 ' loading='lazy' alt="MITSUBISHI CAR" />
                   </div>
                 </div>
 
                 <div data-aos='fade-up' data-aos-duration='1000'    className=" col-lg-3 col-6">
-                  <div className="car pt-1 h-100">
-                    <img src={images.MIT3} className='w-100 rounded-4 h-100 ' loading='lazy' alt="MITSUBISHI CAR" />
+                  <div className="car pt-1 h-100 d-flex align-items-stretch">{loading && <MoonLoader size={100} color={"yellow"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.MIT3} className='w-100 rounded-4 h-100 ' loading='lazy' alt="MITSUBISHI CAR" />
                   </div>
                 </div>
 
                 <div data-aos='fade-down'  data-aos-duration='1000'   className=" col-lg-3 col-6">
-                  <div className="car p-1">
-                    <img src={images.vw4} className='w-100 rounded-4 ' loading='lazy' alt="vw CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"yellow"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.vw4} className='w-100 rounded-4 ' loading='lazy' alt="vw CAR" />
                   </div>
-                  <div className="car p-1">
-                    <img src={images.vw5} className='w-100 rounded-4 ' loading='lazy' alt="vw CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"yellow"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.vw5} className='w-100 rounded-4 ' loading='lazy' alt="vw CAR" />
                   </div>
                 </div>
 
                 <div data-aos='fade-left' data-aos-duration='1000'   className=" col-lg-3 col-6">
-                  <div className="car p-1">
-                    <img src={images.yellowBmw} className='w-100 rounded-4 ' loading='lazy' alt="yellowBmw CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"yellow"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.yellowBmw} className='w-100 rounded-4 ' loading='lazy' alt="yellowBmw CAR" />
                   </div>
-                  <div className="car p-1">
-                    <img src={images.yellowBmw2} className='w-100 rounded-4 ' loading='lazy' alt="yellowBmw CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"yellow"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.yellowBmw2} className='w-100 rounded-4 ' loading='lazy' alt="yellowBmw CAR" />
                   </div>
 
 
@@ -425,73 +433,73 @@ borderRadius: '0',
               <div className="row gy-2 ">
 
                 <div data-aos='fade-down' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
-                  <div className="car p-1">
-                    <img src={images.ibiza1} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.ibiza1} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
                   </div>
-                  <div className="car p-1">
-                    <img src={images.ibiza2} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
-                  </div>
-                </div>
-
-                <div data-aos='fade-right' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
-                  <div className="car p-1">
-                    <img src={images.ibiza6} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
-                  </div>
-                  <div className="car p-1">
-                    <img src={images.ibiza4} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
-                  </div>
-                </div>
-                <div data-aos='fade-right' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
-                  <div className="car p-1">
-                    <img src={images.ibiza5} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
-                  </div>
-                  <div className="car p-1">
-                    <img src={images.ibiza3} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.ibiza2} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
                   </div>
                 </div>
 
                 <div data-aos='fade-right' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
-                  <div className="car p-1">
-                    <img src={images.ibiza7} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.ibiza6} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
                   </div>
-                  <div className="car p-1">
-                    <img src={images.ibiza6} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.ibiza4} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
+                  </div>
+                </div>
+                <div data-aos='fade-right' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.ibiza5} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
+                  </div>
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.ibiza3} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
                   </div>
                 </div>
 
                 <div data-aos='fade-right' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
-                  <div className="car p-1">
-                    <img src={images.ibiza9} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.ibiza7} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
                   </div>
-                  <div className="car p-1">
-                    <img src={images.ibiza10} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.ibiza6} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
+                  </div>
+                </div>
+
+                <div data-aos='fade-right' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.ibiza9} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
+                  </div>
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.ibiza10} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
                   </div>
                 </div>
 
                 <div data-aos='fade-left' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
-                  <div className="car p-1">
-                    <img src={images.ibiza11} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.ibiza11} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
                   </div>
-                  <div className="car p-1">
-                    <img src={images.purpleVw} className='w-100 rounded-4 ' loading='lazy' alt="opel CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.purpleVw} className='w-100 rounded-4 ' loading='lazy' alt="opel CAR" />
                   </div>
                 </div>
 
                 <div data-aos='fade-up' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
-                  <div className="car p-1">
-                    <img src={images.opel01} className='w-100 rounded-4 ' loading='lazy' alt="OPEL CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.opel01} className='w-100 rounded-4 ' loading='lazy' alt="OPEL CAR" />
                   </div>
-                  <div className="car p-1">
-                    <img src={images.opel02} className='w-100 rounded-4 ' loading='lazy' alt="VW CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.opel02} className='w-100 rounded-4 ' loading='lazy' alt="VW CAR" />
                   </div>
                 </div>
 
                 <div data-aos='fade-down' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
-                  <div className="car p-1">
-                    <img src={images.opel03} className='w-100 rounded-4 ' loading='lazy' alt="OPEL CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.opel03} className='w-100 rounded-4 ' loading='lazy' alt="OPEL CAR" />
                   </div>
-                  <div className="car p-1">
-                    <img src={images.opel01} className='w-100 rounded-4 ' loading='lazy' alt="VW CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.opel01} className='w-100 rounded-4 ' loading='lazy' alt="VW CAR" />
                   </div>
                 </div>
 
@@ -508,38 +516,38 @@ borderRadius: '0',
               <div className="row gy-2 ">
 
                 <div data-aos='fade-right' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
-                  <div className="car p-1">
-                    <img src={images.whiteVw01} className='w-100 rounded-4 ' loading='lazy' alt="VW CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"white"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.whiteVw01} className='w-100 rounded-4 ' loading='lazy' alt="VW CAR" />
                   </div>
-                  <div className="car p-1">
-                    <img src={images.whiteVw02} className='w-100 rounded-4 ' loading='lazy' alt="VW CAR" />
-                  </div>
-                </div>
-
-                <div data-aos='fade-right' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
-                  <div className="car p-1">
-                    <img src={images.whiteSeat01} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
-                  </div>
-                  <div className="car p-1">
-                    <img src={images.whiteSeat02} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"white"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.whiteVw02} className='w-100 rounded-4 ' loading='lazy' alt="VW CAR" />
                   </div>
                 </div>
 
                 <div data-aos='fade-right' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
-                  <div className="car p-1">
-                    <img src={images.whiteBmw} className='w-100 rounded-4 ' loading='lazy' alt="BMW CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"white"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.whiteSeat01} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
                   </div>
-                  <div className="car p-1">
-                    <img src={images.HYNDAI} className='w-100 rounded-4 ' loading='lazy' alt="HYNDAI CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"white"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.whiteSeat02} className='w-100 rounded-4 ' loading='lazy' alt="SEAT IBIZA CAR" />
                   </div>
                 </div>
 
                 <div data-aos='fade-right' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
-                  <div className="car p-1">
-                    <img src={images.Dayoo} className='w-100 rounded-4 ' loading='lazy' alt="CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"white"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.whiteBmw} className='w-100 rounded-4 ' loading='lazy' alt="BMW CAR" />
                   </div>
-                  <div className="car p-1">
-                    <img src={images.toyota} className='w-100 rounded-4 ' loading='lazy' alt="TOYOTA CAR" />
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"white"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.HYNDAI} className='w-100 rounded-4 ' loading='lazy' alt="HYNDAI CAR" />
+                  </div>
+                </div>
+
+                <div data-aos='fade-right' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"white"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.Dayoo} className='w-100 rounded-4 ' loading='lazy' alt="CAR" />
+                  </div>
+                  <div className="car p-1">{loading && <MoonLoader size={100} color={"white"} loading={loading} />}
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.toyota} className='w-100 rounded-4 ' loading='lazy' alt="TOYOTA CAR" />
                   </div>
                 </div>
 
