@@ -53,7 +53,8 @@ borderRadius: '0',
               <button className="nav-link rounded-circle  active " id="pills-purple-tab" data-bs-toggle="pill" data-bs-target="#pills-purple" type="button" role="tab" aria-controls="pills-purple" aria-selected="false"><i className=" fa-solid text-purple fa-droplet fa-2x"></i></button>
             </li>
             <li className="nav-item" role="presentation">
-              <button className="nav-link  rounded-circle " id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i className="text-main fa-solid fa-droplet fa-2x"></i></button>
+              <button className="nav-link  rounded-circle " id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i className="text-main fa-solid fa-droplet fa-2x"></i>
+              </button>
             </li>
             <li className="nav-item" role="presentation">
               <button className="nav-link rounded-circle  mx-2 " id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i className=" fa-solid text-orange fa-droplet fa-2x"></i></button>
@@ -89,10 +90,13 @@ borderRadius: '0',
 
                 <div  data-aos-duration='1000' data-aos='fade-right' className=" col-lg-3 col-6 ">
                   <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
-                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.BMW3} className='w-100 rounded-4 '  alt="BMW CAR" />
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad} 
+                      effect="blur"   threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722965774/sdpbccv8x3hnqiyjkjgk.webp' className='w-100 rounded-4 '  alt="BMW CAR" />
                   </div>
                   <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
-                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.MOTO} className='w-100 rounded-4 mt-2'  alt="BMW RACE" />
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad} 
+                     afterLoad={handleonLoad}   effect="blur"   threshold={1500} 
+                     src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723142614/vbdiwadjq6xaalpp8bl2.webp' className='w-100 rounded-4 mt-2'  alt="BMW RACE" />
                   </div>
                 
                  
@@ -100,7 +104,8 @@ borderRadius: '0',
 
                 <div  data-aos-duration='1000'   data-aos='fade-up' className=" col-lg-3 col-6">
                   <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
-                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.BMW1} className='w-100 rounded-4 '  alt="BMW CAR" />
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   
+                    effect="blur"   threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722965568/pkigrno2jyl4prvknefh.webp'className='w-100 rounded-4 '  alt="BMW CAR" />
                   </div>
 
                   
@@ -108,16 +113,21 @@ borderRadius: '0',
 
                 <div  data-aos-duration='1000'  data-aos='fade-down' className=" col-lg-3 col-6">
                   <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
-                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.porscha} className='w-100 rounded-4 '  alt="Porscha CAR" />
+                    <LazyLoadImage  
+                    beforeLoad={handleBeforeLoad}
+                      afterLoad={handleonLoad}  
+                       effect="blur"   
+                       threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722965885/as4sx6tsqqejhexqitpq.webp' className='w-100 rounded-4 '  alt="Porscha CAR" />
                   </div>
                 </div>
 
                 <div  data-aos-duration='1000'  data-aos='fade-left' className=" col-lg-3 col-6">
                   <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
-                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.seat} className='w-100 rounded-4 '  alt="seat CAR" />
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"  
+                     threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722965885/zwtrmx6oywwxlcmmxp62.webp' className='w-100 rounded-4 '  alt="seat CAR" />
                   </div>
                   <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
-                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.khonfsa} className='w-100 rounded-4 '  alt="OLD VW CAR" />
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723142648/mm3i28az8smpbd4lmooz.webp' className='w-100 rounded-4 '  alt="OLD VW CAR" />
                   </div>
 
 
@@ -129,10 +139,12 @@ borderRadius: '0',
 
                 <div  data-aos-duration='1000' data-aos='fade-right' className=" col-lg-3 col-6 ">
                   <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
-                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.E92} className='w-100 rounded-4 '  alt="BMW CAR" />
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   
+                    effect="blur"   threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722965790/zfi6loysjk9jkebtvobp.webp' className='w-100 rounded-4 '  alt="BMW CAR" />
                   </div>
                   <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
-                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.E921} className='w-100 rounded-4  '  alt="BMW CAR" />
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur" 
+                      threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722965786/bjelm5w9k4zyfkmiglyi.webp'className='w-100 rounded-4  '  alt="BMW CAR" />
                   </div>
                 
                  
@@ -140,10 +152,11 @@ borderRadius: '0',
 
                 <div  data-aos-duration='1000'   data-aos='fade-up' className=" col-lg-3 col-6">
                   <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
-                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.BMW4} className='w-100 rounded-4 '  alt="BMW CAR" />
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   
+                    effect="blur"   threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722965791/ueknwrcaf7468eivh5sn.webp'className='w-100 rounded-4 '  alt="BMW CAR" />
                   </div>
                   <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
-                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.E922} className='w-100 rounded-4 '  alt="BMW CAR" />
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722965778/j4wxc2sv5u5toknl6exv.webp' className='w-100 rounded-4 '  alt="BMW CAR" />
                   </div>
 
                   
@@ -151,19 +164,23 @@ borderRadius: '0',
 
                 <div  data-aos-duration='1000'  data-aos='fade-down' className=" col-lg-3 col-6">
                   <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
-                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.honda1} className='w-100 rounded-4 '  alt="HONDA CAR" />
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad} 
+                      effect="blur"   threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723142627/utk8wisbsg8kbh4h2xav.webp' className='w-100 rounded-4 '  alt="HONDA CAR" />
                   </div>
                   <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
-                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.honda2} className='w-100 rounded-4 '  alt="HONDA CAR" />
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}  
+                     effect="blur"   threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723142625/b85luhdkv4szdv3tjtxr.webp' className='w-100 rounded-4 '  alt="HONDA CAR" />
                   </div>
                 </div>
 
                 <div  data-aos-duration='1000'  data-aos='fade-left' className=" col-lg-3 col-6">
                   <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
-                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.honda3} className='w-100 rounded-4 '  alt="HONDA CAR" />
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad} 
+                     afterLoad={handleonLoad}   effect="blur"   threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723142624/ezttcoinq123dnaaew5r.webp' className='w-100 rounded-4 '  alt="HONDA CAR" />
                   </div>
                   <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
-                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.puma} className='w-100 rounded-4 '  alt="LANCER  CAR" />
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur" 
+                      threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723142630/u6badte6actyzlxvhgor.webp' className='w-100 rounded-4 '  alt="LANCER  CAR" />
                   </div>
 
 
@@ -175,10 +192,12 @@ borderRadius: '0',
 
 <div  data-aos-duration='1000' data-aos='fade-right' className=" col-lg-3 col-6 ">
   <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
-  <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.skoda} className='w-100 rounded-4 '  alt="SKODA CAR" />
+  <LazyLoadImage  beforeLoad={handleBeforeLoad} 
+   afterLoad={handleonLoad}   effect="blur"   threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722965890/zk2mnqumovhzp3rr4pjg.webp' className='w-100 rounded-4 '  alt="SKODA CAR" />
   </div>
   <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
-  <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.skodaa7} className='w-100 rounded-4 '  alt="SKODA CAR" />
+  <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur" 
+    threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723142644/teahlmyq1xzmuxmaq5g2.webp' className='w-100 rounded-4 '  alt="SKODA CAR" />
   </div>
   
 
@@ -187,10 +206,12 @@ borderRadius: '0',
 
 <div  data-aos-duration='1000'   data-aos='fade-up' className=" col-lg-3 col-6">
   <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
-    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.skoda1} className='w-100 rounded-4 '  alt="skoda CAR" />
+    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}  
+    effect="blur"   threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723142643/qowwd00mrzolbwqigqcv.webp' className='w-100 rounded-4 '  alt="skoda CAR" />
   </div>
   <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
-    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.skoda2} className='w-100 rounded-4 '  alt="skoda CAR" />
+    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad} 
+      effect="blur"   threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723142641/onenrzptw4a8qgyuwgg0.webp' className='w-100 rounded-4 '  alt="skoda CAR" />
   </div>
 
   
@@ -198,19 +219,25 @@ borderRadius: '0',
 
 <div  data-aos-duration='1000'  data-aos='fade-down' className=" col-lg-3 col-6">
   <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
-    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.insgnia1} className='w-100 rounded-4 '  alt="OPEL CAR" />
+    <LazyLoadImage  beforeLoad={handleBeforeLoad} 
+     afterLoad={handleonLoad}   effect="blur" 
+       threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723142634/ttmzqvfklerptddrhzau.webp' className='w-100 rounded-4 '  alt="OPEL CAR" />
   </div>
   <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
-    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.insgnia2} className='w-100 rounded-4 '  alt="OPEL CAR" />
+    <LazyLoadImage  beforeLoad={handleBeforeLoad} 
+     afterLoad={handleonLoad}   effect="blur"   
+     threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723142634/j1ovhjq5bvhuoxlwn5cq.webp' className='w-100 rounded-4 '  alt="OPEL CAR" />
   </div>
 </div>
 
 <div  data-aos-duration='1000'  data-aos='fade-left' className=" col-lg-3 col-6">
   <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
-    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.insgnia3} className='w-100 rounded-4 '  alt="OPEL CAR" />
+    <LazyLoadImage  beforeLoad={handleBeforeLoad}  
+    afterLoad={handleonLoad}   effect="blur"   threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723142634/asfvg01rty5tgjbsqtk5.webp' className='w-100 rounded-4 '  alt="OPEL CAR" />
   </div>
   <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
-    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.insgnia4} className='w-100 rounded-4 '  alt="OPEL  CAR" />
+    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad} 
+      effect="blur"   threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723142638/akjnza7qqadthui4ppqk.webp ' className='w-100 rounded-4 '  alt="OPEL  CAR" />
   </div>
 
 
@@ -442,75 +469,83 @@ borderRadius: '0',
 
                 <div data-aos='fade-down' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
                   <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
-                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.ibiza1} className='w-100 rounded-4 '  alt="SEAT IBIZA CAR" />
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"
+                       threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722976696/npqcz18bjmjk5mfuqxmu.webp' className='w-100 rounded-4 '  alt="SEAT IBIZA CAR" />
                   </div>
                   <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
-                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.ibiza2} className='w-100 rounded-4 '  alt="SEAT IBIZA CAR" />
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}
+                      afterLoad={handleonLoad}   effect="blur"   threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722976705/g4o2ys2vpftsifzt4oju.webp' className='w-100 rounded-4 '  alt="SEAT IBIZA CAR" />
                   </div>
                 </div>
 
                 <div data-aos='fade-right' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
                   <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
-                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.ibiza6} className='w-100 rounded-4 '  alt="SEAT IBIZA CAR" />
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}  
+                     effect="blur"   threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722976699/espbhlclwapi7la4cwwy.webp' className='w-100 rounded-4 '  alt="SEAT IBIZA CAR" />
                   </div>
                   <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
-                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.ibiza4} className='w-100 rounded-4 '  alt="SEAT IBIZA CAR" />
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad} 
+                     afterLoad={handleonLoad}   effect="blur"   threshold={1500} 
+                     src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722976696/qles0uyglbaqgmneve8f.webp' className='w-100 rounded-4 '  alt="SEAT IBIZA CAR" />
                   </div>
                 </div>
                 <div data-aos='fade-right' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
                   <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
-                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.ibiza5} className='w-100 rounded-4 '  alt="SEAT IBIZA CAR" />
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad} 
+                     afterLoad={handleonLoad}   effect="blur"  
+                      threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722976704/mzfnvxydgs2vzlhrfn2g.webp' className='w-100 rounded-4 '  alt="SEAT IBIZA CAR" />
                   </div>
                   <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
-                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.ibiza3} className='w-100 rounded-4 '  alt="SEAT IBIZA CAR" />
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad} 
+                      effect="blur"   threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722976695/zrr6eraqguaxnudqlnz5.webp' className='w-100 rounded-4 '  alt="SEAT IBIZA CAR" />
                   </div>
                 </div>
 
                 <div data-aos='fade-right' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
                   <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
-                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.ibiza7} className='w-100 rounded-4 '  alt="SEAT IBIZA CAR" />
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  
+                    afterLoad={handleonLoad}   effect="blur"   threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722976696/ynai2kgipyhm45vdwjnb.webp'
+                    className='w-100 rounded-4 '  alt="SEAT IBIZA CAR" />
                   </div>
                   <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
-                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.ibiza6} className='w-100 rounded-4 '  alt="SEAT IBIZA CAR" />
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad} 
+                     afterLoad={handleonLoad}   effect="blur"   threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722976705/g4o2ys2vpftsifzt4oju.webp' className='w-100 rounded-4 '  alt="SEAT IBIZA CAR" />
                   </div>
                 </div>
 
-                <div data-aos='fade-right' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
-                  <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
-                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.ibiza9} className='w-100 rounded-4 '  alt="SEAT IBIZA CAR" />
-                  </div>
-                  <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
-                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.ibiza10} className='w-100 rounded-4 '  alt="SEAT IBIZA CAR" />
-                  </div>
-                </div>
+              
 
-                <div data-aos='fade-left' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
-                  <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
-                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.ibiza11} className='w-100 rounded-4 '  alt="SEAT IBIZA CAR" />
-                  </div>
-                  <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
-                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.purpleVw} className='w-100 rounded-4 '  alt="opel CAR" />
-                  </div>
-                </div>
+           
 
                 <div data-aos='fade-up' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
                   <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
                     <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.opel01} className='w-100 rounded-4 '  alt="OPEL CAR" />
                   </div>
                   <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
-                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.opel02} className='w-100 rounded-4 '  alt="VW CAR" />
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur" 
+                      threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722976710/ppdqvwfvsuxoysydbxep.webp'
+                       className='w-100 rounded-4 '  alt="Proton CAR" />
                   </div>
                 </div>
 
                 <div data-aos='fade-down' data-aos-duration='1000'  className=" col-lg-3 col-6 ">
                   <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
-                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.opel03} className='w-100 rounded-4 '  alt="OPEL CAR" />
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   
+                    threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722976710/tbmfosxjia7a9m2lfegt.webp'
+                     className='w-100 rounded-4 '  alt="Proton CAR" />
                   </div>
                   <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
-                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src={images.opel01} className='w-100 rounded-4 '  alt="VW CAR" />
+                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}  
+                     effect="blur"   threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722976710/kb5z4m03uvtjkk2730th.webp'className='w-100 rounded-4 '  alt="proton CAR" />
                   </div>
                 </div>
-
+                <div data-aos='fade-left' data-aos-duration='1000'  className="  col-6 ">
+                
+                <div className="car p-1">{loading && <MoonLoader size={100} color={"Purple"} loading={loading} />}
+                  <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}  
+                   effect="blur"   threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722976714/gzp7emiype2tl3zpfimr.webp' className='w-100 rounded-4 '  alt="vw CAR" />
+                </div>
+              </div>
               
 
               </div>
