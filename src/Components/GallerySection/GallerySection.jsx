@@ -293,8 +293,8 @@ export default function GallerySection() {
 
 <div className="d-flex justify-content-center">
 
-<Link to='/gallery'  className={`my-2 fs-3 text-main readMore oxygen-700 m-auto text-decoration-none `} >
-      <i className="fa-solid fa-angles-right text-main"></i> See More
+<Link to='/gallery'  className={`  mt-5 fs-1 readMore oxygen-700 m-auto text-decoration-none `} >
+<i className="fa-solid fa-gas-pump"></i> See More <i className="fa-solid fa-gas-pump"></i> 
     </Link>      
 </div>
 

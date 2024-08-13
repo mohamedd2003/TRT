@@ -19,7 +19,7 @@ export default function AutovroomEvent() {
        
        <header className={`  ${styles.backGround} text-center `}>
        <div   className={`d-flex justify-content-center align-items-center  ${styles.header}`}>
-            <h1  data-aos='fade-down' data-aos-duration='1000'  className='  text-white text-decoration-line-through  oswald-titles main-font'><span className='text-main '>A</span>UTOVROOM EVENT</h1>
+            <h1    className='  text-white text-decoration-line-through  oswald-titles main-font'><span className='text-main '>A</span>UTOVROOM EVENT</h1>
             </div>
     
         

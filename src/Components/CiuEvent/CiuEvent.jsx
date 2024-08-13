@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from './ElshroukEvent.module.css'
+import styles from './CiuEvent.module.css'
 import Marquee from '../slider/slider'
-export default function ElshroukEvent() {
+export default function CiuEvent() {
     const lineStyle={
         background : 'linear-gradient(to right, rgb(39, 1, 1), #733095)',
         width: '80px',
@@ -17,7 +17,7 @@ export default function ElshroukEvent() {
     <>
       <header className={`  ${styles.backGround} text-center `}>
        <div   className={`d-flex justify-content-center align-items-center  ${styles.header}`}>
-            <h1    className='  text-white text-decoration-line-through  oswald-titles main-font'><span className='text-main '>E</span>LSHROUK EVENT</h1>
+            <h1    className='  text-white text-decoration-line-through  oswald-titles main-font'><span className='text-main '>C</span>IU EVENT</h1>
             </div>
     
         
@@ -32,22 +32,22 @@ export default function ElshroukEvent() {
        <div className="container p-4 shadowLg rounded-4 my-4">
         <div className="row gy-3 ">
          
-          <div className="col-md-6 ">
+        
+          <div className="col-6 ">
             <div >
-              <img data-aos='fade-right' data-aos-duration='1000' src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722980043/n9ikjmnpaptxgxwlveco.jpg'  alt='Memories' className='w-100 rounded-4 py-2 ' />
-              <img data-aos='fade-left' data-aos-duration='1000' src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722980046/u5faejcrmfkwsotdtmos.jpg'  alt='BLue BMW Car' className='w-100 rounded-4  ' />
-
+            <img data-aos='fade-right' data-aos-duration='1000' src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722980347/vzfcgbuoa7newtc20tcq.webp'  alt='Memories' className='w-100 rounded-4 py-2 ' />
             </div>
           </div>
-          <div className="col-md-6 ">
+          <div className="col-6 ">
             <div >
-            <img data-aos='fade-right' data-aos-duration='1000' src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722980044/jrsdswyrbmgtfg8hbf8g.jpg'  alt='Memories' className='w-100 rounded-4 py-2 ' />
-            <img data-aos='fade-left' data-aos-duration='1000' src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722980047/tekyfmsd34skfgguijeb.jpg'  alt='BLue BMW Car' className='w-100 rounded-4  ' />
+            <img data-aos='fade-left' data-aos-duration='1000' src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722980347/oqaywobv5ia6ie4v9q6t.webp'  alt='BLue BMW Car' className='w-100 rounded-4  ' />
             </div>
-            
           </div>
-       
-         
+          <div className="col-12 ">
+            <div >
+            <img data-aos='fade-left' data-aos-duration='1000' src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722980347/mwl8aoodglwtcc742y7k.webp'  alt='BLue BMW Car' className='w-100 rounded-4  ' />
+            </div>
+          </div>
         </div>
        </div>
        </section>

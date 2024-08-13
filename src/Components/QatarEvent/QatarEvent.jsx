@@ -16,7 +16,8 @@ export default function QatarEvent() {
            }
           return (
            <>
-           
+
+
            <header className={`  ${styles.backGround} text-center `}>
 
             
@@ -51,7 +52,7 @@ export default function QatarEvent() {
           </div>
           <div className="col-md-4 col-12">
             <div >
-              <img src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722976872/we6w8w4ockbeox52dlco.webp' alt='Ford Qatar Event'  className='w-100 rounded-4 ' />
+              <img src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722976872/we6w8w4ockbeox52dlco.webp' alt='Ford Qatar Event'  className='w-100 rounded-4  ' />
         
             </div>
           </div>
@@ -64,7 +65,7 @@ export default function QatarEvent() {
           </div>
           <div className=" col-6">
             <div >
-              <img src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722976870/chhsqjylg0abyk94qcpr.webp'  alt='Ford Qatar Event' className='w-100  rounded-4 ' />
+              <img src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723573041/sxroiugawmnmczt0d5rj.webp '  alt='Ford Qatar Event' className='w-100  rounded-4 ' />
             
             </div>
           </div>

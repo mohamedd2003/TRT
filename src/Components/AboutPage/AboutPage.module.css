@@ -1,0 +1,38 @@
+.header{
+    min-height: 79vh;
+    background-color: rgba(0, 0, 0, 0.5);
+ 
+}
+.backGround{
+    background-image: url("https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722966851/eaaddurxrz75ek5dtgg8.webp");
+    background-position: center center;
+    background-size: cover ;
+    position: relative;
+} 
+
+.logo{
+    width: 100px;
+    height: 100px;
+}
+.swiper-card {
+    width: 150px !important;
+    height: 150px !important;
+  }
+  .overlay{
+    transition: all 1s;
+    top: 100%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    opacity: 0;
+  }
+
+  .owner:hover .overlay{
+   top: 0;
+   opacity: 1;
+  }
+
+
+  

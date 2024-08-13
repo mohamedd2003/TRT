@@ -27,7 +27,7 @@ export default function Navbar() {
         <div className="container-fluid py-1 ">
           <img src={images.ministry} alt="Ministry Logo"   width={100} height={100} />
 
-          <img src={images.trt} alt="TRT-Log" className='m-auto' width={180} />
+        <Link to={'/'}>  <img src={images.trt} alt="TRT-Log" className='m-auto' width={180} /></Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -51,10 +51,13 @@ export default function Navbar() {
                 <NavLink className="nav-link text-center main-font " to="/autovroomEvent">Autovroom Event</NavLink>
               </li>
               <li className="nav-item mt-3 ">
-                <NavLink className="nav-link text-center main-font" to="/QatarEvent">Ford QatarEvent</NavLink>
+                <NavLink className="nav-link text-center main-font" to="/QatarEvent">Ford Qatar Event</NavLink>
               </li>
               <li className="nav-item mt-3 ">
                 <NavLink className="nav-link text-center main-font" to="/ElshroukEvent">ElShrouk Event</NavLink>
+              </li>
+              <li className="nav-item mt-3 ">
+                <NavLink className="nav-link text-center main-font" to="/CiuEvent">Ciu Event</NavLink>
               </li>
              
             
@@ -63,9 +66,9 @@ export default function Navbar() {
               <li className="nav-item mt-3">
                 <NavLink className="nav-link text-center main-font" to="contact">Contact</NavLink>
               </li>
-              <li className="nav-item mt-4 text-center main-font">
-                <Link className="rounded-pill btn btn-outline-danger mx-3" to="">Get Ticket</Link>
-              </li>
+              {/* <li className="nav-item mt-4 text-center main-font">
+                <Link className="btn btn-outline-danger text-white main-font rounded-pill mx-3" to="">Get Ticket</Link>
+              </li> */}
             </ul>
           </div>
         </div>

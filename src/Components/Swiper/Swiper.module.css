@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+header{
+    height: 80vh;
+   position: relative;
+ 
+}
+.overlay{
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+  }
+
+
+
+  .lol {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 110px;
+    line-height: 80px;
+    color: whitesmoke;
+    
+}
+
+  @media screen and (max-width:576px) {
+    .lol {
+        font-size: 80px;
+      }
+    
+    
+  }
+
+
+
+  

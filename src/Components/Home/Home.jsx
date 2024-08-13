@@ -1,9 +1,6 @@
-import React, { useEffect } from 'react'
+import React, { useEffect  ,useState} from 'react'
 import './Home.module.css';
 
-import { Link } from 'react-router-dom';
-import styles from "../Home/Home.module.css"
-//********************************************* */
 //Framer-Motion library Imports
 import { motion } from 'framer-motion'
 
@@ -37,6 +34,8 @@ export default function Home() {
       return '<span class="' + className + '">' + (index + 1) + '</span>';
     },
   };
+
+
  
   const lineStyle={
     background: 'linear-gradient(to right, rgb(39, 1, 1), #ff0014)',
@@ -53,189 +52,116 @@ export default function Home() {
   return (
     <>
 
-      
+<div className='position-fixed fa-beat-fade top-90 end-0 rounded-start-pill bg-main p-2 z-3'>
+
+<a href="/#hero">
+<i className="fa-solid fa-angles-up fa-xl text-white fa-beat-fade"></i>
+
+</a>
+    </div>
       <section id='hero'  >
-        <Swiper
-          grabCursor={true}
-          effect={'creative'}
-          creativeEffect={{
-            prev: {
-              shadow: true,
-              translate: [0, 0, -400],
-            },
-            next: {
-              translate: ['100%', 0, 0],
-            },
-          }}
-          className="mySwiper vh-100"
-          navigation={true}
-          pagination={pagination}
-          modules={[Pagination, Navigation, EffectCreative]}  >
+      <Swiper
+        className="mySwiper swiper-h"
+        spaceBetween={50}
+        pagination={pagination}
+        modules={[Pagination,EffectCreative]}
 
-          <SwiperSlide className=' position-relative mobile '>
-            <img src={images.fordEvent} alt="Ford QatarEvent" className='w-100 ' />
-
-            <div className={`overlay d-flex  align-items-center justify-content-center  `}>
-
-              <div className="caption  ">
-                <motion.h1
-                  initial={{ x: -1000 }}
-                  animate={{ x: 0 }}
-                  transition={{ duration: 6 ,delay:4}}
-                  
-                  className=' text-white' ><i className="fa-solid fa-t fa-3x"></i></motion.h1>
-
-                <motion.h1
-                  initial={{ y: -1000, x: 0 }}
-                  animate={{ y: 0, x: 0 }}
-                  transition={{ duration: 6 ,delay:4}} >
-                  <i className="fa-brands text-main fa-r-project fa-3x my-5"></i>
-                </motion.h1>
-                <motion.h1
-                  initial={{ x: 4000 }}
-                  animate={{ x: 0 }}
-                  transition={{ duration: 6 ,delay:4}}
-                  className=' text-white' ><i className="fa-solid fa-t fa-3x"></i></motion.h1>
-
-
-
-              </div>
-            </div>
-
-          </SwiperSlide>
-            {/************** /* 1 */}
-          <SwiperSlide className=' position-relative laptop  '>
-            <img src={images.slide1} alt="opel Astra Car" className='w-100' />
-
-            <div className={`overlay d-flex  align-items-center justify-content-center  `}>
-
-              <div className="caption  ">
-                <motion.h1
-                  initial={{ x: -1000 }}
-                  animate={{ x: 0 }}
-                  transition={{ duration: 6 ,delay:4}}
-                  className=' text-white' ><i className="fa-solid fa-t fa-3x"></i></motion.h1>
-
-                <motion.h1
-                  initial={{ y: -1000, x: 0 }}
-                  animate={{ y: 0, x: 0 }}
-                  transition={{ duration: 6 ,delay:4}} >
-                  <i className="fa-brands text-main fa-r-project fa-3x my-5"></i>
-                </motion.h1>
-                <motion.h1
-                  initial={{ x: 4000 }}
-                  animate={{ x: 0 }}
-                  transition={{ duration: 6 ,delay:4}}
-                  className=' text-white' ><i className="fa-solid fa-t fa-3x"></i></motion.h1>
-
-
-
-              </div>
-            </div>
-
-          </SwiperSlide> 
-            {/************** /* 2 */}
-
+        grabCursor={true}
+        effect={'creative'}
+        creativeEffect={{
+          prev: {
+            shadow: true,
+            translate: ['-125%', 0, -800],
+            rotate: [0, 0, -90],
+          },
+          next: {
+            shadow: true,
+            translate: ['125%', 0, -800],
+            rotate: [0, 0, 90],
+          },
+        }}
+      >
           <SwiperSlide>
-            <Swiper
-              grabCursor={true}
-              effect={'creative'}
-              creativeEffect={{
-                prev: {
-                  shadow: true,
-                  translate: [0, 0, -800],
-                  rotate: [180, 0, 0],
-                },
-                next: {
-                  shadow: true,
-                  translate: [0, 0, -800],
-                  rotate: [-180, 0, 0],
-                },
-              }}
-              className="mySwiper2 swiper-v"
-              direction={'vertical'}
-              spaceBetween={50}
-              pagination={pagination}
-              modules={[Pagination, EffectCreative]}>
-              <SwiperSlide className='position-relative '>
-                <img src={images.slide2} alt="Dodge Car" className='w-100' />
-
-                <div className={`overlay`}></div>
-
-              </SwiperSlide>
-              <SwiperSlide className=' position-relative '>
-                <img src={images.slide3} alt="Dodge Car" className='w-100' />
-
-                <div className={`overlay`}></div>
-
-              </SwiperSlide>
-              <SwiperSlide className=' position-relative '>
-                <img src={images.slide4} alt="Dodge Car" className='w-100' />
-
-                <div className={`overlay`}></div>
-
-              </SwiperSlide>
-              <SwiperSlide className=' position-relative '>
-                <img loading='lazy' src={images.slide5} alt="Dodge Car" className='w-100' />
-
-                <div className={`overlay`}></div>
-
-              </SwiperSlide>
-              <SwiperSlide className=' position-relative '>
-                <img loading='lazy' src={images.slide6} alt="Dodge Car" className='w-100' />
-
-                <div className={`overlay`}></div>
-
-              </SwiperSlide>
-
-            </Swiper>
-          </SwiperSlide> 
-            {/************** /* 3 */}
-
-          <SwiperSlide className=' position-relative '>
-
-            <video   src={images.video} type="video/mp4" className='w-100' loop muted playsInline   autoPlay >
-           
-            </video>
-
+          <Swiper
+            className="mySwiper2 swiper-v"
+            direction={'vertical'}
+            spaceBetween={50}
+            pagination={pagination}
+            modules={[Pagination,EffectCreative]}
+            grabCursor={true}
+            effect={'creative'}
+            creativeEffect={{
+              prev: {
+                shadow: true,
+                translate: [0, '-20%', -1], // Move the previous slide up
+              },
+              next: {
+                translate: [0, '100%', 0], // Move the next slide down
+              },
+            }}
+            
+          >
+                  <SwiperSlide>
             <div className="overlay">
-              <div  className="caption d-flex justify-content-center align-items-center vh-100">
-        <h2   className={`main-font  text-center  mb-0 pb-lg-4 trt`}>AUTOVROOM EVENT</h2>
+              <div className="row ">
+                <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
+                <motion.h1
+        initial={{ x: -1000 }}
+        animate={{ x: -10 }}
+        transition={{ duration: 6 }}
+        className=' text-white main-font my-fs' >AUTOVROOM</motion.h1>
+                </div>
               </div>
-            </div>
-
-          </SwiperSlide> 
-            {/************** /* 4 */}
-
-          <SwiperSlide className=' position-relative '>
-
-<video   src={images.video} type="video/mp4" className='w-100' loop muted playsInline   autoPlay >
-
-</video>
-
-<div className="overlay">
-  <div  className="caption d-flex justify-content-center align-items-center vh-100">
-<div>
-<h2   className={`main-font  text-center  mb-0 pb-lg-4 trt`}>AUTOVROOM EVENT 02</h2>
-<h2   className={`main-font  text-center  mt-2 mb-0 pb-lg-4 trt`}>SOON</h2>
+              </div> 
+              <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722965568/pkigrno2jyl4prvknefh.webp" alt="Bmw Car" /></SwiperSlide>
+             <SwiperSlide >
+          <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722975863/nnrpld3aooqq91yyq1eu.webp"    alt=" BMW car" />
+                <div className="overlay"></div>
+        </SwiperSlide>
+             <SwiperSlide >
+          <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723048347/k7b08bwttbcjweczjyfk.jpg"    alt=" BMW car" />
+                <div className="overlay"></div>
+        </SwiperSlide>
 
 
 
-</div>
-  </div>
-</div>
+            <SwiperSlide><img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723048342/brtmrvvhlmpkxi60rrqd.jpg" alt="Toyota"  />
+            <div className="overlay"></div>
+            </SwiperSlide>
 
-            </SwiperSlide> 
-            {/************** /* 5 */}
 
-          <SwiperSlide className=' position-relative '>
-            <img loading='lazy' src={images.slide8} alt="BMW Motocycle" className='w-100' />
 
-            <div className={`overlay`}></div>
+            <SwiperSlide>
+            <div className="overlay"></div>
+              <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722974786/knohjz5mhwzozlbviie9.webp" alt="Mitsubishi"  />
+              </SwiperSlide>
 
-          </SwiperSlide> 
 
-        </Swiper>
+
+            <SwiperSlide>
+            <div className="overlay"></div> 
+            <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722967563/b7uevgn8zpz4qc9sp8jb.webp" alt="BMW Car" />
+            </SwiperSlide>
+
+          </Swiper>
+
+
+        </SwiperSlide>
+
+
+        <SwiperSlide>
+          <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723576872/noeee2kbn1bqmpgw6yaj.jpg"   alt="Ford Qatar Event" />
+          <div className="overlay"></div>
+        </SwiperSlide>
+      
+        <SwiperSlide>
+          <div className="overlay"></div>
+        <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722980347/mwl8aoodglwtcc742y7k.webp"  alt="BMW Car"  />
+
+        
+        </SwiperSlide>
+        <SwiperSlide><img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722980346/e1spxxzeys4ck0m9x8q3.webp" alt="VW Golf car" /></SwiperSlide>
+      </Swiper>
       </section>
 <Marquee lineStyle={lineStyle}/>
       
@@ -264,17 +190,28 @@ export default function Home() {
 
         <div className="marquee bg-black  mt-5">
           <div className="marquee-content-logos">
-            
-            <img src={images.logo1} className='mx-3 mx-sm-5'  width={250}  height={150} />
-            <img src={images.logo2} className='mx-3 mx-sm-5' width={250}  height={150} />
-            <img src={images.logo3} className='mx-3 mx-sm-5' width={250}  height={100} />
-            <img src={images.logo4} className='mx-3 mx-sm-5' width={250}  height={80} />
-            <img src={images.logo1} className='mx-3 mx-sm-5'  width={250}  height={150} />
-            <img src={images.logo2} className='mx-3 mx-sm-5' width={250}  height={150} />
-            <img src={images.logo3} className='mx-3 mx-sm-5' width={250}  height={100} />
-            <img src={images.logo4} className='mx-3 mx-sm-5' width={250}  height={80} />
+
+
+<img src={images.logo1} className='mx-3 mx-sm-5'  width={250}  height={150} />
+<img src={images.logo2} className='mx-3 mx-sm-5' width={250}  height={150} />
+<img src={images.logo3} className='mx-3 mx-sm-5' width={250}  height={100} />
+<img src={images.logo4} className='mx-3 mx-sm-5' width={250}  height={80} />
+<img src={images.logo1} className='mx-3 mx-sm-5'  width={250}  height={150} />
+<img src={images.logo2} className='mx-3 mx-sm-5' width={250}  height={150} />
+<img src={images.logo3} className='mx-3 mx-sm-5' width={250}  height={100} />
+<img src={images.logo4} className='mx-3 mx-sm-5' width={250}  height={80} />
+<img src={images.logo1} className='mx-3 mx-sm-5'  width={250}  height={150} />
+<img src={images.logo2} className='mx-3 mx-sm-5' width={250}  height={150} />
+<img src={images.logo3} className='mx-3 mx-sm-5' width={250}  height={100} />
+<img src={images.logo4} className='mx-3 mx-sm-5' width={250}  height={80} />
+<img src={images.logo1} className='mx-3 mx-sm-5'  width={250}  height={150} />
+<img src={images.logo2} className='mx-3 mx-sm-5' width={250}  height={150} />
+<img src={images.logo3} className='mx-3 mx-sm-5' width={250}  height={100} />
+<img src={images.logo4} className='mx-3 mx-sm-5' width={250}  height={80} />
+
           </div>
         </div>
+
 
               
 
@@ -283,7 +220,7 @@ export default function Home() {
 
       </section>
 
-      <section id='tickets' className='bg-black py-5'>
+      {/* <section id='tickets' className='bg-black py-5'>
        
       <div className='m-auto text-center'>
         <h2 data-aos='fade-down' 
@@ -340,7 +277,8 @@ export default function Home() {
     </div>
   </div>
 </div>
-      </section>
+      </section> */}
     </>
   )
 }
+
