@@ -52,11 +52,14 @@ export default function Home() {
   return (
     <>
 
+<div className='position-absolute top-15 start-0 w-100  z-3 text-center'>
+
+<h4 className='text-white main-font '>SWIPE DOWN </h4>
+</div>
 <div className='position-fixed fa-beat-fade top-90 end-0 rounded-start-pill bg-main p-2 z-3'>
 
 <a href="/#hero">
 <i className="fa-solid fa-angles-up fa-xl text-white fa-beat-fade"></i>
-
 </a>
     </div>
       <section id='hero'  >
@@ -112,34 +115,108 @@ export default function Home() {
         className=' text-white main-font my-fs' >AUTOVROOM</motion.h1>
                 </div>
               </div>
+
+            <a href="/#marquee"  >
+            <i className="  w-100  position-absolute start-0 top-75 fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+              </a>  
               </div> 
               <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722965568/pkigrno2jyl4prvknefh.webp" alt="Bmw Car" /></SwiperSlide>
              <SwiperSlide >
           <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722975863/nnrpld3aooqq91yyq1eu.webp"    alt=" BMW car" />
-                <div className="overlay"></div>
+          <div className="overlay">
+              <div className="row ">
+                <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
+                <motion.h1
+        initial={{ x: -1000 }}
+        animate={{ x: -10 }}
+        transition={{ duration: 6 }}
+        className=' text-white main-font my-fs' >AUTOVROOM</motion.h1>
+                </div>
+              </div>
+
+            <a href="/#marquee"  >
+            <i className="  w-100  position-absolute start-0 top-75 fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+              </a>  
+              </div> 
         </SwiperSlide>
              <SwiperSlide >
           <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723048347/k7b08bwttbcjweczjyfk.jpg"    alt=" BMW car" />
-                <div className="overlay"></div>
+                <div className="overlay">
+              <div className="row ">
+                <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
+                <motion.h1
+        initial={{ x: -1000 }}
+        animate={{ x: -10 }}
+        transition={{ duration: 6 }}
+        className=' text-white main-font my-fs' >AUTOVROOM</motion.h1>
+                </div>
+              </div>
+
+            <a href="/#marquee"  >
+            <i className="  w-100  position-absolute start-0 top-75 fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+              </a>  
+              </div> 
         </SwiperSlide>
 
 
 
             <SwiperSlide><img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723048342/brtmrvvhlmpkxi60rrqd.jpg" alt="Toyota"  />
-            <div className="overlay"></div>
+            <div className="overlay">
+              <div className="row ">
+                <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
+                <motion.h1
+        initial={{ x: -1000 }}
+        animate={{ x: -10 }}
+        transition={{ duration: 6 }}
+        className=' text-white main-font my-fs' >AUTOVROOM</motion.h1>
+                </div>
+              </div>
+
+            <a href="/#marquee"  >
+            <i className="  w-100  position-absolute start-0 top-75 fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+              </a>  
+              </div> 
             </SwiperSlide>
 
 
 
             <SwiperSlide>
-            <div className="overlay"></div>
+            <div className="overlay">
+              <div className="row ">
+                <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
+                <motion.h1
+        initial={{ x: -1000 }}
+        animate={{ x: -10 }}
+        transition={{ duration: 6 }}
+        className=' text-white main-font my-fs' >AUTOVROOM</motion.h1>
+                </div>
+              </div>
+
+            <a href="/#marquee"  >
+            <i className="  w-100  position-absolute start-0 top-75 fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+              </a>  
+              </div> 
               <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722974786/knohjz5mhwzozlbviie9.webp" alt="Mitsubishi"  />
               </SwiperSlide>
 
 
 
             <SwiperSlide>
-            <div className="overlay"></div> 
+            <div className="overlay">
+              <div className="row ">
+                <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
+                <motion.h1
+        initial={{ x: -1000 }}
+        animate={{ x: -10 }}
+        transition={{ duration: 6 }}
+        className=' text-white main-font my-fs' >AUTOVROOM</motion.h1>
+                </div>
+              </div>
+
+            <a href="/#marquee"  >
+            <i className="  w-100  position-absolute start-0 top-75 fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+              </a>  
+              </div>  
             <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722967563/b7uevgn8zpz4qc9sp8jb.webp" alt="BMW Car" />
             </SwiperSlide>
 
@@ -150,20 +227,69 @@ export default function Home() {
 
 
         <SwiperSlide>
+        <div className="overlay">
+              <div className="row ">
+                <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
+                <motion.h1
+        initial={{ x: -1000 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 6 }}
+        className=' text-white main-font my-fs' >FORD <br />QATAR</motion.h1>
+                </div>
+              </div>
+
+            <a href="/#marquee"  >
+            <i className="  w-100  position-absolute start-0 top-75 fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+              </a>  
+              </div> 
           <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723576872/noeee2kbn1bqmpgw6yaj.jpg"   alt="Ford Qatar Event" />
-          <div className="overlay"></div>
         </SwiperSlide>
       
         <SwiperSlide>
-          <div className="overlay"></div>
+        <div className="overlay">
+              <div className="row ">
+                <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
+                <motion.h1
+        initial={{ x: -1000 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 6 }}
+        className=' text-white main-font my-fs' >CIU <br />EVENT</motion.h1>
+                </div>
+              </div>
+
+            <a href="/#marquee"  >
+            <i className="  w-100  position-absolute start-0 top-75 fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+              </a>  
+              </div> 
         <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722980347/mwl8aoodglwtcc742y7k.webp"  alt="BMW Car"  />
 
         
         </SwiperSlide>
-        <SwiperSlide><img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722980346/e1spxxzeys4ck0m9x8q3.webp" alt="VW Golf car" /></SwiperSlide>
+        <SwiperSlide>
+        <div className="overlay">
+              <div className="row ">
+                <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
+                <motion.h1
+        initial={{ x: -1000 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 6 }}
+        className=' text-white main-font my-fs' >ELSHROUK <br /></motion.h1>
+                </div>
+              </div>
+
+            <a href="/#marquee"  >
+            <i className="  w-100  position-absolute start-0 top-75 fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+              </a>  
+              </div> 
+          <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722980346/e1spxxzeys4ck0m9x8q3.webp" alt="VW Golf car" /></SwiperSlide>
       </Swiper>
       </section>
-<Marquee lineStyle={lineStyle}/>
+
+
+      <div id='marquee'>
+
+<Marquee  lineStyle={lineStyle}/>
+      </div>
       
 
       <section id='title'>
