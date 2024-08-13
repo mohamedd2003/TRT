@@ -116,9 +116,13 @@ export default function Home() {
                 </div>
               </div>
 
-            <a href="/#marquee"  >
-            <i className="  w-100  position-absolute start-0 top-75 fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
-              </a>  
+            <a href='/#marquee'  className=' text-decoration-none  main-font text-white w-100  position-absolute start-0 top-75'>
+           
+            <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+            
+           
+            <h3 className='mt-1'>Click For <i class="fa-brands fa-draft2digital "></i>nd Section</h3>
+            </a>
               </div> 
               <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722965568/pkigrno2jyl4prvknefh.webp" alt="Bmw Car" /></SwiperSlide>
              <SwiperSlide >
@@ -134,9 +138,13 @@ export default function Home() {
                 </div>
               </div>
 
-            <a href="/#marquee"  >
-            <i className="  w-100  position-absolute start-0 top-75 fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
-              </a>  
+             <a href='/#marquee'  className=' text-decoration-none  main-font text-white w-100  position-absolute start-0 top-75'>
+           
+            <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+            
+           
+            <h3 className='mt-1'>Click For <i class="fa-brands fa-draft2digital "></i>nd Section</h3>
+            </a>  
               </div> 
         </SwiperSlide>
              <SwiperSlide >
@@ -152,9 +160,13 @@ export default function Home() {
                 </div>
               </div>
 
-            <a href="/#marquee"  >
-            <i className="  w-100  position-absolute start-0 top-75 fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
-              </a>  
+             <a href='/#marquee'  className=' text-decoration-none  main-font text-white w-100  position-absolute start-0 top-75'>
+           
+            <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+            
+           
+            <h3 className='mt-1'>Click For <i class="fa-brands fa-draft2digital "></i>nd Section</h3>
+            </a>  
               </div> 
         </SwiperSlide>
 
@@ -172,9 +184,13 @@ export default function Home() {
                 </div>
               </div>
 
-            <a href="/#marquee"  >
-            <i className="  w-100  position-absolute start-0 top-75 fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
-              </a>  
+             <a href='/#marquee'  className=' text-decoration-none  main-font text-white w-100  position-absolute start-0 top-75'>
+           
+            <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+            
+           
+            <h3 className='mt-1'>Click For <i class="fa-brands fa-draft2digital "></i>nd Section</h3>
+            </a>  
               </div> 
             </SwiperSlide>
 
@@ -192,9 +208,13 @@ export default function Home() {
                 </div>
               </div>
 
-            <a href="/#marquee"  >
-            <i className="  w-100  position-absolute start-0 top-75 fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
-              </a>  
+             <a href='/#marquee'  className=' text-decoration-none  main-font text-white w-100  position-absolute start-0 top-75'>
+           
+            <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+            
+           
+            <h3 className='mt-1'>Click For <i class="fa-brands fa-draft2digital "></i>nd Section</h3>
+            </a>  
               </div> 
               <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722974786/knohjz5mhwzozlbviie9.webp" alt="Mitsubishi"  />
               </SwiperSlide>
@@ -213,9 +233,13 @@ export default function Home() {
                 </div>
               </div>
 
-            <a href="/#marquee"  >
-            <i className="  w-100  position-absolute start-0 top-75 fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
-              </a>  
+             <a href='/#marquee'  className=' text-decoration-none  main-font text-white w-100  position-absolute start-0 top-75'>
+           
+            <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+            
+           
+            <h3 className='mt-1'>Click For <i class="fa-brands fa-draft2digital "></i>nd Section</h3>
+            </a>  
               </div>  
             <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722967563/b7uevgn8zpz4qc9sp8jb.webp" alt="BMW Car" />
             </SwiperSlide>
@@ -238,9 +262,13 @@ export default function Home() {
                 </div>
               </div>
 
-            <a href="/#marquee"  >
-            <i className="  w-100  position-absolute start-0 top-75 fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
-              </a>  
+             <a href='/#marquee'  className=' text-decoration-none  main-font text-white w-100  position-absolute start-0 top-75'>
+           
+            <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+            
+           
+            <h3 className='mt-1'>Click For <i class="fa-brands fa-draft2digital "></i>nd Section</h3>
+            </a>  
               </div> 
           <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723576872/noeee2kbn1bqmpgw6yaj.jpg"   alt="Ford Qatar Event" />
         </SwiperSlide>
@@ -257,9 +285,13 @@ export default function Home() {
                 </div>
               </div>
 
-            <a href="/#marquee"  >
-            <i className="  w-100  position-absolute start-0 top-75 fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
-              </a>  
+             <a href='/#marquee'  className=' text-decoration-none  main-font text-white w-100  position-absolute start-0 top-75'>
+           
+            <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+            
+           
+            <h3 className='mt-1'>Click For <i class="fa-brands fa-draft2digital "></i>nd Section</h3>
+            </a>  
               </div> 
         <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722980347/mwl8aoodglwtcc742y7k.webp"  alt="BMW Car"  />
 
@@ -277,9 +309,13 @@ export default function Home() {
                 </div>
               </div>
 
-            <a href="/#marquee"  >
-            <i className="  w-100  position-absolute start-0 top-75 fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
-              </a>  
+             <a href='/#marquee'  className=' text-decoration-none  main-font text-white w-100  position-absolute start-0 top-75'>
+           
+            <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+            
+           
+            <h3 className='mt-1'>Click For <i class="fa-brands fa-draft2digital "></i>nd Section</h3>
+            </a>  
               </div> 
           <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722980346/e1spxxzeys4ck0m9x8q3.webp" alt="VW Golf car" /></SwiperSlide>
       </Swiper>
