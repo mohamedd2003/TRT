@@ -33,7 +33,7 @@ export default function AboutPage() {
 
        <About/>
 
-       <section className='my-3'>
+       <section className='my-3 bg-black'>
 
        <div className='m-auto text-center'>
         <h2 data-aos='fade-down' 
@@ -140,7 +140,7 @@ export default function AboutPage() {
         </div>
        </section>
 
-       <section className='my-5'>
+       <section className='my-5 bg-black'>
 
 <div className='m-auto text-center'>
  <h2 data-aos='fade-down' 
