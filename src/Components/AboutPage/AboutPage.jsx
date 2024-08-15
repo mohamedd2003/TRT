@@ -44,32 +44,8 @@ export default function AboutPage() {
 
         <div className="container bg-black">
           <div className="row gy-3">
+
           <div className="col-md-3 col-6 ">
-              <div data-aos='fade-down' data-aos-duration='1000' className={` ${styles.owner}  rounded-4  position-relative`}  >
-              <div className='position-relative'>
-              <i   className={`   fa-solid fa-hand-pointer  position-absolute top-2 text-black fa-2x end-2  `}></i>
-                <img src={'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723747540/rnajnkcqkubjrt8sj79v.jpg'} className='w-100 rounded-4' alt="Owner" />
-              </div>
-              <div className={` ${styles.overlay}  rounded-4  d-flex flex-wrap  justify-content-center align-items-center `}>
-        <h2 className='main-font text-white  w-100 text-center '>Mido Fit</h2> <br />
-        <div className="icons  text-center  w-100    ">
-  <a href="https://www.instagram.com/midofit1?igsh=MTVscmtybXhya2pqZQ==" target="_blank">  <i class="fa-brands fa-instagram fa-2x  text-danger mx-2"></i></a>
-  <a href='https://wa.me/201091079755 ' target="_blank">
-  <i class="fa-brands fa-whatsapp fa-2x   mx-2 text-danger  my-1 "></i>
-  </a>
-
-
-    
-        </div>
-
-        <h2 className=' w-100 text-center text-white main-font'>Owner</h2>
-              </div>
-            
-
-            
-              </div>
-            </div>
-            <div className="col-md-3 col-6 ">
               <div data-aos='fade-down' data-aos-duration='1000' className={` ${styles.owner}  rounded-4  position-relative`}  >
               <div className='position-relative'>
               <i   className={`   fa-solid fa-hand-pointer  position-absolute top-2 text-black fa-2x end-2  `}></i>
@@ -79,7 +55,7 @@ export default function AboutPage() {
         <h2 className='main-font text-white  w-100 text-center '>Mohamed Hossam</h2> <br />
         <div className="icons  text-center  w-100   ">
   <a href="https://www.instagram.com/1mhmdd?igsh=MWM5bmlnNjdwejVzcQ==" target='_blank'>  <i class="fa-brands fa-instagram fa-2x  text-danger mx-2"></i></a>
-  <a href='https://wa.me/201033994411 ' >
+  <a href='https://wa.me/01033994411 ' >
   <i class="fa-brands fa-whatsapp fa-2x   mx-2 text-danger  my-1 "></i>
   </a>
 
@@ -94,6 +70,32 @@ export default function AboutPage() {
             
               </div>
             </div>
+          <div className="col-md-3 col-6 ">
+              <div data-aos='fade-down' data-aos-duration='1000' className={` ${styles.owner}  rounded-4  position-relative`}  >
+              <div className='position-relative'>
+              <i   className={`   fa-solid fa-hand-pointer  position-absolute top-2 text-black fa-2x end-2  `}></i>
+                <img src={'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723747540/rnajnkcqkubjrt8sj79v.jpg'} className='w-100 rounded-4' alt="Owner" />
+              </div>
+              <div className={` ${styles.overlay}  rounded-4  d-flex flex-wrap  justify-content-center align-items-center `}>
+        <h2 className='main-font text-white  w-100 text-center '>Mido Fit</h2> <br />
+        <div className="icons  text-center  w-100    ">
+  <a href="https://www.instagram.com/midofit1?igsh=MTVscmtybXhya2pqZQ==" target="_blank">  <i class="fa-brands fa-instagram fa-2x  text-danger mx-2"></i></a>
+  <a href='https://wa.me/01091079755 ' target="_blank">
+  <i class="fa-brands fa-whatsapp fa-2x   mx-2 text-danger  my-1 "></i>
+  </a>
+
+
+    
+        </div>
+
+        <h2 className=' w-100 text-center text-white main-font'>Owner</h2>
+              </div>
+            
+
+            
+              </div>
+            </div>
+           
             <div className="col-md-3 col-6 ">
               <div data-aos='fade-down' data-aos-duration='1000' className={` ${styles.owner}  rounded-4  position-relative`}  >
               <div className='position-relative'>
@@ -127,7 +129,7 @@ export default function AboutPage() {
         <h2 className='main-font text-white  w-100 text-center '>Mohab Sakr</h2> <br />
         <div className="icons  text-center  w-100   ">
   <a href="https://www.instagram.com/mohab.saqr?igsh=MWo5dTdnODdrcGM1Ng==">  <i class="fa-brands fa-instagram fa-2x  text-danger mx-2"></i></a>
-
+  
 
     
         </div>
