@@ -96,11 +96,12 @@ export default function AboutPage() {
               </div>
             </div>
            
-            <div className="col-md-3 col-6 ">
-              <div data-aos='fade-down' data-aos-duration='1000' className={` ${styles.owner}  rounded-4  position-relative`}  >
-              <div className='position-relative'>
+            <div className="col-md-3 col-6  ">
+              <div data-aos='fade-down' data-aos-duration='1000' className={` ${styles.owner} h-100 rounded-4  position-relative`}  >
+              <div className='position-relative h-100'>
               <i   className={`   fa-solid fa-hand-pointer  position-absolute top-2 text-black fa-2x end-2  `}></i>
-                <img src={'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723750558/htb0cece3tgaip0qqvzw.jpg'} className='w-100 rounded-4' alt="owner" />
+                <img src={'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723750558/htb0cece3tgaip0qqvzw.jpg'}
+                 className='w-100 rounded-4 h-100' alt="owner" />
             </div>
               <div className={` ${styles.overlay}  rounded-4  d-flex flex-wrap  justify-content-center align-items-center `}>
         <h2 className='main-font text-white  w-100 text-center '>Waleed Khairy</h2> <br />
