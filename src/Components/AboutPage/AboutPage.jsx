@@ -87,7 +87,7 @@ export default function AboutPage() {
     
         </div>
 
-        <h2 className=' w-100 text-center text-white main-font'>Owner</h2>
+        <h2 className=' w-100 text-center text-white main-font'>Founder</h2>
               </div>
             
 
