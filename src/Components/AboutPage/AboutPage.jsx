@@ -54,7 +54,7 @@ export default function AboutPage() {
         <h2 className='main-font text-white  w-100 text-center '>Mido Fit</h2> <br />
         <div className="icons  text-center  w-100    ">
   <a href="https://www.instagram.com/midofit1?igsh=MTVscmtybXhya2pqZQ==" target="_blank">  <i class="fa-brands fa-instagram fa-2x  text-danger mx-2"></i></a>
-  <a href='https://wa.me/+2010910079755 ' target="_blank">
+  <a href='https://wa.me/01091079755 ' target="_blank">
   <i class="fa-brands fa-whatsapp fa-2x   mx-2 text-danger  my-1 "></i>
   </a>
 
@@ -79,7 +79,7 @@ export default function AboutPage() {
         <h2 className='main-font text-white  w-100 text-center '>Mohamed Hossam</h2> <br />
         <div className="icons  text-center  w-100   ">
   <a href="https://www.instagram.com/1mhmdd?igsh=MWM5bmlnNjdwejVzcQ==" target='_blank'>  <i class="fa-brands fa-instagram fa-2x  text-danger mx-2"></i></a>
-  <a href='https://wa.me/+20103399441 ' >
+  <a href='https://wa.me/01033994411 ' >
   <i class="fa-brands fa-whatsapp fa-2x   mx-2 text-danger  my-1 "></i>
   </a>
 
