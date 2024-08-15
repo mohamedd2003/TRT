@@ -3,13 +3,15 @@
     background-color: rgba(0, 0, 0, 0.5);
  
 }
+.hero{
+    background-color: #000;
+}
 .backGround{
     background-image: url("https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722966851/eaaddurxrz75ek5dtgg8.webp");
     background-position: center center;
     background-size: cover ;
     position: relative;
 } 
-
 
 .logo{
     width: 100px;
