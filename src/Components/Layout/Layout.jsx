@@ -80,7 +80,7 @@ const Layout = () => {
             <video
               ref={videoRef}
               className={`${style.home_video}`}
-              src='https://res.cloudinary.com/dnmwmrxmr/video/upload/v1722979057/gjsh9na7vqmbzodahcyz.mp4'
+              src='https://res.cloudinary.com/dnmwmrxmr/video/upload/f_auto:video,q_auto/gjsh9na7vqmbzodahcyz'
               type="video/mp4"
               loop
               playsInline

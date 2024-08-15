@@ -1,4 +1,4 @@
-import React, { useEffect  ,useState} from 'react'
+import React, { lazy} from 'react'
 import './Home.module.css';
 
 //Framer-Motion library Imports
@@ -15,14 +15,12 @@ import { Pagination, Navigation, EffectCreative } from 'swiper/modules';
 import 'swiper/css/navigation';
 //********************************************* */
 // image imports
-import images from '../Images/Images';
+
 import About from '../About/About';
-
 import Marquee from '../slider/slider'
-import GallerySection from '../GallerySection/GallerySection';
-import EventsSection from '../EventsSection/EventsSection';
-
-
+const images =lazy(()=>import('../Images/Images'))
+const GallerySection =lazy(()=>import('../GallerySection/GallerySection'))
+const EventsSection =lazy(()=>import('../EventsSection/EventsSection'))
 
 export default function Home() {
   
@@ -93,6 +91,7 @@ export default function Home() {
             modules={[Pagination,EffectCreative]}
             grabCursor={true}
             effect={'creative'}
+            
             creativeEffect={{
               prev: {
                 shadow: true,
@@ -354,22 +353,11 @@ export default function Home() {
           <div className="marquee-content-logos">
 
 
-<img src={images.logo1} className='mx-3 mx-sm-5'  width={250}  height={150} />
-<img src={images.logo2} className='mx-3 mx-sm-5' width={250}  height={150} />
-<img src={images.logo3} className='mx-3 mx-sm-5' width={250}  height={100} />
-<img src={images.logo4} className='mx-3 mx-sm-5' width={250}  height={80} />
-<img src={images.logo1} className='mx-3 mx-sm-5'  width={250}  height={150} />
-<img src={images.logo2} className='mx-3 mx-sm-5' width={250}  height={150} />
-<img src={images.logo3} className='mx-3 mx-sm-5' width={250}  height={100} />
-<img src={images.logo4} className='mx-3 mx-sm-5' width={250}  height={80} />
-<img src={images.logo1} className='mx-3 mx-sm-5'  width={250}  height={150} />
-<img src={images.logo2} className='mx-3 mx-sm-5' width={250}  height={150} />
-<img src={images.logo3} className='mx-3 mx-sm-5' width={250}  height={100} />
-<img src={images.logo4} className='mx-3 mx-sm-5' width={250}  height={80} />
-<img src={images.logo1} className='mx-3 mx-sm-5'  width={250}  height={150} />
-<img src={images.logo2} className='mx-3 mx-sm-5' width={250}  height={150} />
-<img src={images.logo3} className='mx-3 mx-sm-5' width={250}  height={100} />
-<img src={images.logo4} className='mx-3 mx-sm-5' width={250}  height={80} />
+<img src={'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723723039/etluwbytfllngxk7sk8z.png'} alt='phantom Center' className='mx-3 mx-sm-5'  width={250}  height={80} />
+<img src={'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723723042/cisghuhkiyvaco6pzyf6.png'} alt='Eagle Car Center' className='mx-3 mx-sm-5' width={250}  height={150} />
+<img src={'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723723041/qqojgj6lc2iahzdpxxqj.png'} className='mx-3 mx-sm-5' alt='AUTOVROOM' width={250}  height={150} />
+<img src={'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723723041/teelhdkovij2dxuhopsn.png'} alt='Drops Garage ' className='mx-3 mx-sm-5' width={250}  height={180} />
+
 
           </div>
         </div>
