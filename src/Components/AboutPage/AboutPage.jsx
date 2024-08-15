@@ -104,9 +104,7 @@ export default function AboutPage() {
         <h2 className='main-font text-white  w-100 text-center '>Waleed Khairy</h2> <br />
         <div className="icons  text-center  w-100   ">
   <a href="https://www.instagram.com/waleedkhairy7?igsh=bm1kem82eHNrcW1r">  <i class="fa-brands fa-instagram fa-2x  text-danger mx-2"></i></a>
-  <a href='https://www.tiktok.com/@trt.eg?_t=8omy8NDN72u  ' >
-  <i class="fa-brands fa-whatsapp fa-2x   mx-2 text-danger  my-1 "></i>
-  </a>
+  
 
 
     
@@ -129,9 +127,6 @@ export default function AboutPage() {
         <h2 className='main-font text-white  w-100 text-center '>Mohab Sakr</h2> <br />
         <div className="icons  text-center  w-100   ">
   <a href="https://www.instagram.com/mohab.saqr?igsh=MWo5dTdnODdrcGM1Ng==">  <i class="fa-brands fa-instagram fa-2x  text-danger mx-2"></i></a>
-  <a href='https://www.tiktok.com/@trt.eg?_t=8omy8NDN72u  ' >
-  <i class="fa-brands fa-whatsapp fa-2x   mx-2 text-danger  my-1 "></i>
-  </a>
 
 
     
