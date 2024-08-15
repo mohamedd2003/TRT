@@ -127,7 +127,7 @@ export default function AboutPage() {
                 <img src={'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723747539/eyuotyjgefun24jq1l8k.jpg'} className='w-100 rounded-4' alt="owner" />
           </div>
               <div className={` ${styles.overlay}  rounded-4  d-flex flex-wrap  justify-content-center align-items-center `}>
-        <h2 className='main-font text-white  w-100 text-center '>Mohab Sakr</h2> <br />
+        <h2 className='main-font text-white  w-100 text-center '>Mohab Saqr</h2> <br />
         <div className="icons  text-center  w-100   ">
   <a href="https://www.instagram.com/mohab.saqr?igsh=MWo5dTdnODdrcGM1Ng==">  <i class="fa-brands fa-instagram fa-2x  text-danger mx-2"></i></a>
   
