@@ -100,7 +100,7 @@ export default function AboutPage() {
               <div data-aos='fade-down' data-aos-duration='1000' className={` ${styles.owner}  rounded-4  position-relative`}  >
               <div className='position-relative'>
               <i   className={`   fa-solid fa-hand-pointer  position-absolute top-2 text-black fa-2x end-2  `}></i>
-                <img src={'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723746960/oqx9dudsxexdybdholrs.jpg'} className='w-100 rounded-4' alt="owner" />
+                <img src={'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723750558/htb0cece3tgaip0qqvzw.jpg'} className='w-100 rounded-4' alt="owner" />
             </div>
               <div className={` ${styles.overlay}  rounded-4  d-flex flex-wrap  justify-content-center align-items-center `}>
         <h2 className='main-font text-white  w-100 text-center '>Waleed Khairy</h2> <br />
