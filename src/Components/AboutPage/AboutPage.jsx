@@ -47,7 +47,7 @@ export default function AboutPage() {
           <div className="col-md-3 col-6 ">
               <div data-aos='fade-down' data-aos-duration='1000' className={` ${styles.owner}  rounded-4  position-relative`}  >
               <div className='position-relative'>
-              <i   className={`   fa-solid fa-hand-pointer  position-absolute top-2 text-black fa-3x end-2  `}></i>
+              <i   className={`   fa-solid fa-hand-pointer  position-absolute top-2 text-black fa-2x end-2  `}></i>
                 <img src={'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723747540/rnajnkcqkubjrt8sj79v.jpg'} className='w-100 rounded-4' alt="Owner" />
               </div>
               <div className={` ${styles.overlay}  rounded-4  d-flex flex-wrap  justify-content-center align-items-center `}>
@@ -72,7 +72,7 @@ export default function AboutPage() {
             <div className="col-md-3 col-6 ">
               <div data-aos='fade-down' data-aos-duration='1000' className={` ${styles.owner}  rounded-4  position-relative`}  >
               <div className='position-relative'>
-              <i   className={`   fa-solid fa-hand-pointer  position-absolute top-2 text-black fa-3x end-2  `}></i>
+              <i   className={`   fa-solid fa-hand-pointer  position-absolute top-2 text-black fa-2x end-2  `}></i>
                 <img src={'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723747540/b4watpz3yzigiocxv1bl.jpg'} className='w-100 rounded-4' alt="owner" />
              </div>
               <div className={` ${styles.overlay}  rounded-4  d-flex flex-wrap  justify-content-center align-items-center `}>
@@ -97,7 +97,7 @@ export default function AboutPage() {
             <div className="col-md-3 col-6 ">
               <div data-aos='fade-down' data-aos-duration='1000' className={` ${styles.owner}  rounded-4  position-relative`}  >
               <div className='position-relative'>
-              <i   className={`   fa-solid fa-hand-pointer  position-absolute top-2 text-black fa-3x end-2  `}></i>
+              <i   className={`   fa-solid fa-hand-pointer  position-absolute top-2 text-black fa-2x end-2  `}></i>
                 <img src={'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723746960/oqx9dudsxexdybdholrs.jpg'} className='w-100 rounded-4' alt="owner" />
             </div>
               <div className={` ${styles.overlay}  rounded-4  d-flex flex-wrap  justify-content-center align-items-center `}>
@@ -122,7 +122,7 @@ export default function AboutPage() {
             <div className="col-md-3 col-6 ">
               <div data-aos='fade-down' data-aos-duration='1000' className={` ${styles.owner}  rounded-4  position-relative`}  >
               <div className='position-relative'>
-              <i   className={`   fa-solid fa-hand-pointer  position-absolute top-2 text-black fa-3x end-2  `}></i>
+              <i   className={`   fa-solid fa-hand-pointer  position-absolute top-2 text-black fa-2x end-2  `}></i>
                 <img src={'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723747539/eyuotyjgefun24jq1l8k.jpg'} className='w-100 rounded-4' alt="owner" />
           </div>
               <div className={` ${styles.overlay}  rounded-4  d-flex flex-wrap  justify-content-center align-items-center `}>
