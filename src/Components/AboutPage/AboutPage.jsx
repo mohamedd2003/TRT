@@ -17,7 +17,7 @@ export default function AboutPage() {
        }
 
   return (
- <>
+ <div className={`${styles.hero}`}>
 
 <header className={`  ${styles.backGround} text-center `}>
        <div   className={`d-flex justify-content-center align-items-center  ${styles.header}`}>
@@ -254,6 +254,6 @@ export default function AboutPage() {
    </div>
  </div>
 </section>
- </>
+ </div>
   )
 }
