@@ -45,7 +45,7 @@ export default function AboutPage() {
         <div className="container bg-black">
           <div className="row gy-3">
 
-          <div className="col-md-3 col-6 ">
+          <div className="col-lg col-6  ">
               <div data-aos='fade-down' data-aos-duration='1000' className={` ${styles.owner}  rounded-4  position-relative`}  >
               <div className='position-relative'>
               <i   className={`   fa-solid fa-hand-pointer  position-absolute top-2 text-black fa-2x end-2  `}></i>
@@ -70,7 +70,7 @@ export default function AboutPage() {
             
               </div>
             </div>
-          <div className="col-md-3 col-6 ">
+          <div className="col-lg col-6  ">
               <div data-aos='fade-down' data-aos-duration='1000' className={` ${styles.owner}  rounded-4  position-relative`}  >
               <div className='position-relative'>
               <i   className={`   fa-solid fa-hand-pointer  position-absolute top-2 text-black fa-2x end-2  `}></i>
@@ -96,7 +96,7 @@ export default function AboutPage() {
               </div>
             </div>
            
-            <div className="col-md-3 col-6  ">
+            <div className="col-lg col-6   ">
               <div data-aos='fade-down' data-aos-duration='1000' className={` ${styles.owner} h-100 rounded-4  position-relative`}  >
               <div className='position-relative h-100'>
               <i   className={`   fa-solid fa-hand-pointer  position-absolute top-2 text-black fa-2x end-2  `}></i>
@@ -120,16 +120,38 @@ export default function AboutPage() {
             
               </div>
             </div>
-            <div className="col-md-3 col-6 ">
+            <div className="col-lg col-6  ">
               <div data-aos='fade-down' data-aos-duration='1000' className={` ${styles.owner}  rounded-4  position-relative`}  >
               <div className='position-relative'>
               <i   className={`   fa-solid fa-hand-pointer  position-absolute top-2 text-black fa-2x end-2  `}></i>
                 <img src={'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723747539/eyuotyjgefun24jq1l8k.jpg'} className='w-100 rounded-4' alt="owner" />
           </div>
               <div className={` ${styles.overlay}  rounded-4  d-flex flex-wrap  justify-content-center align-items-center `}>
-        <h2 className='main-font text-white  w-100 text-center '>Mohab Saqr</h2> <br />
+        <h2 className='main-font text-white  w-100 text-center '>Mohab Sakr</h2> <br />
         <div className="icons  text-center  w-100   ">
   <a href="https://www.instagram.com/mohab.saqr?igsh=MWo5dTdnODdrcGM1Ng==">  <i class="fa-brands fa-instagram fa-2x  text-danger mx-2"></i></a>
+  
+
+    
+        </div>
+
+        <h2 className=' w-100 text-center text-white main-font'>Owner</h2>
+              </div>
+            
+
+            
+              </div>
+            </div>
+            <div className="col-lg col-6  ">
+              <div data-aos='fade-down' data-aos-duration='1000' className={` ${styles.owner}  rounded-4  position-relative`}  >
+              <div className='position-relative'>
+              <i   className={`   fa-solid fa-hand-pointer  position-absolute top-2 text-black fa-2x end-2  `}></i>
+                <img src={'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723753765/tstnwupqdo6p7fkc22pd.jpg'} className='w-100 rounded-4' alt="owner" />
+          </div>
+              <div className={` ${styles.overlay}  rounded-4  d-flex flex-wrap  justify-content-center align-items-center `}>
+        <h2 className='main-font text-white  w-100 text-center '>Islam Ramy</h2> <br />
+        <div className="icons  text-center  w-100   ">
+  <a href="https://www.instagram.com/islam_ramy_?igsh=MWRzZTd5YmI4cGJibQ==">  <i class="fa-brands fa-instagram fa-2x  text-danger mx-2"></i></a>
   
 
     
