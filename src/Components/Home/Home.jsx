@@ -1,4 +1,4 @@
-import React, { lazy} from 'react'
+import React, { lazy ,useState,useEffect} from 'react'
 import './Home.module.css';
 
 //Framer-Motion library Imports
@@ -23,9 +23,17 @@ const GallerySection =lazy(()=>import('../GallerySection/GallerySection'))
 const EventsSection =lazy(()=>import('../EventsSection/EventsSection'))
 
 export default function Home() {
-  
 
-  
+  const[width,setWidth]=useState(window.innerWidth)
+
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   const pagination = {
     clickable: true,
     renderBullet: function (index, className) {
@@ -120,10 +128,10 @@ export default function Home() {
             <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
             
            
-            <h3 className='mt-1'>Click For <i class="fa-brands fa-draft2digital "></i>nd Section</h3>
+            <h3 className='mt-1'>Click For <i className="fa-brands fa-draft2digital "></i>nd Section</h3>
             </a>
               </div> 
-              <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722965568/pkigrno2jyl4prvknefh.webp" alt="Bmw Car" /></SwiperSlide>
+              <img src={width>576?'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722965774/sdpbccv8x3hnqiyjkjgk.webp':"https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722965568/pkigrno2jyl4prvknefh.webp"}  alt="Bmw Car" /></SwiperSlide>
              <SwiperSlide >
           <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722975863/nnrpld3aooqq91yyq1eu.webp"    alt=" BMW car" />
           <div className="overlay">
@@ -142,7 +150,7 @@ export default function Home() {
             <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
             
            
-            <h3 className='mt-1'>Click For <i class="fa-brands fa-draft2digital "></i>nd Section</h3>
+            <h3 className='mt-1'>Click For <i className="fa-brands fa-draft2digital "></i>nd Section</h3>
             </a>  
               </div> 
         </SwiperSlide>
@@ -164,7 +172,7 @@ export default function Home() {
             <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
             
            
-            <h3 className='mt-1'>Click For <i class="fa-brands fa-draft2digital "></i>nd Section</h3>
+            <h3 className='mt-1'>Click For <i className="fa-brands fa-draft2digital "></i>nd Section</h3>
             </a>  
               </div> 
         </SwiperSlide>
@@ -188,7 +196,7 @@ export default function Home() {
             <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
             
            
-            <h3 className='mt-1'>Click For <i class="fa-brands fa-draft2digital "></i>nd Section</h3>
+            <h3 className='mt-1'>Click For <i className="fa-brands fa-draft2digital "></i>nd Section</h3>
             </a>  
               </div> 
             </SwiperSlide>
@@ -212,10 +220,10 @@ export default function Home() {
             <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
             
            
-            <h3 className='mt-1'>Click For <i class="fa-brands fa-draft2digital "></i>nd Section</h3>
+            <h3 className='mt-1'>Click For <i className="fa-brands fa-draft2digital "></i>nd Section</h3>
             </a>  
               </div> 
-              <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722974786/knohjz5mhwzozlbviie9.webp" alt="Mitsubishi"  />
+              <img src={width>576?'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722974787/jv4n2rbkanxbv0xl55f5.webp': "https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722974786/knohjz5mhwzozlbviie9.webp"}    alt="Mitsubishi"  />
               </SwiperSlide>
 
 
@@ -237,10 +245,10 @@ export default function Home() {
             <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
             
            
-            <h3 className='mt-1'>Click For <i class="fa-brands fa-draft2digital "></i>nd Section</h3>
+            <h3 className='mt-1'>Click For <i className="fa-brands fa-draft2digital "></i>nd Section</h3>
             </a>  
               </div>  
-            <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722967563/b7uevgn8zpz4qc9sp8jb.webp" alt="BMW Car" />
+            <img src= {width>576 ?'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722967583/a84cib0zqoxocooyh7pk.webp':"https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722967563/b7uevgn8zpz4qc9sp8jb.webp" }   alt="BMW Car" />
             </SwiperSlide>
 
           </Swiper>
@@ -248,54 +256,6 @@ export default function Home() {
 
         </SwiperSlide>
 
-
-        <SwiperSlide>
-        <div className="overlay">
-              <div className="row ">
-                <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
-                <motion.h1
-        initial={{ x: -1000 }}
-        animate={{ x: 0 }}
-        transition={{ duration: 6 }}
-        className=' text-white main-font my-fs' >FORD <br />QATAR</motion.h1>
-                </div>
-              </div>
-
-             <a href='/#marquee'  className=' text-decoration-none  main-font text-white w-100  position-absolute start-0 top-75'>
-           
-            <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
-            
-           
-            <h3 className='mt-1'>Click For <i class="fa-brands fa-draft2digital "></i>nd Section</h3>
-            </a>  
-              </div> 
-          <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723576872/noeee2kbn1bqmpgw6yaj.jpg"   alt="Ford Qatar Event" />
-        </SwiperSlide>
-      
-        <SwiperSlide>
-        <div className="overlay">
-              <div className="row ">
-                <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
-                <motion.h1
-        initial={{ x: -1000 }}
-        animate={{ x: 0 }}
-        transition={{ duration: 6 }}
-        className=' text-white main-font my-fs' >CIU <br />EVENT</motion.h1>
-                </div>
-              </div>
-
-             <a href='/#marquee'  className=' text-decoration-none  main-font text-white w-100  position-absolute start-0 top-75'>
-           
-            <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
-            
-           
-            <h3 className='mt-1'>Click For <i class="fa-brands fa-draft2digital "></i>nd Section</h3>
-            </a>  
-              </div> 
-        <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722980347/mwl8aoodglwtcc742y7k.webp"  alt="BMW Car"  />
-
-        
-        </SwiperSlide>
         <SwiperSlide>
         <div className="overlay">
               <div className="row ">
@@ -313,10 +273,58 @@ export default function Home() {
             <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
             
            
-            <h3 className='mt-1'>Click For <i class="fa-brands fa-draft2digital "></i>nd Section</h3>
+            <h3 className='mt-1'>Click For <i className="fa-brands fa-draft2digital "></i>nd Section</h3>
             </a>  
               </div> 
           <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722980346/e1spxxzeys4ck0m9x8q3.webp" alt="VW Golf car" /></SwiperSlide>
+        <SwiperSlide>
+        <div className="overlay">
+              <div className="row ">
+                <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
+                <motion.h1
+        initial={{ x: -1000 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 6 }}
+        className=' text-white main-font my-fs' >FORD <br  /><span className='mt-md-5 d-block'>QATAR</span></motion.h1>
+                </div>
+              </div>
+
+             <a href='/#marquee'  className=' text-decoration-none  main-font text-white w-100  position-absolute start-0 top-75'>
+           
+            <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+            
+           
+            <h3 className='mt-1'>Click For <i className="fa-brands fa-draft2digital "></i>nd Section</h3>
+            </a>  
+              </div> 
+          <img src={width>576?"https://res.cloudinary.com/dnmwmrxmr/image/upload/v1724076862/iwoleopl6428lirft80i.jpg":"https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723576872/noeee2kbn1bqmpgw6yaj.jpg"} alt="Ford Qatar Event" />
+        </SwiperSlide>
+      
+        <SwiperSlide>
+        <div className="overlay">
+              <div className="row ">
+                <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
+                <motion.h1
+        initial={{ x: -1000 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 6 }}
+        className=' text-white main-font my-fs' >CIU <span className='mt-md-5 d-block'>EVENT</span></motion.h1>
+                </div>
+              </div>
+
+             <a href='/#marquee'  className=' text-decoration-none  main-font text-white w-100  position-absolute start-0 top-75'>
+           
+            <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+            
+           
+            <h3 className='mt-1'>Click For <i className="fa-brands fa-draft2digital "></i>nd Section</h3>
+            </a>  
+              </div> 
+        <img src={width>576?'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1724077031/lldyf77udh4cal18g972.jpg':"https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722980347/mwl8aoodglwtcc742y7k.webp"}  alt="BMW Car"  />
+
+        
+        </SwiperSlide>
+       
       </Swiper>
       </section>
 
