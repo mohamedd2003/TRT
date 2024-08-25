@@ -30,7 +30,7 @@ export default function EventsSection() {
        <div className="overlay " >
     <h2   className={`main-font text-center  position-relative top-50 translate-middle-y  mb-0 pb-lg-4 trt`}>LA CASA DE PAPEL EVENT</h2>
    <div className='position-absolute top-75 translate-middle-y end-0'>
-    <i   className='fa-solid fa-spinner fa-spin   fa-1x trt'></i>
+    <i   className='fa-solid fa-spinner fa-spin   fa-3x trt'></i>
 
    </div>
     
