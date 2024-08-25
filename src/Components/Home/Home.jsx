@@ -81,7 +81,7 @@ export default function Home() {
   return (
     <>
 
-<div className='position-absolute top-15 start-0 w-100  z-3 text-center'>
+<div className='position-absolute top-20 start-0 w-100  z-3 text-center'>
 
 <h4 className='text-white main-font '>SWIPE <i class="fa-solid fa-arrows-up-down-left-right"></i> </h4>
 </div>
