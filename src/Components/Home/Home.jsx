@@ -11,29 +11,52 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 import 'swiper/css/pagination';
-import { Pagination, Navigation, EffectCreative } from 'swiper/modules';
+import { Pagination, Mousewheel, EffectCreative } from 'swiper/modules';
 import 'swiper/css/navigation';
 //********************************************* */
 // image imports
 
 import About from '../About/About';
 import Marquee from '../slider/slider'
-const images =lazy(()=>import('../Images/Images'))
+
 const GallerySection =lazy(()=>import('../GallerySection/GallerySection'))
 const EventsSection =lazy(()=>import('../EventsSection/EventsSection'))
 
 export default function Home() {
 
   const[width,setWidth]=useState(window.innerWidth)
+  const[showarrow,setShowArrow]=useState(false)
 
   useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth);
-
+    const handleResize = () =>
+      {
+        setWidth(window.innerWidth)
+      } 
+      window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
 
-    // Cleanup the event listener on component unmount
-    return () => window.removeEventListener('resize', handleResize);
+    
+    return () => {
+
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
+    }
+      
   }, []);
+
+
+  const handleScroll = () => {
+    if (window.scrollY > 638) {
+      setShowArrow(true);
+    } else {
+      setShowArrow(false);
+    }
+  };
+
+
+
+
+  
   const pagination = {
     clickable: true,
     renderBullet: function (index, className) {
@@ -60,21 +83,21 @@ export default function Home() {
 
 <div className='position-absolute top-15 start-0 w-100  z-3 text-center'>
 
-<h4 className='text-white main-font '>SWIPE DOWN </h4>
+<h4 className='text-white main-font '>SWIPE <i class="fa-solid fa-arrows-up-down-left-right"></i> </h4>
 </div>
-<div className='position-fixed fa-beat-fade top-90 end-0 rounded-start-pill bg-main p-2 z-3'>
+{showarrow?<div className='position-fixed fa-beat-fade top-90 end-0 rounded-start-pill bg-main p-2 z-3'>
 
-<a href="/#hero">
+<a href="/#hero" >
 <i className="fa-solid fa-angles-up fa-xl text-white fa-beat-fade"></i>
 </a>
-    </div>
+    </div>:''}
       <section id='hero'  >
       <Swiper
         className="mySwiper swiper-h"
         spaceBetween={50}
         pagination={pagination}
         modules={[Pagination,EffectCreative]}
-
+        mousewheel={true}
         grabCursor={true}
         effect={'creative'}
         creativeEffect={{
@@ -90,13 +113,15 @@ export default function Home() {
           },
         }}
       >
-          <SwiperSlide>
+           <SwiperSlide>
           <Swiper
             className="mySwiper2 swiper-v"
             direction={'vertical'}
             spaceBetween={50}
+          
+            mousewheel={true}
             pagination={pagination}
-            modules={[Pagination,EffectCreative]}
+            modules={[Pagination,Mousewheel,EffectCreative]}
             grabCursor={true}
             effect={'creative'}
             
@@ -106,11 +131,100 @@ export default function Home() {
                 translate: [0, '-20%', -1], // Move the previous slide up
               },
               next: {
-                translate: [0, '100%', 0], // Move the next slide down
+                translate: [0, '100%', 0], // Move the next slide UP
               },
             }}
             
           >
+               
+                  <SwiperSlide>
+            <div className="overlay">
+              <div className="row ">
+                <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
+                <motion.h1
+        initial={{ x: -1000 }}
+        animate={{ x: -10 }}
+        transition={{ duration: 6 }}
+        className=' text-white main-font my-fs' >NEW<span className='mt-md-5 d-block'>ALALMEIN</span></motion.h1>
+                </div>
+              </div>
+
+            <a href='/#marquee'  className=' text-decoration-none  main-font text-white w-100  position-absolute start-0 top-75'>
+           
+            <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+            
+           
+            <h3 className='mt-1'>Click For <i className="fa-brands fa-draft2digital "></i>nd Section</h3>
+            </a>
+              </div> 
+              <img  src={width>576?'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1724609518/foxj8pgpth4enlja64d4.jpg':"https://res.cloudinary.com/dnmwmrxmr/image/upload/v1724609516/omrsm1luqsnlu9u45qf8.jpg"}  alt="Bmw Car" />
+              </SwiperSlide>
+                  <SwiperSlide>
+            <div className="overlay">
+              <div className="row ">
+                <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
+                <motion.h1
+        initial={{ x: -1000 }}
+        animate={{ x: -10 }}
+        transition={{ duration: 6 }}
+        className=' text-white main-font my-fs' >NEW<span className='mt-md-5 d-block'>ALALMEIN</span></motion.h1>
+                </div>
+              </div>
+
+            <a href='/#marquee'  className=' text-decoration-none  main-font text-white w-100  position-absolute start-0 top-75'>
+           
+            <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+            
+           
+            <h3 className='mt-1'>Click For <i className="fa-brands fa-draft2digital "></i>nd Section</h3>
+            </a>
+              </div> 
+              <img  src={width>576?'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1724609507/y5bowfdpclc8mzzj1vtw.jpg':"https://res.cloudinary.com/dnmwmrxmr/image/upload/v1724609509/gewjug5dvip6qmywgjbz.jpg"}  alt="Bmw Car" />
+              </SwiperSlide>
+
+
+          
+       
+
+
+
+
+
+
+
+
+
+          </Swiper>
+
+
+        </SwiperSlide>
+
+{/* //***************2******************** */ }
+
+          <SwiperSlide>
+          <Swiper
+            className="mySwiper2 swiper-v"
+            direction={'vertical'}
+            spaceBetween={50}
+          
+            mousewheel={true}
+            pagination={pagination}
+            modules={[Pagination,Mousewheel,EffectCreative]}
+            grabCursor={true}
+            effect={'creative'}
+            
+            creativeEffect={{
+              prev: {
+                shadow: true,
+                translate: [0, '-20%', -1], // Move the previous slide up
+              },
+              next: {
+                translate: [0, '100%', 0], // Move the next slide UP
+              },
+            }}
+            
+          >
+               
                   <SwiperSlide>
             <div className="overlay">
               <div className="row ">
@@ -131,7 +245,8 @@ export default function Home() {
             <h3 className='mt-1'>Click For <i className="fa-brands fa-draft2digital "></i>nd Section</h3>
             </a>
               </div> 
-              <img src={width>576?'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722965774/sdpbccv8x3hnqiyjkjgk.webp':"https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722965568/pkigrno2jyl4prvknefh.webp"}  alt="Bmw Car" /></SwiperSlide>
+              <img  src={width>576?'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722965774/sdpbccv8x3hnqiyjkjgk.webp':"https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722965568/pkigrno2jyl4prvknefh.webp"}  alt="Bmw Car" />
+              </SwiperSlide>
              <SwiperSlide >
           <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722975863/nnrpld3aooqq91yyq1eu.webp"    alt=" BMW car" />
           <div className="overlay">
@@ -139,6 +254,7 @@ export default function Home() {
                 <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
                 <motion.h1
         initial={{ x: -1000 }}
+        
         animate={{ x: -10 }}
         transition={{ duration: 6 }}
         className=' text-white main-font my-fs' >AUTOVROOM</motion.h1>
@@ -161,6 +277,7 @@ export default function Home() {
                 <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
                 <motion.h1
         initial={{ x: -1000 }}
+        
         animate={{ x: -10 }}
         transition={{ duration: 6 }}
         className=' text-white main-font my-fs' >AUTOVROOM</motion.h1>
@@ -185,6 +302,7 @@ export default function Home() {
                 <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
                 <motion.h1
         initial={{ x: -1000 }}
+        
         animate={{ x: -10 }}
         transition={{ duration: 6 }}
         className=' text-white main-font my-fs' >AUTOVROOM</motion.h1>
@@ -209,6 +327,7 @@ export default function Home() {
                 <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
                 <motion.h1
         initial={{ x: -1000 }}
+        
         animate={{ x: -10 }}
         transition={{ duration: 6 }}
         className=' text-white main-font my-fs' >AUTOVROOM</motion.h1>
@@ -234,6 +353,7 @@ export default function Home() {
                 <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
                 <motion.h1
         initial={{ x: -1000 }}
+        
         animate={{ x: -10 }}
         transition={{ duration: 6 }}
         className=' text-white main-font my-fs' >AUTOVROOM</motion.h1>
@@ -262,6 +382,7 @@ export default function Home() {
                 <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
                 <motion.h1
         initial={{ x: -1000 }}
+        
         animate={{ x: 0 }}
         transition={{ duration: 6 }}
         className=' text-white main-font my-fs' >ELSHROUK <br /></motion.h1>
@@ -283,6 +404,7 @@ export default function Home() {
                 <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
                 <motion.h1
         initial={{ x: -1000 }}
+        
         animate={{ x: 0 }}
         transition={{ duration: 6 }}
         className=' text-white main-font my-fs' >FORD <br  /><span className='mt-md-5 d-block'>QATAR</span></motion.h1>
@@ -306,6 +428,7 @@ export default function Home() {
                 <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
                 <motion.h1
         initial={{ x: -1000 }}
+        
         animate={{ x: 0 }}
         transition={{ duration: 6 }}
         className=' text-white main-font my-fs' >CIU <span className='mt-md-5 d-block'>EVENT</span></motion.h1>
@@ -337,7 +460,11 @@ export default function Home() {
 
       <section id='title'>
       <div className='bg-black'>
-        <h2 data-aos-duration='1000' data-aos="fade-down" className={`main-font bg-black text-center  mb-0 pb--lg-4 trt`}>TRT</h2>
+        <motion.h2
+        drag
+        dragConstraints={{top:0,left:0,right:0,bottom:0}}
+        dragElastic={5} 
+        data-aos-duration='1000' data-aos="fade-UP" className={`main-font bg-black text-center  mb-0 pb--lg-4 trt`}>TRT</motion.h2>
         <h2 data-aos-duration='1000' data-aos="fade-up" className={`main-font bg-black text-center   mb-0 trt`}>THE RIGHT TRACK</h2>
 
       </div>
@@ -352,7 +479,7 @@ export default function Home() {
 
       <section id='sponsers' className='bg-black py-5'>
         <div className='m-auto text-center'>
-        <h2 data-aos='fade-down' 
+        <h2 data-aos='fade-UP' 
         data-aos-duration='1000' 
         className='  text-decoration-line-through  oswald-titles main-font'><span className=' text-main'>O</span>UR SPONSERS</h2>
         </div>
@@ -381,13 +508,13 @@ export default function Home() {
       {/* <section id='tickets' className='bg-black py-5'>
        
       <div className='m-auto text-center'>
-        <h2 data-aos='fade-down' 
+        <h2 data-aos='fade-UP' 
         data-aos-duration='1000' 
         className='  text-decoration-line-through  oswald-titles main-font'><span className=' text-main'>G</span>ET TICKETS</h2>
         </div>
 <div className="container">
   <div className="row mt-3 g-3 text-white">
-      <div className="col-md-4 " data-aos='fade-down' data-aos-duration='1000'>
+      <div className="col-md-4 " data-aos='fade-UP' data-aos-duration='1000'>
     <div className="ticket gradient rounded-bottom-circle p-3">
     <div className="text-center">
     <h2 className={`main-font  Text-white text-center trtSmall`}>CAR OWNER</h2>
@@ -403,7 +530,7 @@ export default function Home() {
     </div>
       </div>
     </div>
-    <div className="col-md-4" data-aos='fade-down' data-aos-duration='1000'>
+    <div className="col-md-4" data-aos='fade-UP' data-aos-duration='1000'>
     <div className="ticket gradient rounded-bottom-circle p-3">
     <div className="text-center">
     <h2 className={`main-font  Text-white text-center  trtSmall`}>PHOTOGRAPHER</h2>
@@ -418,7 +545,7 @@ export default function Home() {
     </div>
       </div>
     </div>
-    <div className="col-md-4" data-aos='fade-down' data-aos-duration='1000'>
+    <div className="col-md-4" data-aos='fade-UP' data-aos-duration='1000'>
     <div className="ticket gradient rounded-bottom-circle p-3">
     <div className="text-center">
     <h2 className={`main-font  Text-white text-center  trtSmall`}>Fans</h2>

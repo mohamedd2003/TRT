@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { MoonLoader } from 'react-spinners';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+
 export default function EventsSection() {
   const [loading, setLoading] = useState(true);
 
@@ -21,13 +22,37 @@ export default function EventsSection() {
 
     <div className="container">
       <div className="row g-0" >
+      <div className="col-md-6   position-relative" data-aos='fade-right' data-aos-duration='1000'>
+     
+       {loading && <MoonLoader size={100} color={"red"} loading={loading} />}
+      <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"  
+       threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1724614009/ws2muojbczzli0tfxbid.jpg'alt="AutvRoom Event" className='w-100 h-100 rounded-start-pill blur  ' />
+       <div className="overlay " >
+    <h2   className={`main-font text-center  position-relative top-50 translate-middle-y  mb-0 pb-lg-4 trt`}>LA CASA DE PAPEL </h2>
+    {/* <h6   className={` position-absolute bottom-0 translate-middle-y start-50  trt`}>soon</h6> */}
+    <i   className={`fa-solid fa-spinner fa-spin position-absolute top-75 translate-middle-y end-0 start fa-3x trt`}></i>
+        </div>
+      
+        </div>
+        <div className="col-md-6   position-relative" data-aos='fade-left' data-aos-duration='1000'>
+     <Link  to={'/newAlalmein'}>
+     {loading && <MoonLoader size={100} color={"red"} loading={loading} />}
+     <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500}  src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1724614014/rb7j7ooikck4q02hl2xv.jpg' className='w-100 h-100  rounded-end-pill ' />
+        <div className="overlay " >
+    <h2     className={`main-font text-center  position-relative top-50 translate-middle-y  mb-0 pb-lg-4 trt`}>NEW AlALMEIN EVENT</h2>
+    <i   className={`fa-solid fa-hand-pointer  position-absolute top-75 translate-middle-y  start fa-3x trt`}></i>
+        </div>
+     </Link>
+        </div>
+
        <div className="col-md-6   position-relative" data-aos='fade-right' data-aos-duration='1000'>
        <Link  to={'/autovroomEvent'}>
        {loading && <MoonLoader size={100} color={"red"} loading={loading} />}
-      <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722978989/hoaq6jic3hfwcuinjlsq.jpg'alt="AutvRoom Event" className='w-100 h-100 rounded-start-pill  ' />
+      <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"  
+       threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722978989/hoaq6jic3hfwcuinjlsq.jpg'alt="AutvRoom Event" className='w-100 h-100 rounded-start-pill  ' />
        <div className="overlay " >
     <h2   className={`main-font text-center  position-relative top-50 translate-middle-y  mb-0 pb-lg-4 trt`}>AUTOVROOM EVENT </h2>
-    <i   className={`fa-solid fa-hand-pointer  position-absolute top-50 translate-middle-y end-0 fa-3x trt`}></i>
+    <i   className={`fa-solid fa-hand-pointer  position-absolute top-75 translate-middle-y end-0 fa-3x trt`}></i>
         </div>
        </Link>
         </div>
@@ -37,7 +62,7 @@ export default function EventsSection() {
      <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500}  src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722978589/hnninbweyi4csorg6vwb.jpg' className='w-100 h-100  rounded-end-pill ' />
         <div className="overlay " >
     <h2     className={`main-font text-center  position-relative top-50 translate-middle-y  mb-0 pb-lg-4 trt`}>FORD QATAR EVENT</h2>
-    <i   className={`fa-solid fa-hand-pointer  position-absolute top-50 translate-middle-y  start fa-3x trt`}></i>
+    <i   className={`fa-solid fa-hand-pointer  position-absolute top-75 translate-middle-y  start fa-3x trt`}></i>
         </div>
      </Link>
         </div>
@@ -47,7 +72,7 @@ export default function EventsSection() {
         <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722978590/uiyyeysjdbnywzgbknsc.jpg' className='w-100 rounded-start-pill ' />
         <div className="overlay " >
     <h2    className={`main-font text-center  position-relative top-50 translate-middle-y  mb-0 pb-lg-4 trt`}>ELSHROUK <br /> EVENT </h2>
-    <i   className={`fa-solid fa-hand-pointer  position-absolute top-50 translate-middle-y end-0 fa-3x trt`}></i>
+    <i   className={`fa-solid fa-hand-pointer  position-absolute top-75 translate-middle-y end-0 fa-3x trt`}></i>
         </div>
       </Link>
         </div>
@@ -59,7 +84,7 @@ export default function EventsSection() {
         <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722978589/enlyvoxrrpy9bgawzaye.jpg' className='w-100 rounded-end-pill' />
         <div className="overlay " >
     <h2     className={`main-font text-center  position-relative top-50 translate-middle-y  mb-0 pb-lg-4 trt`}>CIU <br/>EVENT</h2>
-    <i   className={`fa-solid fa-hand-pointer  position-absolute top-50 translate-middle-y start-0 fa-3x trt`}></i>
+    <i   className={`fa-solid fa-hand-pointer  position-absolute top-75 translate-middle-y start-0 fa-3x trt`}></i>
         </div>
         </Link>
         </div>

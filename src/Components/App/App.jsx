@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from "../Layout/Layout";
 import Lazy from "../LazyLoading/LazyLoading";
 import Footer from '../Footer/Footer';
+import NewAlalmein from '../NewAlalmein/NewAlalmein';
 
 const Home = lazy(() => import('../Home/Home'));
 const Events = lazy(() => import('../Events/Events'));
@@ -28,6 +29,7 @@ let routes = createBrowserRouter([
             { path: 'QatarEvent', element: <QatarEvent /> },
             { path: 'ElshroukEvent', element: <ElshroukEvent /> },
             { path: 'CiuEvent', element: <CiuEvent /> },
+            { path: 'newAlalmein', element: <NewAlalmein /> },
             { path: 'Footer', element: <Footer /> },
             { path: '*', element: <NotFound /> },
         ]
