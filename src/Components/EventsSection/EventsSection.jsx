@@ -28,9 +28,12 @@ export default function EventsSection() {
       <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"  
        threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1724614009/ws2muojbczzli0tfxbid.jpg'alt="AutvRoom Event" className='w-100 h-100 rounded-start-pill blur  ' />
        <div className="overlay " >
-    <h2   className={`main-font text-center  position-relative top-50 translate-middle-y  mb-0 pb-lg-4 trt`}>LA CASA DE PAPEL </h2>
-    {/* <h6   className={` position-absolute bottom-0 translate-middle-y start-50  trt`}>soon</h6> */}
-    <i   className={`fa-solid fa-spinner fa-spin position-absolute top-75 translate-middle-y end-0 start fa-3x trt`}></i>
+    <h2   className={`main-font text-center  position-relative top-50 translate-middle-y  mb-0 pb-lg-4 trt`}>LA CASA DE PAPEL EVENT</h2>
+   <div className='position-absolute top-75 translate-middle-y end-0'>
+    <i   className='fa-solid fa-spinner fa-spin   fa-1x trt'></i>
+
+   </div>
+    
         </div>
       
         </div>
