@@ -157,7 +157,7 @@ export default function Home() {
             <h3 className='mt-1'>Click For <i className="fa-brands fa-draft2digital "></i>nd Section</h3>
             </a>
               </div> 
-              <img  src={width>576?'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1724609518/foxj8pgpth4enlja64d4.jpg':"https://res.cloudinary.com/dnmwmrxmr/image/upload/v1724609516/omrsm1luqsnlu9u45qf8.jpg"}  alt="Bmw Car" />
+              <img  src={width>576?'https://res.cloudinary.com/dnmwmrxmr/image/upload/f_auto,q_auto/flfniakcr06mk5zymoqv':"https://res.cloudinary.com/dnmwmrxmr/image/upload/v1724609516/omrsm1luqsnlu9u45qf8.jpg"}  alt="Bmw Car" />
               </SwiperSlide>
                   <SwiperSlide>
             <div className="overlay">
