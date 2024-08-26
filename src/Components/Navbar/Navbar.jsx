@@ -60,6 +60,9 @@ export default function Navbar() {
                   Events
                 </a>
                 <ul className="dropdown-menu bg-black">
+                <li className="nav-item mt-3">
+                    <NavLink className="nav-link text-center main-font" to="/newAlalmein" onClick={closeNavbar}>New Alalamein Event</NavLink>
+                  </li>
                   <li className="nav-item mt-3">
                     <NavLink className="nav-link text-center main-font" to="/autovroomEvent" onClick={closeNavbar}>Autovroom Event</NavLink>
                   </li>

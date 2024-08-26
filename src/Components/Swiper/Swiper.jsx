@@ -1,334 +1,387 @@
+import React ,{useState,useEffect} from 'react'
+import { motion } from 'framer-motion'
+
+//Swiper library Imports
+import 'swiper/css/effect-creative';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/effect-cards';
+import 'swiper/css/pagination';
+import { Pagination, Mousewheel, EffectCreative } from 'swiper/modules';
+import 'swiper/css/navigation';
+export default function SwiperComp() {
+
+  const[width,setWidth]=useState(window.innerWidth)
+ 
 
 
-import React, { useState, useEffect } from 'react';
-import styles from '../Swiper/Swiper.module.css';
-import { motion } from 'framer-motion';
 
-export default function Swiper() {
-  const targetDate = new Date('2024-08-16T00:00:00'); // Set target date to 16 Aug 2024
 
-  const calculateTimeLeft = () => {
-    const now = new Date();
-    const difference = targetDate - now;
-
-    let timeLeft = {
-      days: 0,
-      hours: 0,
-      minutes: 0,
-      seconds: 0,
-    };
-
-    if (difference > 0) {
-      timeLeft = {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
-      };
-    }
-
-    return timeLeft;
-  };
-
-  const [time, setTime] = useState(calculateTimeLeft());
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTime(calculateTimeLeft());
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, []);
-
-  const text = "New Alamein Festival";
-  const parentVariant = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delay: 3,
-      },
+  
+  const pagination = {
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + '</span>';
     },
   };
 
-  const spanVariants = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1 },
-      transition: {
-        staggerChildren: 0.05,
-        delay: 3,
-      },
-    }
-    return (
-      <>
-        <header className={`${styles.backGround} text-center`}>
-          <video
-            src="https://res.cloudinary.com/dnmwmrxmr/video/upload/v1723403780/efchy20cmirckyfljnqu.mp4"
-            muted
-            loop
-            autoPlay
-            className="start-0 end-0 top-0 bottom-0 position-absolute"
-          ></video>
-  
-          <div className={`${styles.overlay} d-flex flex-column align-items-center justify-content-center`}>
-            <motion.h1 variants={parentVariant} initial="hidden" animate="show" className={`${styles.lol}`}>
-              {text.split('').map((char, index) => (
-                <motion.span variants={spanVariants} key={index}>
-                  {char}
-                </motion.span>
-              ))}
-            </motion.h1>
-  
-            {/* Countdown Timer */}
-            <div className="grid grid-flow-col gap-5 text-center auto-cols-max mt-4">
-              <div className="flex flex-col p-2 bg-gradient  rounded-box text-neutral-content">
-                <span className="countdown font-mono text-5xl">
-                  <span style={{ "--value": time.days }}></span>
-                </span>
-                days
-              </div>
-              <div className="flex flex-col p-2 bg-gradient rounded-box text-neutral-content">
-                <span className="countdown font-mono text-5xl">
-                  <span style={{ "--value": time.hours }}></span>
-                </span>
-                hours
-              </div>
-              <div className="flex flex-col p-2 bg-gradient rounded-box text-neutral-content">
-                <span className="countdown font-mono text-5xl">
-                  <span style={{ "--value": time.minutes }}></span>
-                </span>
-                min
-              </div>
-              <div className="flex flex-col p-2 bg-gradient rounded-box text-neutral-content">
-                <span className="countdown font-mono text-5xl">
-                  <span style={{ "--value": time.seconds }}></span>
-                </span>
-                sec
-              </div>
-            </div>
-
-            <a href='https://pace-r.com/' className='btn btn-outline-light  rounded-end-pill main-font mt-2 d-flex align-items-center justify-content-center'> Learn More</a>
-          </div>
-        </header>
-      </>
-    );
-  };
-
-
-//*************************************************************************************** */
-
-
-<Swiper
-grabCursor={true}
-effect={'creative'}
-creativeEffect={{
-  prev: {
-    shadow: true,
-    translate: [0, 0, -400],
-  },
-  next: {
-    translate: ['100%', 0, 0],
-  },
-}}
-className="mySwiper vh-100"
-navigation={true}
-pagination={pagination}
-modules={[Pagination, Navigation, EffectCreative]}  >
-
-<SwiperSlide className=' position-relative mobile hide '>
-  <img src={images.fordEvent} alt="Ford QatarEvent" className='w-100 ' />
-
-  <div className={`overlay d-flex  align-items-center justify-content-center  `}>
-
-    <div className="caption  ">
-      <motion.h1
-        initial={{ x: -1000 }}
-        animate={{ x: 0 }}
-        transition={{ duration: 6 ,delay:4}}
-        
-        className=' text-white' ><i className="fa-solid fa-t fa-3x"></i></motion.h1>
-
-      <motion.h1
-        initial={{ y: -1000, x: 0 }}
-        animate={{ y: 0, x: 0 }}
-        transition={{ duration: 6 ,delay:4}} >
-        <i className="fa-brands text-main fa-r-project fa-3x my-5"></i>
-      </motion.h1>
-      <motion.h1
-        initial={{ x: 4000 }}
-        animate={{ x: 0 }}
-        transition={{ duration: 6 ,delay:4}}
-        className=' text-white' ><i className="fa-solid fa-t fa-3x"></i></motion.h1>
-
-
-
-    </div>
-  </div>
-
-</SwiperSlide>
-  {/************** /* 1 */}
-<SwiperSlide className=' position-relative laptop  '>
-  <img src={images.slide1} alt="opel Astra Car" className='w-100' />
-
-  <div className={`overlay d-flex  align-items-center justify-content-center  `}>
-
-    <div className="caption  ">
-      <motion.h1
-        initial={{ x: -1000 }}
-        animate={{ x: 0 }}
-        transition={{ duration: 6 ,delay:4}}
-        className=' text-white' ><i className="fa-solid fa-t fa-3x"></i></motion.h1>
-
-      <motion.h1
-        initial={{ y: -1000, x: 0 }}
-        animate={{ y: 0, x: 0 }}
-        transition={{ duration: 6 ,delay:4}} >
-        <i className="fa-brands text-main fa-r-project fa-3x my-5"></i>
-      </motion.h1>
-      <motion.h1
-        initial={{ x: 4000 }}
-        animate={{ x: 0 }}
-        transition={{ duration: 6 ,delay:4}}
-        className=' text-white' ><i className="fa-solid fa-t fa-3x"></i></motion.h1>
-
-<div className="container ">
-<div className="row justify-content-center ">
-<div className="col-12">
-<div className="card ">
- 
-  <div className="card-body p-0 ">
-    <div className="row text-center m-0">
-      <div className="col-3  ">
-        <h3 id="days" className="display-4">{timeLeft.days}</h3>
-        <p>Days</p>
-      </div>
-      <div className="col-3 ">
-        <h3 id="hours" className="display-4">{timeLeft.hours}</h3>
-        <p>Hours</p>
-      </div>
-      <div className="col-3 ">
-        <h3 id="minutes" className="display-4">{timeLeft.minutes}</h3>
-        <p>Minutes</p>
-      </div>
-      <div className="col-3 ">
-        <h3 id="seconds" className="display-4">{timeLeft.seconds}</h3>
-        <p>Seconds</p>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-</div>
-</div>
-
-    </div>
-  </div>
-
-</SwiperSlide> 
-  {/************** /* 2 */}
-
-<SwiperSlide>
-  <Swiper
+  return (
+    <Swiper
+    className="mySwiper swiper-h"
+    spaceBetween={50}
+    pagination={pagination}
+    modules={[Pagination,EffectCreative]}
+    mousewheel={true}
     grabCursor={true}
     effect={'creative'}
     creativeEffect={{
       prev: {
         shadow: true,
-        translate: [0, 0, -800],
-        rotate: [180, 0, 0],
+        translate: ['-125%', 0, -800],
+        rotate: [0, 0, -90],
       },
       next: {
         shadow: true,
-        translate: [0, 0, -800],
-        rotate: [-180, 0, 0],
+        translate: ['125%', 0, -800],
+        rotate: [0, 0, 90],
       },
     }}
-    className="mySwiper2 swiper-v"
-    direction={'vertical'}
-    spaceBetween={50}
-    pagination={pagination}
-    modules={[Pagination, EffectCreative]}>
-    <SwiperSlide className='position-relative '>
-      <img src={images.slide2} alt="Dodge Car" className='w-100' />
+  >
+       <SwiperSlide>
+      <Swiper
+        className="mySwiper2 swiper-v"
+        direction={'vertical'}
+        spaceBetween={50}
+      
+        mousewheel={true}
+        pagination={pagination}
+        modules={[Pagination,Mousewheel,EffectCreative]}
+        grabCursor={true}
+        effect={'creative'}
+        
+        creativeEffect={{
+          prev: {
+            shadow: true,
+            translate: [0, '-20%', -1], // Move the previous slide up
+          },
+          next: {
+            translate: [0, '100%', 0], // Move the next slide UP
+          },
+        }}
+        
+      >
+           
+              <SwiperSlide>
+        <div className="overlay">
+          <div className="row ">
+            <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
+            <motion.h1
+    initial={{ x: -1000 }}
+    animate={{ x: -10 }}
+    transition={{ duration: 6 }}
+    className=' text-white main-font my-fs' >NEW<span className='mt-md-5 d-block'>ALALMEIN</span></motion.h1>
+            </div>
+          </div>
 
-      <div className={`overlay`}></div>
+        <a href='/#marquee'  className=' text-decoration-none  main-font text-white w-100  position-absolute start-0 top-75'>
+       
+        <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+        
+       
+        <h3 className='mt-1'>Click For <i className="fa-brands fa-draft2digital "></i>nd Section</h3>
+        </a>
+          </div> 
+          <img  src={width>576?'https://res.cloudinary.com/dnmwmrxmr/image/upload/f_auto,q_auto/flfniakcr06mk5zymoqv':"https://res.cloudinary.com/dnmwmrxmr/image/upload/v1724609516/omrsm1luqsnlu9u45qf8.jpg"}  alt="NEW ALALMEIN EVENT" />
+          </SwiperSlide>
+              <SwiperSlide>
+        <div className="overlay">
+          <div className="row ">
+            <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
+            <motion.h1
+    initial={{ x: -1000 }}
+    animate={{ x: -10 }}
+    transition={{ duration: 6 }}
+    className=' text-white main-font my-fs' >NEW<span className='mt-md-5 d-block'>ALALMEIN</span></motion.h1>
+            </div>
+          </div>
+
+        <a href='/#marquee'  className=' text-decoration-none  main-font text-white w-100  position-absolute start-0 top-75'>
+       
+        <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+        
+       
+        <h3 className='mt-1'>Click For <i className="fa-brands fa-draft2digital "></i>nd Section</h3>
+        </a>
+          </div> 
+          <img  src={width>576?'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1724609507/y5bowfdpclc8mzzj1vtw.jpg':"https://res.cloudinary.com/dnmwmrxmr/image/upload/v1724609509/gewjug5dvip6qmywgjbz.jpg"}  alt="NEW ALALMEIN EVENT" />
+          </SwiperSlide>
+
+
+      
+   
+
+
+
+
+
+
+
+
+
+      </Swiper>
+
 
     </SwiperSlide>
-    <SwiperSlide className=' position-relative '>
-      <img src={images.slide3} alt="Dodge Car" className='w-100' />
 
-      <div className={`overlay`}></div>
+{/* //***************2******************** */ }
+
+      <SwiperSlide>
+      <Swiper
+        className="mySwiper2 swiper-v"
+        direction={'vertical'}
+        spaceBetween={50}
+      
+        mousewheel={true}
+        pagination={pagination}
+        modules={[Pagination,Mousewheel,EffectCreative]}
+        grabCursor={true}
+        effect={'creative'}
+        
+        creativeEffect={{
+          prev: {
+            shadow: true,
+            translate: [0, '-20%', -1], // Move the previous slide up
+          },
+          next: {
+            translate: [0, '100%', 0], // Move the next slide UP
+          },
+        }}
+        
+      >
+           
+              <SwiperSlide>
+        <div className="overlay">
+          <div className="row ">
+            <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
+            <motion.h1
+    initial={{ x: -1000 }}
+    animate={{ x: -10 }}
+    transition={{ duration: 6 }}
+    className=' text-white main-font my-fs' >AUTOVROOM</motion.h1>
+            </div>
+          </div>
+
+        <a href='/#marquee'  className=' text-decoration-none  main-font text-white w-100  position-absolute start-0 top-75'>
+       
+        <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+        
+       
+        <h3 className='mt-1'>Click For <i className="fa-brands fa-draft2digital "></i>nd Section</h3>
+        </a>
+          </div> 
+          <img  src={width>576?'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722965774/sdpbccv8x3hnqiyjkjgk.webp':"https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722965568/pkigrno2jyl4prvknefh.webp"}  alt="Bmw Car" />
+          </SwiperSlide>
+         <SwiperSlide >
+      <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722975863/nnrpld3aooqq91yyq1eu.webp"    alt=" BMW car" />
+      <div className="overlay">
+          <div className="row ">
+            <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
+            <motion.h1
+    initial={{ x: -1000 }}
+    
+    animate={{ x: -10 }}
+    transition={{ duration: 6 }}
+    className=' text-white main-font my-fs' >AUTOVROOM</motion.h1>
+            </div>
+          </div>
+
+         <a href='/#marquee'  className=' text-decoration-none  main-font text-white w-100  position-absolute start-0 top-75'>
+       
+        <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+        
+       
+        <h3 className='mt-1'>Click For <i className="fa-brands fa-draft2digital "></i>nd Section</h3>
+        </a>  
+          </div> 
+    </SwiperSlide>
+         <SwiperSlide >
+      <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723048347/k7b08bwttbcjweczjyfk.jpg"    alt=" BMW car" />
+            <div className="overlay">
+          <div className="row ">
+            <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
+            <motion.h1
+    initial={{ x: -1000 }}
+    
+    animate={{ x: -10 }}
+    transition={{ duration: 6 }}
+    className=' text-white main-font my-fs' >AUTOVROOM</motion.h1>
+            </div>
+          </div>
+
+         <a href='/#marquee'  className=' text-decoration-none  main-font text-white w-100  position-absolute start-0 top-75'>
+       
+        <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+        
+       
+        <h3 className='mt-1'>Click For <i className="fa-brands fa-draft2digital "></i>nd Section</h3>
+        </a>  
+          </div> 
+    </SwiperSlide>
+
+
+
+        <SwiperSlide><img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723048342/brtmrvvhlmpkxi60rrqd.jpg" alt="Toyota"  />
+        <div className="overlay">
+          <div className="row ">
+            <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
+            <motion.h1
+    initial={{ x: -1000 }}
+    
+    animate={{ x: -10 }}
+    transition={{ duration: 6 }}
+    className=' text-white main-font my-fs' >AUTOVROOM</motion.h1>
+            </div>
+          </div>
+
+         <a href='/#marquee'  className=' text-decoration-none  main-font text-white w-100  position-absolute start-0 top-75'>
+       
+        <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+        
+       
+        <h3 className='mt-1'>Click For <i className="fa-brands fa-draft2digital "></i>nd Section</h3>
+        </a>  
+          </div> 
+        </SwiperSlide>
+
+
+
+        <SwiperSlide>
+        <div className="overlay">
+          <div className="row ">
+            <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
+            <motion.h1
+    initial={{ x: -1000 }}
+    
+    animate={{ x: -10 }}
+    transition={{ duration: 6 }}
+    className=' text-white main-font my-fs' >AUTOVROOM</motion.h1>
+            </div>
+          </div>
+
+         <a href='/#marquee'  className=' text-decoration-none  main-font text-white w-100  position-absolute start-0 top-75'>
+       
+        <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+        
+       
+        <h3 className='mt-1'>Click For <i className="fa-brands fa-draft2digital "></i>nd Section</h3>
+        </a>  
+          </div> 
+          <img src={width>576?'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722974787/jv4n2rbkanxbv0xl55f5.webp': "https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722974786/knohjz5mhwzozlbviie9.webp"}    alt="Mitsubishi"  />
+          </SwiperSlide>
+
+
+
+        <SwiperSlide>
+        <div className="overlay">
+          <div className="row ">
+            <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
+            <motion.h1
+    initial={{ x: -1000 }}
+    
+    animate={{ x: -10 }}
+    transition={{ duration: 6 }}
+    className=' text-white main-font my-fs' >AUTOVROOM</motion.h1>
+            </div>
+          </div>
+
+         <a href='/#marquee'  className=' text-decoration-none  main-font text-white w-100  position-absolute start-0 top-75'>
+       
+        <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+        
+       
+        <h3 className='mt-1'>Click For <i className="fa-brands fa-draft2digital "></i>nd Section</h3>
+        </a>  
+          </div>  
+        <img src= {width>576 ?'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722967583/a84cib0zqoxocooyh7pk.webp':"https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722967563/b7uevgn8zpz4qc9sp8jb.webp" }   alt="BMW Car" />
+        </SwiperSlide>
+
+      </Swiper>
+
 
     </SwiperSlide>
-    <SwiperSlide className=' position-relative '>
-      <img src={images.slide4} alt="Dodge Car" className='w-100' />
 
-      <div className={`overlay`}></div>
+    <SwiperSlide>
+    <div className="overlay">
+          <div className="row ">
+            <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
+            <motion.h1
+    initial={{ x: -1000 }}
+    
+    animate={{ x: 0 }}
+    transition={{ duration: 6 }}
+    className=' text-white main-font my-fs' >ELSHROUK <br /></motion.h1>
+            </div>
+          </div>
 
+         <a href='/#marquee'  className=' text-decoration-none  main-font text-white w-100  position-absolute start-0 top-75'>
+       
+        <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+        
+       
+        <h3 className='mt-1'>Click For <i className="fa-brands fa-draft2digital "></i>nd Section</h3>
+        </a>  
+          </div> 
+      <img src="https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722980346/e1spxxzeys4ck0m9x8q3.webp" alt="VW Golf car" /></SwiperSlide>
+    <SwiperSlide>
+    <div className="overlay">
+          <div className="row ">
+            <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
+            <motion.h1
+    initial={{ x: -1000 }}
+    
+    animate={{ x: 0 }}
+    transition={{ duration: 6 }}
+    className=' text-white main-font my-fs' >FORD <br  /><span className='mt-md-5 d-block'>QATAR</span></motion.h1>
+            </div>
+          </div>
+
+         <a href='/#marquee'  className=' text-decoration-none  main-font text-white w-100  position-absolute start-0 top-75'>
+       
+        <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+        
+       
+        <h3 className='mt-1'>Click For <i className="fa-brands fa-draft2digital "></i>nd Section</h3>
+        </a>  
+          </div> 
+      <img src={width>576?"https://res.cloudinary.com/dnmwmrxmr/image/upload/v1724076862/iwoleopl6428lirft80i.jpg":"https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723576872/noeee2kbn1bqmpgw6yaj.jpg"} alt="Ford Qatar Event" />
     </SwiperSlide>
-    <SwiperSlide className=' position-relative '>
-      <img loading='lazy' src={images.slide5} alt="Dodge Car" className='w-100' />
+  
+    <SwiperSlide>
+    <div className="overlay">
+          <div className="row ">
+            <div className="col-12  vh-100 d-flex justify-content-center align-items-center">
+            <motion.h1
+    initial={{ x: -1000 }}
+    
+    animate={{ x: 0 }}
+    transition={{ duration: 6 }}
+    className=' text-white main-font my-fs' >CIU <span className='mt-md-5 d-block'>EVENT</span></motion.h1>
+            </div>
+          </div>
 
-      <div className={`overlay`}></div>
+         <a href='/#marquee'  className=' text-decoration-none  main-font text-white w-100  position-absolute start-0 top-75'>
+       
+        <i className="  fa-solid fa-hand-pointer  fa-3x text-white fa-beat-fade"></i>
+        
+       
+        <h3 className='mt-1'>Click For <i className="fa-brands fa-draft2digital "></i>nd Section</h3>
+        </a>  
+          </div> 
+    <img src={width>576?'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1724077031/lldyf77udh4cal18g972.jpg':"https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722980347/mwl8aoodglwtcc742y7k.webp"}  alt="BMW Car"  />
 
+    
     </SwiperSlide>
-    <SwiperSlide className=' position-relative '>
-      <img loading='lazy' src={images.slide6} alt="Dodge Car" className='w-100' />
-
-      <div className={`overlay`}></div>
-
-    </SwiperSlide>
-
+   
   </Swiper>
-</SwiperSlide> 
-  {/************** /* 3 */}
-
-<SwiperSlide className=' position-relative '>
-
-  <video   src={images.video} type="video/mp4" className='w-100' loop muted playsInline   autoPlay >
- 
-  </video>
-
-  <div className="overlay">
-    <div  className="caption d-flex justify-content-center align-items-center vh-100">
-<h2   className={`main-font  text-center  mb-0 pb-lg-4 trt`}>AUTOVROOM EVENT</h2>
-    </div>
-  </div>
-
-</SwiperSlide> 
-  {/************** /* 4 */}
-
-<SwiperSlide className=' position-relative '>
-
-<video   src={images.video} type="video/mp4" className='w-100' loop muted playsInline   autoPlay >
-
-</video>
-
-<div className="overlay">
-<div  className="caption d-flex justify-content-center align-items-center vh-100">
-<div>
-<h2   className={`main-font  text-center  mb-0 pb-lg-4 trt`}>AUTOVROOM EVENT 02</h2>
-<h2   className={`main-font  text-center  mt-2 mb-0 pb-lg-4 trt`}>SOON</h2>
-
-
-
-</div>
-</div>
-</div>
-
-  </SwiperSlide> 
-  {/************** /* 5 */}
-
-<SwiperSlide className=' position-relative '>
-  <img loading='lazy' src={images.slide8} alt="BMW Motocycle" className='w-100' />
-
-  <div className={`overlay`}></div>
-
-</SwiperSlide> 
-
-</Swiper>
-
- 
-
+  )
+}
