@@ -35,7 +35,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`navbar navbar-expand-lg navbar-dark fixed-top z-2 ${navBackground ? style.scrolled : ''}`}>
+      <nav className={`navbar navbar-expand-lg navbar-dark fixed-top z-3 ${navBackground ? style.scrolled : ''}`}>
         <div className="container-fluid py-1 ">
           <img src={images.ministry} alt="Ministry Logo" width={100} height={100} />
 
