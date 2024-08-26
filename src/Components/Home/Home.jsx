@@ -157,7 +157,7 @@ export default function Home() {
             <h3 className='mt-1'>Click For <i className="fa-brands fa-draft2digital "></i>nd Section</h3>
             </a>
               </div> 
-              <img  src={width>576?'https://res.cloudinary.com/dnmwmrxmr/image/upload/f_auto,q_auto/flfniakcr06mk5zymoqv':"https://res.cloudinary.com/dnmwmrxmr/image/upload/v1724609516/omrsm1luqsnlu9u45qf8.jpg"}  alt="Bmw Car" />
+              <img  src={width>576?'https://res.cloudinary.com/dnmwmrxmr/image/upload/f_auto,q_auto/flfniakcr06mk5zymoqv':"https://res.cloudinary.com/dnmwmrxmr/image/upload/v1724609516/omrsm1luqsnlu9u45qf8.jpg"}  alt="NEW ALALMEIN EVENT" />
               </SwiperSlide>
                   <SwiperSlide>
             <div className="overlay">
@@ -179,7 +179,7 @@ export default function Home() {
             <h3 className='mt-1'>Click For <i className="fa-brands fa-draft2digital "></i>nd Section</h3>
             </a>
               </div> 
-              <img  src={width>576?'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1724609507/y5bowfdpclc8mzzj1vtw.jpg':"https://res.cloudinary.com/dnmwmrxmr/image/upload/v1724609509/gewjug5dvip6qmywgjbz.jpg"}  alt="Bmw Car" />
+              <img  src={width>576?'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1724609507/y5bowfdpclc8mzzj1vtw.jpg':"https://res.cloudinary.com/dnmwmrxmr/image/upload/v1724609509/gewjug5dvip6qmywgjbz.jpg"}  alt="NEW ALALMEIN EVENT" />
               </SwiperSlide>
 
 
