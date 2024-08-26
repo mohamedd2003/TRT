@@ -58,7 +58,7 @@ export default function Home() {
     <>
 {/* /*********************************Swipe Word + Arrows Icon From Font Awesome************************************ */}
 
-<div className='position-absolute top-20 start-0 w-100  z-1 text-center'>
+<div className='position-absolute top-25 start-0 w-100  z-2 text-center'>
 
 <h4 className='text-white main-font '>SWIPE <i className="fa-solid fa-arrows-up-down-left-right"></i> </h4>
 </div>
