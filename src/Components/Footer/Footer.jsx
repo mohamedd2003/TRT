@@ -3,6 +3,9 @@ import React from 'react'
 export default function Footer() {
   return (
     <>
+
+    <div className="bg-black">
+
     <div className="gradient  w-75 my-2 rounded-pill m-auto py-2 " >
         <div className="row">
 
@@ -15,6 +18,7 @@ export default function Footer() {
 
           
         </div>
+    </div>
     </div>
     </>
   )
