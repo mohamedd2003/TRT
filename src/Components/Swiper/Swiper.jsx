@@ -14,7 +14,31 @@ export default function SwiperComp() {
   const[width,setWidth]=useState(window.innerWidth)
  
 
+  useEffect(() => {
+    const handleResize = () =>
+      {
+        setWidth(window.innerWidth)
+      } 
+      window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
 
+    
+    return () => {
+
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
+    }
+      
+  }, []);
+
+
+  const handleScroll = () => {
+    if (window.scrollY > 638) {
+      setShowArrow(true);
+    } else {
+      setShowArrow(false);
+    }
+  };
 
 
   

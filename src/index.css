@@ -88,6 +88,7 @@ top:75% !important
     line-height: 85px;
     color: white;
   }
+  
 .top-25{
   top: 25%;
 }
@@ -300,6 +301,12 @@ right:2%
   @media screen and (max-width:576px) {
     .my-fs{
       font-size: 70px;
+      line-height: 85px;
+      color: white;
+    }
+
+    .oswald-titles{
+      font-size: 65px;
       line-height: 85px;
       color: white;
     }

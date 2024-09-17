@@ -15,31 +15,7 @@ import EventsSection from '../EventsSection/EventsSection';
 
 export default function Home() {
   const[showarrow,setShowArrow]=useState(false)
-  useEffect(() => {
-    const handleResize = () =>
-      {
-        setWidth(window.innerWidth)
-      } 
-      window.addEventListener('scroll', handleScroll);
-    window.addEventListener('resize', handleResize);
-
-    
-    return () => {
-
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
-    }
-      
-  }, []);
-
-
-  const handleScroll = () => {
-    if (window.scrollY > 638) {
-      setShowArrow(true);
-    } else {
-      setShowArrow(false);
-    }
-  };
+ 
 
 
   const lineStyle={
