@@ -3,7 +3,7 @@ import React from 'react'
 export default function Footer() {
   return (
     <>
-    <div className="container-fluid gradient  py-2 " >
+    <div className="gradient  w-75 my-2 rounded-pill m-auto py-2 " >
         <div className="row">
 
           <div className="col-md-4 col-0"></div>
