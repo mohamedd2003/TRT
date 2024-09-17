@@ -4,7 +4,7 @@ import Layout from "../Layout/Layout";
 import Lazy from "../LazyLoading/LazyLoading";
 import Footer from '../Footer/Footer';
 import NewAlalmein from '../NewAlalmein/NewAlalmein';
-import PhotoVoting from '../PhotoVoting/PhotoVoting';
+
 const Home = lazy(() => import('../Home/Home'));
 const Events = lazy(() => import('../Events/Events'));
 const AboutPage = lazy(() => import('../AboutPage/AboutPage'));
@@ -31,7 +31,7 @@ let routes = createBrowserRouter([
             { path: 'CiuEvent', element: <CiuEvent /> },
             { path: 'newAlalmein', element: <NewAlalmein /> },
             { path: 'Footer', element: <Footer /> },
-            { path: 'PhotoVoting', element: <PhotoVoting /> },
+        
             { path: '*', element: <NotFound /> },
         ]
     }
