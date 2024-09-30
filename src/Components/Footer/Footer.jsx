@@ -6,7 +6,7 @@ export default function Footer() {
 
     <div className="bg-black">
 
-    <div className="gradient  w-75 my-2 rounded-pill m-auto py-2 " >
+    <div className="gradient  w-95 my-2 rounded-pill m-auto p-2 " >
         <div className="row">
 
           <div className="col-md-4 col-0"></div>

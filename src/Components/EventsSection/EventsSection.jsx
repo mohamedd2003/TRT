@@ -84,7 +84,8 @@ export default function EventsSection() {
       <Link to={'/CiuEvent'} >
       
       {loading && <MoonLoader size={100} color={"red"} loading={loading} />}
-        <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722978589/enlyvoxrrpy9bgawzaye.jpg' className='w-100 rounded-end-pill' />
+        <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500}
+         src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1727171147/tu6bavfxzecjeutpi5pk.jpg' className='w-100 rounded-end-pill' />
         <div className="overlay " >
     <h2     className={`main-font text-center  position-relative top-50 translate-middle-y  mb-0 pb-lg-4 trt`}>CIU <br/>EVENT</h2>
     <i   className={`fa-solid fa-hand-pointer  position-absolute top-75 translate-middle-y start-0 fa-3x trt`}></i>

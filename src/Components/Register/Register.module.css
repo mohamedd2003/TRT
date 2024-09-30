@@ -1,0 +1,39 @@
+.header{
+    min-height: 79vh;
+    background-color: rgba(0, 0, 0, 0.5);
+ 
+}
+.backGround{
+    background-image: url("https://res.cloudinary.com/dnmwmrxmr/image/upload/v1724671796/flfniakcr06mk5zymoqv.jpg");
+    background-position: center center;
+    background-size: cover ;
+    position: relative;
+} 
+
+.logo{
+    width: 100px;
+    height: 100px;
+}
+.swiper-card {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  #phoneNumber::placeholder {
+    color: red; /* You can change this to any color you like */
+  }
+  
+  /* For webkit browsers like Chrome, Safari, Opera */
+  #phoneNumber::-webkit-input-placeholder {
+    color: red;
+  }
+  
+  /* For Mozilla Firefox */
+  #phoneNumber:-moz-placeholder {
+    color: red;
+  }
+  
+  /* For Internet Explorer 10+ */
+  #phoneNumber:-ms-input-placeholder {
+    color: red;
+  }

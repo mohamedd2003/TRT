@@ -18,6 +18,8 @@ export default function SwiperComp() {
     const handleResize = () =>
       {
         setWidth(window.innerWidth)
+    
+        
       } 
       window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);

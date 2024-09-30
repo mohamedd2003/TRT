@@ -4,7 +4,11 @@ import Layout from "../Layout/Layout";
 import Lazy from "../LazyLoading/LazyLoading";
 import Footer from '../Footer/Footer';
 import NewAlalmein from '../NewAlalmein/NewAlalmein';
-
+import Register from '../Register/Register';
+import Voting from '../Voting/Voting';
+import { UserContextProvider } from '../../Context/Users/UsersContext';
+import Login from '../Login/Login';
+import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 const Home = lazy(() => import('../Home/Home'));
 const Events = lazy(() => import('../Events/Events'));
 const AboutPage = lazy(() => import('../AboutPage/AboutPage'));
@@ -31,7 +35,9 @@ let routes = createBrowserRouter([
             { path: 'CiuEvent', element: <CiuEvent /> },
             { path: 'newAlalmein', element: <NewAlalmein /> },
             { path: 'Footer', element: <Footer /> },
-        
+            { path: 'register', element: <Register /> },
+            { path: '/voting', element: <ProtectedRoute><Voting /></ProtectedRoute>  },
+            { path: '/login', element: <Login /> },
             { path: '*', element: <NotFound /> },
         ]
     }
@@ -40,8 +46,11 @@ let routes = createBrowserRouter([
 export default function App() {
     return (
         <Suspense fallback={<Lazy />}>
+            <UserContextProvider>
 
-            <RouterProvider router={routes} />
+                <RouterProvider router={routes} />
+
+            </UserContextProvider>
 
         </Suspense>
     );

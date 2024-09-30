@@ -129,7 +129,7 @@ borderRadius: '0',
                      threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1722965885/zwtrmx6oywwxlcmmxp62.webp' className='w-100 rounded-4 '  alt="seat CAR" />
                   </div>
                   <div className="car p-1">{loading && <MoonLoader size={100} color={"red"} loading={loading} />}
-                    <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"   threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723142648/mm3i28az8smpbd4lmooz.webp' className='w-100 rounded-4 '  alt="OLD VW CAR" />
+                    <LazyLoadImage e  effect="blur"   threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723142648/mm3i28az8smpbd4lmooz.webp' className='w-100 rounded-4 '  alt="OLD VW CAR" />
                   </div>
 
 
