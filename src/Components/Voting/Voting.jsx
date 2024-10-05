@@ -3,12 +3,14 @@ import styles from"./Voting.module.css"
 import Marquee from "../slider/slider"
 import axios from 'axios'
 import { MoonLoader } from 'react-spinners'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 export default function Voting() {
 const baseUrl='https://voting-ca7i.vercel.app/api/v1'
+const userId=localStorage.getItem("ID")
+const EventId="670049c5510869864190677c"
+const postId='66fd1b14a92f3e72a101b337'
 
-  const[cars,setCars]=useState([]  )
+  const[cars,setCars]=useState([])
 
   const[eventDetails,SetEventDetails]=useState([])
   const[topPosts,setTopPosts]=useState([])
@@ -17,17 +19,11 @@ const baseUrl='https://voting-ca7i.vercel.app/api/v1'
 
 
   const getEventDetails=()=>{
-    const userId={
-      "userId":"66faf1382e97e77f5c411196"
-  }
-      axios.post(`${baseUrl}/events/event-details/66faf3029c13fd032c2df4fd`,userId)
+    const value={"userId":userId}
+      axios.post(`${baseUrl}/events/event-details/${EventId}`,value)
       .then((res)=>{
-        
        SetEventDetails(res?.data?.data)
-        
         setTopPosts(eventDetails?.topPosts) 
-        
-      
       })
   }
     const lineStyle={
@@ -45,13 +41,14 @@ const baseUrl='https://voting-ca7i.vercel.app/api/v1'
 
            const geUserLikesNumber=()=>{
               const values={
-                  "userId" :"66faf1382e97e77f5c411196"
+                  "userId" :userId
               }
             axios.post(`${baseUrl}/users/userInfo`,values)
             .then((res)=>
             {
               const arr=res?.data?.data?.likes
               setCarLikes(arr.length)
+              
 
             })
             .catch((err)=> console.log(err) )
@@ -60,14 +57,14 @@ const baseUrl='https://voting-ca7i.vercel.app/api/v1'
 
 
            const getCarPhotos = () => {
-            axios.post(`${baseUrl}/events/66faf3029c13fd032c2df4fd/posts`,
-               { userId: '66faf1382e97e77f5c411196'})
+            axios.post(`${baseUrl}/events/${EventId}/posts`,
+               { userId: userId})
             .then((res) => {
               setCars(res?.data?.data);
               // console.log(res?.data?.data);
               
             })
-            .catch((err) => console.log(err));
+            .catch((err) => console.log(err.response.data));
           };
           //Make Use Effect And Call it Inside 
           useEffect(()=>{
@@ -78,11 +75,12 @@ const baseUrl='https://voting-ca7i.vercel.app/api/v1'
 
         const handleLikes=()=>{
           const obj={
-            "postId" :"66faf31f9c13fd032c2df503",
-            "userId" :"66faf1382e97e77f5c411196"
+            "postId" :postId,
+            "userId" :userId
         }
           axios.patch(`${baseUrl}/events/66faf3029c13fd032c2df4fd/likes/handle-like`,obj)
           .then((res)=>{
+            console.log(res.data);
             
             if (res.data.message === 'Liked successfully') {
               document.getElementById("heart").classList.replace("fa-regular", "fa-solid");
@@ -98,10 +96,9 @@ const baseUrl='https://voting-ca7i.vercel.app/api/v1'
               document.getElementById("heart").classList.remove("fa-3x");
               document.getElementById("heart").classList.add("fa-2x");
             }
-            console.log(carLikes);
             
           })
-          .catch((err)=>console.log(err.message))
+          .catch((err)=>console.log(err.response.data.message))
         }
           
           
@@ -135,7 +132,7 @@ const baseUrl='https://voting-ca7i.vercel.app/api/v1'
           <div key={post._id} className="col-lg-4 col-6">
 
             <div className="car text-white">
-              <LazyLoadImage     threshold={1500}  className='w-100 rounded-4 ' src={post.photo} alt="car image"  />
+              <img className='w-100 rounded-4 ' src={post.photo} alt="car image"  />
 
                 <h4 className='main-font  mt-2'>Car Owner : {post.owner}</h4>
               <div className="d-flex text-white justify-content-between my-2">
@@ -164,7 +161,7 @@ const baseUrl='https://voting-ca7i.vercel.app/api/v1'
           <div key={car._id} className="col-lg-4 col-6">
 
             <div className="car text-white">
-            <LazyLoadImage     threshold={1500} className='w-100 rounded-4 ' src={car.photo} alt="car image"  />
+            <img className='w-100 rounded-4 ' src={car.photo} alt="car image"  />
 
                 <h4 className='main-font  mt-2'>Car Owner : {car.owner}</h4>
               <div className="d-flex text-white justify-content-between my-2">
