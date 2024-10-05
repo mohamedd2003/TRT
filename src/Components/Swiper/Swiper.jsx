@@ -37,7 +37,8 @@ export default function SwiperComp() {
   const handleScroll = () => {
     if (window.scrollY > 638) {
       setShowArrow(true);
-    } else {
+    } 
+    else {
       setShowArrow(false);
     }
   };

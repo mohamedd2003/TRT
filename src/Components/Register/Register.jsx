@@ -27,17 +27,17 @@ let [err,setErr]=useState('')
         }).required('Address is required')
       });
     let submitForm = (values) => {
+      console.log(values);
         setLoading(true)
-        
       axios.post('https://voting-ca7i.vercel.app/api/v1/users/create-user',values)
       .then((res)=>{
           setLoading(false)
+          
           localStorage.setItem("IP",res?.data?.ip)
-          localStorage.setItem("ID",res?.data?._id)
+          localStorage.setItem("ID",res?.data.data._id)
       
           setUserLogin(res?.data?.ip)
-          console.log(res?.data?._id)
-          
+        
           
           if(res.data.message==='User created successfully'){
 
@@ -52,6 +52,7 @@ let [err,setErr]=useState('')
         setLoading(false)
                 setErr(err.response.data.message)})
     }
+
     let formik = useFormik({
         initialValues: {
             "name": "", 
@@ -69,57 +70,81 @@ let [err,setErr]=useState('')
         ,validationSchema
     })
 
-    const handleRegisterClick = (event) => {
-        event.preventDefault();
-
-        // Fill address based on geolocation, then proceed with submission
-        fillAddressWithGeolocation(formik.setFieldValue, formik.submitForm);
- 
-    };
-
-
-    async function fillAddressWithGeolocation(setFieldValue,callback ) {
+    const handleRegisterClick = async (event) => {
+      event.preventDefault();
+      try {
+          // Wait for geolocation to finish and then submit the form
+          await fillAddressWithGeolocation(formik.setFieldValue);
+          formik.submitForm(); // Submit form after geolocation is filled
+      } catch (error) {
+          console.error("Error filling address:", error);
+          // Handle error if needed (optional)
+      }
+  };
+  
+  async function fillAddressWithGeolocation(setFieldValue) {
+    return new Promise((resolve, reject) => {
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(async (position) => {
-                const { latitude, longitude } = position.coords;
+            navigator.geolocation.getCurrentPosition(
+                async (position) => {
+                    const { latitude, longitude } = position.coords;
+                    const url = `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude}`;
 
-                // Call Nominatim API for reverse geocoding
-                const url = `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude}`;
+                    try {
+                        const response = await fetch(url);
+                        const data = await response.json();
 
-                try {
-                    const response = await fetch(url);
-                    const data = await response.json();
+                        if (data.address) {
+                            const address = {
+                                street: data.address.road || '',
+                                city: data.address.city || data.address.town || data.address.village || '',
+                                state: data.address.state || '',
+                                country: data.address.country || '',
+                                postalCode: data.address.postcode || ''
+                            };
 
-                    if (data.address) {
-                        // Parse the address components from the response
-                        const address = {
-                            street: data.address.road || '',
-                            city: data.address.city || data.address.town || data.address.village || '',
-                            state: data.address.state || '',
-                            country: data.address.country || '',
-                            postalCode: data.address.postcode || ''
-                        };
+                            setFieldValue('address.street', address.street);
+                            setFieldValue('address.city', address.city);
+                            setFieldValue('address.state', address.state);
+                            setFieldValue('address.country', address.country);
+                            setFieldValue('address.postalCode', address.postalCode);
 
-                        // Update Formik fields with the address data
-                        setFieldValue('address.street', address.street);
-                        setFieldValue('address.city', address.city);
-                        setFieldValue('address.state', address.state);
-                        setFieldValue('address.country', address.country);
-                        setFieldValue('address.postalCode', address.postalCode);
-
-                        // Proceed with form submission once geolocation is filled
-                        callback();
-                    } else {
-                        console.error('Address not found in response.');
+                            resolve();  // Address filled successfully
+                        } else {
+                            reject(new Error('Address not found'));
+                        }
+                    } catch (error) {
+                        reject(error);  // Handle network errors
                     }
-                } catch (error) {
-                    console.error('Error fetching address:', error);
-                }
-            });
+                },
+                (error) => {
+                    // Handle geolocation errors
+                    switch (error.code) {
+                        case error.PERMISSION_DENIED:
+                            alert('Permission to access location was denied.');
+                            break;
+                        case error.POSITION_UNAVAILABLE:
+                            alert('Location information is unavailable. Please check your network or GPS settings.');
+                            break;
+                        case error.TIMEOUT:
+                            alert('The request to get your location timed out.');
+                            break;
+                        default:
+                            alert('An unknown error occurred while retrieving location.');
+                            break;
+                    }
+                    reject(error);
+                },
+                { timeout: 10000 }  // Set a timeout for the geolocation request
+            );
         } else {
             alert('Geolocation is not supported by this browser.');
+            reject(new Error('Geolocation not supported'));
         }
-    }
+    });
+}
+
+  
     
 
 
@@ -156,13 +181,13 @@ let [err,setErr]=useState('')
                             <div className="input-group-text bg-transparent gradient text-white"><i className="fa-solid fa-fade fa-signature"></i></div>
 
                             <input className=' form-control text-white bg-transparent gradient'
-                                id="name"
-                                name="name"
-                                onBlur={formik.handleBlur}
-                                type="text"
-                                onChange={formik.handleChange}
-                                value={formik.values.name}
-                                placeholder="Enter your Name "
+                              id="name"
+                              name="name"
+                              onBlur={formik.handleBlur}
+                              type="text"
+                              onChange={formik.handleChange}
+                              value={formik.values.name}
+                              placeholder="Enter your Name "
                                  />
                         </div>
                         {formik.errors.name && <h4 className='text-center main-font text-main  my-3'><i className="fa-solid fa-exclamation"></i> {formik.errors.name}</h4>}

@@ -106,7 +106,7 @@ let handleLogout=()=>
 
               </>:<>
               <li className="nav-item mt-3 ">
-                <Link className="nav-link text-center main-font fs-5 mt-lg-2  mb-2    text-white  " to="register" 
+                <Link className="nav-link text-center main-font fs-5 mt-lg-2  mb-2    text-white  " to="voting" 
                 onClick={closeNavbar}><span className='bg-main rounded-pill p-2'>Voting <i className="fa-solid fa-thumbs-up"></i></span> </Link>
               </li>
               <li className="nav-item mt-3 ">

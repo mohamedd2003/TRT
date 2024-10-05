@@ -1,4 +1,4 @@
-import React, { lazy ,useState,useEffect} from 'react'
+import React, { lazy ,useState,useEffect, useMemo} from 'react'
 import './Home.module.css';
 //Framer-Motion library Imports
 import { motion } from 'framer-motion'
@@ -18,17 +18,17 @@ export default function Home() {
  
 
 
-  const lineStyle={
+  const lineStyle = useMemo(() => ({
     background: 'linear-gradient(to right, rgb(39, 1, 1), #ff0014)',
     width: '80px',
     height: '5px',
     margin: '0 20px',
     marginRight: '40px',
     padding: '0px',
-    display:' inline-block',
+    display: 'inline-block',
     transform: 'translateY(-20px)',
     borderRadius: '0',
-       }
+  }), []);
 
   return (
     <>
