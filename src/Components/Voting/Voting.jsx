@@ -8,7 +8,7 @@ import toast, { Toaster } from 'react-hot-toast';
 export default function Voting() {
 const baseUrl='https://voting-ca7i.vercel.app/api/v1'
 const userId=localStorage.getItem("ID")
-const EventId="67017761bdce8e55bf2f1edd"
+const EventId="670185fe07598b205c3458d3"
 
   const[cars,setCars]=useState([])
  
