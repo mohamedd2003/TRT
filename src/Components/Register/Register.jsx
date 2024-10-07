@@ -6,6 +6,7 @@ import axios from 'axios';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { UserContext } from '../../Context/Users/UsersContext';
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function Register() {
 
@@ -50,7 +51,7 @@ let [err,setErr]=useState('')
         .catch(
             (err)=>{
         setLoading(false)
-                setErr(err.response.data.message)})
+        toast.error(err.response.data.message)})
     }
 
     let formik = useFormik({
@@ -77,75 +78,139 @@ let [err,setErr]=useState('')
           await fillAddressWithGeolocation(formik.setFieldValue);
           formik.submitForm(); // Submit form after geolocation is filled
       } catch (error) {
-          console.error("Error filling address:", error);
+         toast.error("Error filling address:", error);
           // Handle error if needed (optional)
       }
   };
   
-  async function fillAddressWithGeolocation(setFieldValue) {
-    return new Promise((resolve, reject) => {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(
-                async (position) => {
-                    const { latitude, longitude } = position.coords;
-                    const url = `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude}`;
+//   async function fillAddressWithGeolocation(setFieldValue) {
+//     return new Promise((resolve, reject) => {
+//         if (navigator.geolocation) {
+//             navigator.geolocation.getCurrentPosition(
+//                 async (position) => {
+//                     const { latitude, longitude } = position.coords;
+//                     const url = `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude}`;
 
-                    try {
-                        const response = await fetch(url);
-                        const data = await response.json();
+//                     try {
+//                         const response = await fetch(url);
+//                         const data = await response.json();
 
-                        if (data.address) {
-                            const address = {
-                                street: data.address.road || '',
-                                city: data.address.city || data.address.town || data.address.village || '',
-                                state: data.address.state || '',
-                                country: data.address.country || '',
-                                postalCode: data.address.postcode || ''
-                            };
+//                         if (data.address) {
+//                             const address = {
+//                                 street: data.address.road || '',
+//                                 city: data.address.city || data.address.town || data.address.village || '',
+//                                 state: data.address.state || '',
+//                                 country: data.address.country || '',
+//                                 postalCode: data.address.postcode || ''
+//                             };
 
-                            setFieldValue('address.street', address.street);
-                            setFieldValue('address.city', address.city);
-                            setFieldValue('address.state', address.state);
-                            setFieldValue('address.country', address.country);
-                            setFieldValue('address.postalCode', address.postalCode);
+//                             setFieldValue('address.street', address.street);
+//                             setFieldValue('address.city', address.city);
+//                             setFieldValue('address.state', address.state);
+//                             setFieldValue('address.country', address.country);
+//                             setFieldValue('address.postalCode', address.postalCode);
 
-                            resolve();  // Address filled successfully
-                        } else {
-                            reject(new Error('Address not found'));
-                        }
-                    } catch (error) {
-                        reject(error);  // Handle network errors
-                    }
-                },
-                (error) => {
-                    // Handle geolocation errors
-                    switch (error.code) {
-                        case error.PERMISSION_DENIED:
-                            alert('Permission to access location was denied.');
-                            break;
-                        case error.POSITION_UNAVAILABLE:
-                            alert('Location information is unavailable. Please check your network or GPS settings.');
-                            break;
-                        case error.TIMEOUT:
-                            alert('The request to get your location timed out.');
-                            break;
-                        default:
-                            alert('An unknown error occurred while retrieving location.');
-                            break;
-                    }
-                    reject(error);
-                },
-                { timeout: 10000 }  // Set a timeout for the geolocation request
-            );
-        } else {
-            alert('Geolocation is not supported by this browser.');
-            reject(new Error('Geolocation not supported'));
-        }
-    });
-}
+//                             resolve();  // Address filled successfully
+//                         } else {
+//                             reject(new Error('Address not found'));
+//                         }
+//                     } catch (error) {
+//                         reject(error);  // Handle network errors
+//                     }
+//                 },
+//                 (error) => {
+//                     // Handle geolocation errors
+//                     switch (error.code) {
+//                         case error.PERMISSION_DENIED:
+//                             toast.error('Permission to access location was denied.');
+//                             break;
+//                         case error.POSITION_UNAVAILABLE:
+//                             toast.error('Location information is unavailable. Please check your network or GPS settings.');
+//                             break;
+//                         case error.TIMEOUT:
+//                             toast.error('The request to get your location timed out.');
+//                             break;
+//                         default:
+//                             toast.error('An unknown error occurred while retrieving location.');
+//                             break;
+//                     }
+//                     reject(error);
+//                 },
+//                 { timeout: 10000 }  // Set a timeout for the geolocation request
+//             );
+//         } else {
+//             toast.error('Geolocation is not supported by this browser.');
+//             reject(new Error('Geolocation not supported'));
+//         }
+//     });
+// }
 
   
-    
+async function fillAddressWithGeolocation(setFieldValue) {
+  return new Promise((resolve, reject) => {
+    // Check if geolocation is supported by the browser
+    if (!navigator.geolocation) {
+      toast.error('Geolocation is not supported by this browser.');
+      reject(new Error('Geolocation not supported'));
+      return;  // Exit the function early if geolocation is not supported
+    }
+
+    navigator.geolocation.getCurrentPosition(
+      async (position) => {
+        const { latitude, longitude } = position.coords;
+        const url = `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude}`;
+
+        try {
+          const response = await fetch(url);
+          const data = await response.json();
+
+          if (data.address) {
+            const address = {
+              street: data.address.road || '',
+              city: data.address.city || data.address.town || data.address.village || '',
+              state: data.address.state || '',
+              country: data.address.country || '',
+              postalCode: data.address.postcode || ''
+            };
+
+            // Set form values for address fields
+            setFieldValue('address.street', address.street);
+            setFieldValue('address.city', address.city);
+            setFieldValue('address.state', address.state);
+            setFieldValue('address.country', address.country);
+            setFieldValue('address.postalCode', address.postalCode);
+
+            resolve();  // Resolve the promise if everything works fine
+          } else {
+            reject(new Error('Address not found'));
+          }
+        } catch (error) {
+          reject(error);  // Handle network errors
+        }
+      },
+      (error) => {
+        // Handle geolocation errors
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            toast.error('Permission to access location was denied.');
+            break;
+          case error.POSITION_UNAVAILABLE:
+            toast.error('Location information is unavailable.');
+            break;
+          case error.TIMEOUT:
+            toast.error('The request to get your location timed out.');
+            break;
+          default:
+            toast.error('An unknown error occurred while retrieving location.');
+            break;
+        }
+        reject(error);  // Reject the promise if an error occurs
+      },
+      { timeout: 10000 }  // Set a timeout for the geolocation request
+    );
+  });
+}
+
 
 
     const lineStyle = {
@@ -161,7 +226,7 @@ let [err,setErr]=useState('')
     }
     return (
         <>
-
+<Toaster position='right-top'></Toaster>
             <header className={`  ${styles.backGround} text-center `}>
                 <div className={`d-flex justify-content-center align-items-center  ${styles.header}`}>
                     <h1 className='  text-white  oswald-titles main-font'><span className='text-main'>R</span>EGISTRATION <i className="ms-1 fa-solid fa-arrow-right-to-bracket"></i></h1>
@@ -174,7 +239,7 @@ let [err,setErr]=useState('')
                 <h2 className='text-center main-font text-white  my-3'> You Should Register First To Vote Cars</h2>
                 <div className='w-75 m-auto'>
 
-                    <form onSubmit={handleRegisterClick}>
+                    <form onSubmit={formik.handleSubmit}>
                         <label className='visually-hidden' htmlFor="name">User Name:</label>
 
                         <div className="input-group my-4">
@@ -266,7 +331,7 @@ let [err,setErr]=useState('')
       </div>
                         </div>
               {err==''?'':
-                <h2 className='text-center main-font text-main  my-3'> <i className="fa-solid   fa-exclamation"></i> {err} <i className="fa-solid   fa-exclamation"></i></h2>
+               <Toaster position='right-top'></Toaster>
               
               } 
 
@@ -274,7 +339,7 @@ let [err,setErr]=useState('')
              <span className='fa fa-spinner fa-spin mx-3'></span>
             </button> 
             :    
-   <button className='btn gradient float-end rounded-pill main-font fs-5 my-2 text-white' type="submit">  
+   <button className='btn gradient float-end rounded-pill main-font fs-5 my-2 text-white' type="button" onClick={handleRegisterClick}>  
          <span> Register<i className="fa-solid ms-2 fa-fade fa-right-to-bracket"></i></span> 
              </button> }
 <Link to={'/login'}> 
