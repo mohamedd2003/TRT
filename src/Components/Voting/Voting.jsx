@@ -38,11 +38,13 @@ const EventId="67019ba8ded0e3b2ccd1502a"
             const value={"userId":userId}
               axios.post(`${baseUrl}/events/event-details/${EventId}`,value)
               .then((res)=>{
+                console.log(res?.data?.data);
+                
                SetEventDetails(res?.data?.data)
-                setTopPosts(eventDetails?.topPosts)
+                setTopPosts(res?.data?.data?.topPosts)
            
                  
-              })
+              }).catch((err)=>toast.error(err))
           }
 
 //**************************************************************** */
@@ -93,10 +95,6 @@ const handleLikes = (postId) => {
         getCarPhotos()
         geUserLikesNumber()
         getEventDetails()
-        // document.getElementById("heart").classList.replace("fa-regular", "fa-solid");
-        // document.getElementById("heart").classList.add("text-main");
-        // document.getElementById("heart").classList.add("fa-beat-fade");
-        // document.getElementById("heart").classList.add("fa-3x");
         toast.success('Photo Liked Successfully');
       }
        else if (res.data.message === 'Unliked successfully') {
@@ -133,8 +131,21 @@ const handleLikes = (postId) => {
  
     </header>
 
+    
+
     <section className='my-5'>
-<h2 className='my-4 text-center main-font text-white fs-1'>TOP  <i className="fa-solid me-2  fa-lg fa-arrow-up-1-9"></i></h2>
+<h2 className='my-4 text-center main-font text-white fs-1'>Event Details<i className="fa-solid ms-1  fa-circle-info"></i></h2>
+      <div className="container shadowLg my-2 p-3 rounded-5">
+      <ul style={{ listStyleType: 'circle' }} className='main-font text-white fs-3   ms-3'>
+          <li>Event : {eventDetails.eventName}</li>
+          <li> cars : {eventDetails.numberOfPosts}</li>
+          <li>Registered Users : {eventDetails.numberOfUsers}</li>
+        </ul>
+      </div>
+    </section>
+
+    <section className='my-5'>
+<h2 className='my-4 text-center main-font text-white fs-1'>TOP Cars <i className="fa-solid me-2  fa-lg fa-arrow-up-1-9"></i></h2>
       <div className="container shadowLg my-2 p-3 rounded-5">
         <div className="row g-4">
       {topPosts?.length===0?<MoonLoader  className='m-auto my-3' size={150} color={"red"}  />
@@ -169,7 +180,7 @@ const handleLikes = (postId) => {
 
 
     <section className='my-5'>
-<h2 className='fa-fade my-4 text-center main-font text-white'>VOTING </h2>
+<h2 className='fa-fade my-4 text-center main-font text-white'>VOTING <i className="fa-regular fa-thumbs-up"></i> </h2>
 <h2 className='fa-fade my-4 text-center main-font text-main'><i className=" me-2 fa-regular fa-bell"></i>You Can Only Vote For One Car <i className=" me-2 fa-regular fa-bell"></i></h2>
 
       
