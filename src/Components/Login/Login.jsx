@@ -6,6 +6,7 @@ import axios from 'axios';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { UserContext } from '../../Context/Users/UsersContext';
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function Login() {
 
@@ -28,13 +29,13 @@ export default function Login() {
 
         setUserLogin(res?.data?.ipAddress)
         setUserId(res?.data?._id)
-
+          toast.success("Login Successfully")
 
         if (res.data.message === 'logged in success') {
 
           navigate('/voting')
         }
-        console.log(res);
+        toast.success(res?.data?.message);
 
       })
       .catch(
@@ -42,7 +43,9 @@ export default function Login() {
           console.log(err);
 
           setLoading(false)
-          setErr(err.response.data.message)
+          const errorMessage = err.response?.data?.message ;
+          setErr(errorMessage)
+          toast.error(errorMessage);
         })
   }
   let formik = useFormik({
@@ -107,7 +110,10 @@ export default function Login() {
             }
 
             {err == '' ? '' :
-              <h2 className='text-center main-font text-main  my-3'> <i className="fa-solid   fa-exclamation"></i> {err} <i className="fa-solid   fa-exclamation"></i></h2>
+              <Toaster
+  position="top-right"
+  reverseOrder={false}
+/>
 
             }
 
