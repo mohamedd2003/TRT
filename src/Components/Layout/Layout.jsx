@@ -59,7 +59,7 @@ const Layout = () => {
 
             
 <a href="https://www.instagram.com/trt.eg/"  target='_blank'  >  <i className="fa-brands fa-instagram fa-xl  text-white  "></i></a>
-<a href='https://www.tiktok.com/@trt.eg?_t=8omy8NDN72u'target='_blank'   className='text-dark'><i className="fa-brands fa-tiktok fa-xl  text-white    mt-4 "></i></a>
+<a href='tiktok://user?username=trt.eg&source_url=https://www.tiktok.com/@trt.eg?_t=8omy8NDN72u'target='_blank'   className='text-dark'><i className="fa-brands fa-tiktok fa-xl  text-white    mt-4 "></i></a>
 
 
   
