@@ -94,9 +94,9 @@ let handleLogout=()=>
                   </li>
                 </ul>
               </li>
-              <li className="nav-item mt-3">
+              {/* <li className="nav-item mt-3">
                 <NavLink className="nav-link text-center main-font" to="contact" onClick={closeNavbar}>Contact</NavLink>
-              </li>
+              </li> */}
 
               {userLogin ===null  ? <>
                 <li className="nav-item mt-3 ">
