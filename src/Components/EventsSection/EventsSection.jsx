@@ -14,6 +14,7 @@ export default function EventsSection() {
   const handleonLoad = () => {
     setLoading(false);
   };
+  {/* <i   className='fa-solid fa-spinner fa-spin   fa-1x trt'></i> */}
   return (
     <section id='events' className='bg-black pt-2 pb-5'>
     <div className='m-auto text-center'>
@@ -29,7 +30,7 @@ export default function EventsSection() {
        threshold={1500} src='https://res.cloudinary.com/dd5zgwygh/image/upload/v1760985609/venu_ckujg1.png'alt="AutvRoom Event" className='w-100 h-100 rounded-pill   ' />
        <div className="overlay " >
     <h2   className={`main-font text-center  position-relative top-50 translate-middle-y  mb-0 pb-lg-4 trt`}>ROYAL PARK EVENT</h2>
-   <div className='position-absolute top-75 translate-middle-y end-50'>
+   <div className='position-absolute top-75 translate-middle-y end-0'>
   <i   className='fa-solid fa-spinner fa-spin  text-danger  fa-1x trt'></i>
 
 
