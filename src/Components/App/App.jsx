@@ -9,6 +9,7 @@ import Voting from '../Voting/Voting';
 import { UserContextProvider } from '../../Context/Users/UsersContext';
 import Login from '../Login/Login';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
+const LaCasa =lazy(()=>import("../LaCasa/LaCasa"))
 const Home = lazy(() => import('../Home/Home'));
 const Events = lazy(() => import('../Events/Events'));
 const AboutPage = lazy(() => import('../AboutPage/AboutPage'));
@@ -30,6 +31,7 @@ let routes = createBrowserRouter([
             { path: 'contact', element: <Contact /> },
             { path: 'gallery', element: <Gallery /> },
             { path: 'autovroomEvent', element: <AutovroomEvent /> },
+            { path: 'laCasa', element: <LaCasa /> },
             { path: 'QatarEvent', element: <QatarEvent /> },
             { path: 'ElshroukEvent', element: <ElshroukEvent /> },
             { path: 'CiuEvent', element: <CiuEvent /> },

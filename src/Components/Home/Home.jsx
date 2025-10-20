@@ -94,6 +94,8 @@ export default function Home() {
           <div className="marquee-content-logos">
 
 
+<img src={'https://res.cloudinary.com/dd5zgwygh/image/upload/v1760985247/logo01_onnkxe.jpg'} alt='OAK' className='mx-3 mx-sm-5'  width={250}  height={300} />
+<img src={'https://res.cloudinary.com/dd5zgwygh/image/upload/v1760985254/logo02_rc1rar.png'} alt='phantom Center' className='mx-3 mx-sm-5'  width={250}  height={300} />
 <img src={'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723723039/etluwbytfllngxk7sk8z.png'} alt='phantom Center' className='mx-3 mx-sm-5'  width={250}  height={80} />
 <img src={'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723723042/cisghuhkiyvaco6pzyf6.png'} alt='Eagle Car Center' className='mx-3 mx-sm-5' width={250}  height={150} />
 <img src={'https://res.cloudinary.com/dnmwmrxmr/image/upload/v1723723041/qqojgj6lc2iahzdpxxqj.png'} className='mx-3 mx-sm-5' alt='AUTOVROOM' width={250}  height={150} />

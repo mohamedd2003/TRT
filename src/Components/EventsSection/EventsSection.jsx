@@ -22,19 +22,38 @@ export default function EventsSection() {
 
     <div className="container">
       <div className="row g-0" >
-      <div className="col-md-6   position-relative" data-aos='fade-right' data-aos-duration='1000'>
+      <div className="col-12   position-relative" data-aos='fade-right' data-aos-duration='1000'>
      
        {loading && <MoonLoader size={100} color={"red"} loading={loading} />}
-      <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}   effect="blur"  
-       threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1724614009/ws2muojbczzli0tfxbid.jpg'alt="AutvRoom Event" className='w-100 h-100 rounded-start-pill blur  ' />
+      <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}     
+       threshold={1500} src='https://res.cloudinary.com/dd5zgwygh/image/upload/v1760985609/venu_ckujg1.png'alt="AutvRoom Event" className='w-100 h-100 rounded-pill   ' />
        <div className="overlay " >
-    <h2   className={`main-font text-center  position-relative top-50 translate-middle-y  mb-0 pb-lg-4 trt`}>LA CASA DE PAPEL EVENT</h2>
-   <div className='position-absolute top-75 translate-middle-y end-0'>
-    <i   className='fa-solid fa-spinner fa-spin   fa-1x trt'></i>
+    <h2   className={`main-font text-center  position-relative top-50 translate-middle-y  mb-0 pb-lg-4 trt`}>ROYAL PARK EVENT</h2>
+   <div className='position-absolute top-75 translate-middle-y end-50'>
+  <i   className='fa-solid fa-spinner fa-spin  text-danger  fa-1x trt'></i>
+
 
    </div>
     
         </div>
+      
+        </div>
+      <div className="col-md-6   position-relative" data-aos='fade-right' data-aos-duration='1000'>
+     
+        <Link to={'/laCasa'}>
+       {loading && <MoonLoader size={100} color={"red"} loading={loading} />}
+      <LazyLoadImage  beforeLoad={handleBeforeLoad}  afterLoad={handleonLoad}     
+       threshold={1500} src='https://res.cloudinary.com/dnmwmrxmr/image/upload/v1724614009/ws2muojbczzli0tfxbid.jpg'alt="AutvRoom Event" className='w-100 h-100 rounded-start-pill   ' />
+       <div className="overlay " >
+    <h2   className={`main-font text-center  position-relative top-50 translate-middle-y  mb-0 pb-lg-4 trt`}>LA CASA DE PAPEL EVENT</h2>
+   <div className='position-absolute top-75 translate-middle-y end-0'>
+    <i   className={`fa-solid fa-hand-pointer  position-absolute top-75 translate-middle-y end-0 fa-3x trt`}></i>
+
+
+   </div>
+    
+        </div>
+     </Link>
       
         </div>
         <div className="col-md-6   position-relative" data-aos='fade-left' data-aos-duration='1000'>
