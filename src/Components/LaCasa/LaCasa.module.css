@@ -1,0 +1,22 @@
+.header{
+    min-height: 79vh;
+    background-color: rgba(0, 0, 0, 0.5);
+ 
+}
+.backGround{
+    background-image: url("https://res.cloudinary.com/dd5zgwygh/image/upload/v1760984358/mk.workss_72_xz5acr.jpg");
+    background-position: center center;
+    background-size: cover ;
+    position: relative;
+} 
+
+.logo{
+    width: 100px;
+    height: 100px;
+}
+.swiper-card {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  
