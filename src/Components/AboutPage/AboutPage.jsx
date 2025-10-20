@@ -168,7 +168,7 @@ export default function AboutPage() {
         </div>
 
 
-        <div className="container">
+        {/* <div className="container">
           <div className="row gy-3">
             <div className="col-md-3 col-6 ">
               <div data-aos='fade-down' data-aos-duration='1000' className={` ${styles.owner}  rounded-4  position-relative`}  >
@@ -256,7 +256,7 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
     </div>
   )
