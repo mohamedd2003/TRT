@@ -14,6 +14,7 @@ export default function EventsSection() {
   const handleonLoad = () => {
     setLoading(false);
   };
+  {/* <i   className='fa-solid fa-spinner fa-spin   fa-1x trt'></i> */}
   return (
     <section id='events' className='bg-black pt-2 pb-5'>
     <div className='m-auto text-center'>
