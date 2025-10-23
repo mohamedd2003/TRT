@@ -76,7 +76,7 @@ let handleLogout=()=>
                 <a className="nav-link dropdown-toggle text-center main-font pt-4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Events
                 </a>
-                <ul className="dropdown-menu bg-black">
+                <ul className="dropdown-menu bg-black ">
                 <li className="nav-item mt-3">
                     <NavLink className="nav-link text-center main-font" to="/newAlalmein" onClick={closeNavbar}>New Alalamein Event</NavLink>
                   </li>
@@ -98,7 +98,7 @@ let handleLogout=()=>
                 <NavLink className="nav-link text-center main-font" to="contact" onClick={closeNavbar}>Contact</NavLink>
               </li> */}
 
-              {userLogin ===null  ? <>
+              {/* {userLogin ===null  ? <>
                 <li className="nav-item mt-3 ">
                 <Link className="nav-link text-center main-font fs-5 mt-lg-2  mb-2    text-white  " to="register" 
                 onClick={closeNavbar}><span className='bg-main rounded-pill p-2'>Voting <i className="fa-solid fa-thumbs-up"></i></span> </Link>
@@ -113,7 +113,7 @@ let handleLogout=()=>
                 <button className="nav-link text-center main-font fs-5 mt-lg-2  mb-2    text-white  " 
                 onClick={()=>handleLogout()}><span ><i className="ms-1 fa-solid fa-arrow-right-to-bracket fa-lg"></i></span> </button>
               </li>
-              </>}
+              </>} */}
            
             </ul>
           </div>

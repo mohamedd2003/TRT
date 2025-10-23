@@ -1,7 +1,8 @@
 import React, { lazy ,useState,useEffect, useMemo} from 'react'
-import './Home.module.css';
+import styles from './Home.module.css';
 //Framer-Motion library Imports
 import { motion } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
 
 
 //********************************************* */
@@ -15,6 +16,7 @@ import EventsSection from '../EventsSection/EventsSection';
 
 export default function Home() {
   const[showarrow,setShowArrow]=useState(false)
+  const navigate = useNavigate()
  
 
 
@@ -52,6 +54,66 @@ export default function Home() {
       <section id='hero'  >
      <SwiperComp/>
       </section>
+
+{/* /*********************************Floating Royal Park Event Icon ************************************ */}
+
+      <motion.div
+        className={styles.floatingEventBadge}
+        onClick={() => navigate('/royalParkCars')}
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ 
+          scale: 1,
+          opacity: 1,
+          y: [0, -12, 0],
+        }}
+        transition={{ 
+          scale: { duration: 0.6, delay: 0.5 },
+          opacity: { duration: 0.6, delay: 0.5 },
+          y: { duration: 2.5, repeat: Infinity, ease: "easeInOut" }
+        }}
+        whileHover={{ 
+          scale: 1.05,
+          boxShadow: '0 0 50px rgba(255, 0, 0, 1)'
+        }}
+        whileTap={{ scale: 0.98 }}
+      >
+        <motion.div 
+          className={styles.badgeGlow}
+          animate={{ 
+            scale: [1, 1.4, 1],
+            opacity: [0.4, 0.7, 0.4]
+          }}
+          transition={{ duration: 2, repeat: Infinity }}
+        />
+        <div className={styles.badgeContent}>
+          <div className={styles.dateBox}>
+            <span className="main-font">24</span>
+            <div className={styles.dateDetails}>
+              <small>OCT</small>
+              <small>2025</small>
+            </div>
+          </div>
+          <div className={styles.badgeText}>
+            <span className="main-font">ROYAL PARK</span>
+            <p className="oxygen-700 mb-0">See Your Car</p>
+          </div>
+          <motion.div
+            className={styles.arrowIcon}
+            animate={{ x: [0, 5, 0] }}
+            transition={{ duration: 1.2, repeat: Infinity }}
+          >
+            <i className="fa-solid fa-arrow-right"></i>
+          </motion.div>
+        </div>
+        <motion.div 
+          className={styles.badgePulse}
+          animate={{
+            scale: [1, 1.15, 1],
+            opacity: [0.8, 0, 0.8]
+          }}
+          transition={{ duration: 2.5, repeat: Infinity }}
+        />
+      </motion.div>
 
 {/* /*********************************CAR NAMES Marquee ************************************ */}
 

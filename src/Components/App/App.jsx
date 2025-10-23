@@ -15,6 +15,7 @@ const Events = lazy(() => import('../Events/Events'));
 const AboutPage = lazy(() => import('../AboutPage/AboutPage'));
 const Contact = lazy(() => import('../Contact/Contact'));
 const Gallery = lazy(() => import('../Gallery/Gallery'));
+const RoyalParkCars = lazy(() => import('../RoyalParkCars/RoyalParkCars'));
 const NotFound = lazy(() => import('../NotFound/NotFound'));
 const AutovroomEvent = lazy(() => import('../AutovroomEvent/AutovroomEvent'));
 const QatarEvent = lazy(() => import('../QatarEvent/QatarEvent'));
@@ -30,6 +31,7 @@ let routes = createBrowserRouter([
             { path: 'events', element: <Events /> },
             { path: 'contact', element: <Contact /> },
             { path: 'gallery', element: <Gallery /> },
+            { path: 'royalParkCars', element: <RoyalParkCars /> },
             { path: 'autovroomEvent', element: <AutovroomEvent /> },
             { path: 'laCasa', element: <LaCasa /> },
             { path: 'QatarEvent', element: <QatarEvent /> },
