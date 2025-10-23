@@ -2,20 +2,18 @@
 /* Floating Event Badge - Mobile First Design */
 .floatingEventBadge {
     position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
+    top: 115px;
+    right: 15px;
+    z-index: 999;
     cursor: pointer;
     background: linear-gradient(135deg, #ff0000 0%, #b30000 50%, #ff0000 100%);
     background-size: 200% 100%;
-    border-radius: 60px;
-    padding: 10px 18px;
-    box-shadow: 0 10px 35px rgba(255, 0, 0, 0.7);
+    border-radius: 40px;
+    padding: 4px 10px;
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.7);
     border: 2px solid rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(10px);
-    width: calc(100% - 30px);
-    max-width: 340px;
+    max-width: 150px;
     animation: gradientMove 3s ease infinite;
 }
 
@@ -41,7 +39,7 @@
 .badgeContent {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 6px;
     color: white;
     position: relative;
     z-index: 2;
@@ -51,17 +49,17 @@
 .dateBox {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 3px;
     background: rgba(0, 0, 0, 0.4);
-    padding: 8px 12px;
-    border-radius: 12px;
+    padding: 3px 6px;
+    border-radius: 6px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    min-width: 70px;
+    min-width: 42px;
     justify-content: center;
 }
 
 .dateBox span {
-    font-size: 1.6rem;
+    font-size: 1rem;
     font-weight: 900;
     line-height: 1;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
@@ -70,15 +68,15 @@
 .dateDetails {
     display: flex;
     flex-direction: column;
-    gap: 1px;
+    gap: 0px;
     line-height: 1;
 }
 
 .dateDetails small {
-    font-size: 0.6rem;
+    font-size: 0.45rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
     opacity: 0.95;
 }
 
@@ -86,32 +84,32 @@
 .badgeText {
     flex: 1;
     text-align: left;
-    line-height: 1.2;
+    line-height: 1;
 }
 
 .badgeText span {
-    font-size: 0.95rem;
+    font-size: 0.65rem;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.3px;
     display: block;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-    line-height: 1.1;
+    line-height: 1;
 }
 
 .badgeText p {
-    font-size: 0.75rem;
+    font-size: 0.52rem;
     opacity: 0.95;
     font-weight: 600;
-    margin-top: 2px;
+    margin-top: 1px;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* Arrow Icon */
 .arrowIcon {
     background: rgba(255, 255, 255, 0.2);
-    width: 35px;
-    height: 35px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -121,15 +119,15 @@
 }
 
 .arrowIcon i {
-    font-size: 1rem;
+    font-size: 0.65rem;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 /* Pulse Animation */
 .badgePulse {
     position: absolute;
-    inset: -6px;
-    border: 3px solid rgba(255, 255, 255, 0.6);
+    inset: -3px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
     border-radius: inherit;
     pointer-events: none;
 }
@@ -137,52 +135,61 @@
 /* Small Mobile (up to 374px) */
 @media screen and (max-width: 374px) {
     .floatingEventBadge {
-        padding: 8px 14px;
-        max-width: 300px;
+        padding: 3px 8px;
+        max-width: 135px;
+        top: 65px;
+        right: 10px;
+    }
+
+    .badgeContent {
+        gap: 5px;
     }
 
     .dateBox {
-        padding: 6px 10px;
-        min-width: 60px;
-        gap: 4px;
+        padding: 2px 5px;
+        min-width: 38px;
+        gap: 2px;
     }
 
     .dateBox span {
-        font-size: 1.4rem;
+        font-size: 0.9rem;
     }
 
     .dateDetails small {
-        font-size: 0.55rem;
+        font-size: 0.4rem;
     }
 
     .badgeText span {
-        font-size: 0.85rem;
+        font-size: 0.6rem;
     }
 
     .badgeText p {
-        font-size: 0.7rem;
+        font-size: 0.48rem;
     }
 
     .arrowIcon {
-        width: 32px;
-        height: 32px;
+        width: 22px;
+        height: 22px;
     }
 
     .arrowIcon i {
-        font-size: 0.9rem;
+        font-size: 0.6rem;
     }
 }
 
-/* Tablet (768px+) */
+/* Tablet (768px+) - Move to bottom right */
 @media screen and (min-width: 768px) {
     .floatingEventBadge {
+        top: auto;
         bottom: 30px;
-        left: auto;
         right: 30px;
-        transform: none;
         padding: 14px 22px;
         max-width: 380px;
-        width: auto;
+        z-index: 1000;
+    }
+
+    .badgeContent {
+        gap: 12px;
     }
 
     .dateBox {
@@ -197,6 +204,7 @@
 
     .dateDetails small {
         font-size: 0.65rem;
+        gap: 1px;
     }
 
     .badgeText span {
@@ -215,6 +223,11 @@
 
     .arrowIcon i {
         font-size: 1.1rem;
+    }
+
+    .badgePulse {
+        inset: -6px;
+        border: 3px solid rgba(255, 255, 255, 0.6);
     }
 }
 
