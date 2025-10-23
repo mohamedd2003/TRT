@@ -16,7 +16,7 @@ export default function EventsSection() {
   };
   {/* <i   className='fa-solid fa-spinner fa-spin   fa-1x trt'></i> */}
   return (
-    <section id='events' className='bg-black pt-2 pb-5'>
+  <section id='events' className='bg-black pt-2 pb-5' data-aos-anchor-placement='top-bottom'>
     <div className='m-auto text-center'>
     <h2 data-aos='fade-down' data-aos-duration='1000' className='  text-decoration-line-through  oswald-titles main-font'><span className=' text-main'>O</span>UR EVENTS</h2>
     </div>
