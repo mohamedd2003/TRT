@@ -1,14 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import styles from './RoyalParkCars.module.css'
 
 export default function RoyalParkCars() {
+  // Initialize AOS (loaded from CDN in index.html)
+  useEffect(() => {
+    if (window.AOS) {
+      window.AOS.init({
+        duration: 1000,
+        once: false,
+        mirror: true
+      });
+    }
+  }, []);
+
   // Dummy data for car images - replace with your actual event images
   const vertical = [
-    { src: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&h=600&fit=crop', owner: 'Ali Mohamed' },
-    { src: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=400&h=600&fit=crop', owner: 'Sara Ahmed' },
-    { src: 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=400&h=600&fit=crop', owner: 'Youssef Ibrahim' },
-    { src: 'https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=400&h=600&fit=crop', owner: 'Noor Saleh' }
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761243605/MoatazMostafa_vgzlao.jpg', owner: 'Moataz Mostafa' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761243608/AMR_YEHIA_p5fvyg.jpg', owner: 'Amr yehia' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761243609/HAZIM_KHAIRY_wzr5rc.jpg', owner: 'HaZIM kHAIRY' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761243608/ESLAM_ROSHDY_hvniio.jpg', owner: 'Eslam roshdy' }
   ];
 
   const horizontal = [
@@ -19,21 +30,25 @@ export default function RoyalParkCars() {
 
   return (
     <section className={`${styles.royalParkSection} position-relative overflow-hidden`}>
-      {/* Animated Background Sparkles */}
+      {/* Animated Background Elements */}
+      <div className={styles.bgPattern}></div>
+      <div className={styles.gridOverlay}></div>
+      
+      {/* Animated Sparkles */}
       <div className={styles.sparkles}>
-        {[...Array(20)].map((_, i) => (
+        {[...Array(25)].map((_, i) => (
           <motion.div
             key={i}
             className={styles.sparkle}
             initial={{ opacity: 0, scale: 0 }}
             animate={{
               opacity: [0, 1, 0],
-              scale: [0, 1.5, 0],
+              scale: [0, 2, 0],
               x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
-              y: Math.random() * 800,
+              y: Math.random() * 1000,
             }}
             transition={{
-              duration: 2 + Math.random() * 2,
+              duration: 2 + Math.random() * 3,
               repeat: Infinity,
               delay: Math.random() * 2,
             }}
@@ -41,118 +56,152 @@ export default function RoyalParkCars() {
         ))}
       </div>
 
-      <div className="container position-relative z-2 py-5">
-        {/* Animated Title */}
-        <motion.div 
-          className="text-center mb-4 mb-md-5"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <motion.h1 
-            className={`${styles.pageTitle} main-font text-white mb-2 mb-md-3`}
-            animate={{ 
-              textShadow: [
-                '0 0 20px rgba(255, 0, 0, 0.5)',
-                '0 0 40px rgba(255, 0, 0, 0.8)',
-                '0 0 20px rgba(255, 0, 0, 0.5)',
-              ]
-            }}
-            transition={{ duration: 2, repeat: Infinity }}
+      <div className="container-fluid position-relative z-2 py-4 py-md-5">
+        {/* Hero Header Section */}
+        <div className={styles.heroHeader} data-aos="fade-down" data-aos-duration="800">
+          <motion.div 
+            className={styles.dateStamp}
+            animate={{ rotate: [0, 5, 0, -5, 0] }}
+            transition={{ duration: 3, repeat: Infinity }}
           >
-            ROYAL PARK EVENT
-          </motion.h1>
-          <motion.p 
-            className="text-white oxygen fs-6 fs-md-5 mb-3"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-          >
-            Tomorrow's Modified Cars Showcase
-          </motion.p>
-        </motion.div>
-
-        {/* Cars Grid Layout - Mobile First */}
-        <div className="row g-3 g-md-4">
-          {/* Vertical Cars Column */}
-          <div className="col-12 col-lg-6">
-            <div className="row g-3 g-md-4">
-              {vertical.map((car, index) => (
-                <motion.div
-                  key={index}
-                  className="col-6"
-                  initial={{ opacity: 0, x: -50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.1 * index, duration: 0.5 }}
-                  whileHover={{ scale: 1.03 }}
-                >
-                  <div className={`${styles.carCard} ${styles.verticalCard}`}>
-                    <div className={styles.imageWrapper}>
-                      <img src={car.src} alt={car.owner} className={styles.carImage} />
-                      {/* Shine Effect */}
-                      <motion.div 
-                        className={styles.shine}
-                        animate={{ x: [-200, 400] }}
-                        transition={{ duration: 3, repeat: Infinity, repeatDelay: 2 }}
-                      />
-                    </div>
-                    {/* Owner Name Below Image - Always Visible */}
-                    <div className={styles.ownerName}>
-                      <i className="fa-solid fa-user me-2"></i>
-                      <span className="main-font">{car.owner}</span>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+            <span className={styles.dateDay}>24</span>
+            <span className={styles.dateMonth}>OCT</span>
+            <span className={styles.dateYear}>2025</span>
+          </motion.div>
+          
+          <div className={styles.titleWrapper}>
+            <motion.h1 
+              className={styles.pageTitle}
+              animate={{ 
+                textShadow: [
+                  '0 0 30px rgba(255, 0, 0, 0.5)',
+                  '0 0 60px rgba(255, 0, 0, 0.9)',
+                  '0 0 30px rgba(255, 0, 0, 0.5)',
+                ]
+              }}
+              transition={{ duration: 2, repeat: Infinity }}
+            >
+              ROYAL PARK
+            </motion.h1>
+            <div className={styles.titleAccent}></div>
+            <p className={styles.subtitle}>MODIFIED CARS SHOWCASE</p>
           </div>
+        </div>
 
-          {/* Horizontal Cars Column */}
-          <div className="col-12 col-lg-6">
-            <div className="row g-3 g-md-4">
-              {horizontal.map((car, index) => (
-                <motion.div
-                  key={index}
-                  className="col-12"
-                  initial={{ opacity: 0, x: 50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.1 * index, duration: 0.5 }}
-                  whileHover={{ scale: 1.02 }}
-                >
-                  <div className={`${styles.carCard} ${styles.horizontalCard}`}>
-                    <div className={styles.imageWrapper}>
-                      <img src={car.src} alt={car.owner} className={styles.carImage} />
-                      {/* Shine Effect */}
-                      <motion.div 
-                        className={styles.shine}
-                        animate={{ x: [-200, 600] }}
-                        transition={{ duration: 3, repeat: Infinity, repeatDelay: 2 }}
-                      />
-                    </div>
-                    {/* Owner Name Below Image - Always Visible */}
-                    <div className={styles.ownerName}>
-                      <i className="fa-solid fa-user me-2"></i>
-                      <span className="main-font">{car.owner}</span>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
+        {/* Cars Gallery - Mobile Gallery Style */}
+        <div className={styles.carsGallery}>
+          {/* Vertical Cars Section */}
+          {vertical.map((car, index) => (
+            <motion.div
+              key={`vertical-${index}`}
+              className={`${styles.carCardWrapper} ${styles.verticalCard}`}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+              data-aos-duration="800"
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className={styles.carCard}>
+                <div className={styles.cardNumber}>{String(index + 1).padStart(2, '0')}</div>
+                
+                <div className={styles.imageContainer}>
+                  <motion.div className={styles.imageBorder}>
+                    <img src={car.src} alt={car.owner} className={styles.carImage} />
+                    
+                    {/* Animated Corner Accents */}
+                    <div className={styles.cornerTL}></div>
+                    <div className={styles.cornerTR}></div>
+                    <div className={styles.cornerBL}></div>
+                    <div className={styles.cornerBR}></div>
+                    
+                    {/* Shine Effect */}
+                    <motion.div 
+                      className={styles.shine}
+                      animate={{ x: [-300, 600] }}
+                      transition={{ duration: 4, repeat: Infinity, repeatDelay: 3 }}
+                    />
+                  </motion.div>
+                </div>
+
+                {/* Owner Info Card */}
+                <div className={styles.ownerCard}>
+                  <div className={styles.ownerLabel}>OWNER</div>
+                  <div className={styles.ownerName}>{car.owner}</div>
+                  <div className={styles.ownerUnderline}></div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+
+          {/* Horizontal Cars Section */}
+          {horizontal.map((car, index) => (
+            <motion.div
+              key={`horizontal-${index}`}
+              className={`${styles.carCardWrapper} ${styles.horizontalCard}`}
+              data-aos="fade-up"
+              data-aos-delay={(vertical.length + index) * 100}
+              data-aos-duration="800"
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className={styles.carCard}>
+                <div className={styles.cardNumber}>{String(vertical.length + index + 1).padStart(2, '0')}</div>
+                
+                <div className={styles.imageContainer}>
+                  <motion.div className={styles.imageBorder}>
+                    <img src={car.src} alt={car.owner} className={styles.carImage} />
+                    
+                    {/* Animated Corner Accents */}
+                    <div className={styles.cornerTL}></div>
+                    <div className={styles.cornerTR}></div>
+                    <div className={styles.cornerBL}></div>
+                    <div className={styles.cornerBR}></div>
+                    
+                    {/* Shine Effect */}
+                    <motion.div 
+                      className={styles.shine}
+                      animate={{ x: [-300, 600] }}
+                      transition={{ duration: 4, repeat: Infinity, repeatDelay: 3 }}
+                    />
+                  </motion.div>
+                </div>
+
+                {/* Owner Info Card */}
+                <div className={styles.ownerCard}>
+                  <div className={styles.ownerLabel}>OWNER</div>
+                  <div className={styles.ownerName}>{car.owner}</div>
+                  <div className={styles.ownerUnderline}></div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
 
-      {/* Animated Lines */}
+      {/* Animated Lines & Shapes */}
       <motion.div 
-        className={styles.animatedLine}
-        style={{ top: '20%' }}
-        animate={{ x: ['-100%', '100%'] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+        className={styles.floatingShape}
+        style={{ top: '15%', left: '5%' }}
+        animate={{ 
+          rotate: 360,
+          x: [0, 30, 0],
+          y: [0, -30, 0]
+        }}
+        transition={{ duration: 20, repeat: Infinity }}
       />
       <motion.div 
+        className={styles.floatingShape}
+        style={{ bottom: '20%', right: '10%' }}
+        animate={{ 
+          rotate: -360,
+          x: [0, -40, 0],
+          y: [0, 40, 0]
+        }}
+        transition={{ duration: 25, repeat: Infinity }}
+      />
+      
+      <motion.div 
         className={styles.animatedLine}
-        style={{ top: '60%' }}
-        animate={{ x: ['100%', '-100%'] }}
+        style={{ top: '30%' }}
+        animate={{ x: ['-100%', '100%'] }}
         transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
       />
     </section>

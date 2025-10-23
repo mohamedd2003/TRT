@@ -59,6 +59,9 @@ export default function LaCasa() {
          <img data-aos='fade-right' data-aos-duration='1000' src='https://res.cloudinary.com/dd5zgwygh/image/upload/v1760984351/Img_24-11-06_16-52-40-832_tgwty6.jpg'  alt='Memories' className='w-100 rounded-4 my-1  ' />
          <img data-aos='fade-left' data-aos-duration='1000' src='https://res.cloudinary.com/dd5zgwygh/image/upload/v1760984344/Img_24-11-06_18-32-00-494_kntosb.jpg'  alt='BLue BMW Car' className='w-100 rounded-4 my-1  ' />
          </div>
+         <div >
+         <img data-aos='fade-right' data-aos-duration='1000' src='https://res.cloudinary.com/dd5zgwygh/image/upload/v1760984351/mk.workss_71_ppfckv.jpg'  alt='Memories' className='w-100 rounded-4 my-1  ' />
+         </div>
          
        </div>
     

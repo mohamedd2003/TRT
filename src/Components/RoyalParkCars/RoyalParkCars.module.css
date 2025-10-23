@@ -1,30 +1,35 @@
-/* Royal Park Cars Section - Mobile First */
+/* Royal Park Cars - Creative Dribbble-Inspired Design - Mobile First */
 .royalParkSection {
-    background: linear-gradient(135deg, #000000 0%, #1a0000 50%, #000000 100%);
+    background: #000000;
     min-height: 100vh;
     position: relative;
-    padding: 60px 0;
+    padding: 80px 0 40px;
+    overflow-x: hidden;
 }
 
-.pageTitle {
-    font-size: 2rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    background: linear-gradient(45deg, #fff, #ff0000, #fff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientShift 3s ease infinite;
-    background-size: 200% auto;
-    line-height: 1.2;
+/* Background Pattern */
+.bgPattern {
+    position: absolute;
+    inset: 0;
+    background: 
+        linear-gradient(45deg, transparent 30%, rgba(255, 0, 0, 0.03) 30%, rgba(255, 0, 0, 0.03) 70%, transparent 70%),
+        linear-gradient(-45deg, transparent 30%, rgba(255, 0, 0, 0.03) 30%, rgba(255, 0, 0, 0.03) 70%, transparent 70%);
+    background-size: 60px 60px;
+    opacity: 0.4;
+    z-index: 0;
 }
 
-@keyframes gradientShift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
+.gridOverlay {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(rgba(255, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: 0;
 }
 
-/* Sparkles Animation */
+/* Sparkles */
 .sparkles {
     position: absolute;
     top: 0;
@@ -33,44 +38,223 @@
     height: 100%;
     pointer-events: none;
     overflow: hidden;
-    z-index: 0;
+    z-index: 1;
 }
 
 .sparkle {
     position: absolute;
     width: 3px;
     height: 3px;
-    background: radial-gradient(circle, #ff0000, transparent);
+    background: #ff0000;
     border-radius: 50%;
-    box-shadow: 0 0 8px #ff0000;
+    box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
 }
 
-/* Car Cards - Mobile First */
+/* Hero Header Section */
+.heroHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding: 0 15px;
+}
+
+/* Date Stamp */
+.dateStamp {
+    background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+    border: 3px solid #fff;
+    border-radius: 15px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 
+        0 8px 30px rgba(255, 0, 0, 0.6),
+        inset 0 -3px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+}
+
+.dateStamp::before {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    background: linear-gradient(45deg, #ff0000, transparent, #ff0000);
+    border-radius: inherit;
+    z-index: -1;
+    filter: blur(8px);
+    opacity: 0.7;
+}
+
+.dateDay {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.dateMonth,
+.dateYear {
+    font-family: 'Teko', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.dateMonth {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+/* Title Wrapper */
+.titleWrapper {
+    text-align: center;
+    position: relative;
+}
+
+.pageTitle {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 8px;
+    color: #fff;
+    margin: 0;
+    line-height: 1;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, #fff 0%, #ff0000 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    z-index: 2;
+}
+
+.titleAccent {
+    height: 4px;
+    width: 80px;
+    background: linear-gradient(90deg, transparent, #ff0000, transparent);
+    margin: 10px auto;
+    position: relative;
+}
+
+.titleAccent::before,
+.titleAccent::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #ff0000;
+    border-radius: 50%;
+    top: -2px;
+}
+
+.titleAccent::before {
+    left: 0;
+}
+
+.titleAccent::after {
+    right: 0;
+}
+
+.subtitle {
+    font-family: 'Teko', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    color: #888;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Event Badge */
+.eventBadge {
+    display: none;
+}
+
+/* Cars Gallery - Flexbox Layout */
+.carsGallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 15px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Car Card Wrapper */
+.carCardWrapper {
+    width: 100%;
+}
+
+/* Vertical and Horizontal Card Specific */
+.verticalCard .imageBorder {
+    aspect-ratio: 3/4;
+}
+
+.horizontalCard .imageBorder {
+    aspect-ratio: 16/9;
+}
+
+/* Car Card */
 .carCard {
     position: relative;
-    border-radius: 12px;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    border: 2px solid rgba(255, 0, 0, 0.3);
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-    transition: all 0.3s ease;
-    background: #000;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.carCard::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #ff0000, transparent, #ff0000);
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.carCard:hover::before {
+    opacity: 1;
 }
 
 .carCard:hover {
-    box-shadow: 0 12px 40px rgba(255, 0, 0, 0.4);
+    border-color: rgba(255, 0, 0, 0.8);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(255, 0, 0, 0.3);
 }
 
-.verticalCard {
-    height: 280px;
+/* Card Number */
+.cardNumber {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.1);
+    z-index: 3;
+    font-weight: 700;
+    line-height: 1;
 }
 
-.horizontalCard {
-    height: 200px;
+/* Image Container */
+.imageContainer {
+    padding: 20px;
 }
 
-.imageWrapper {
+.imageBorder {
     position: relative;
-    width: 100%;
-    height: calc(100% - 45px);
+    border-radius: 15px;
     overflow: hidden;
 }
 
@@ -78,31 +262,64 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: brightness(0.9) contrast(1.1);
+    display: block;
 }
 
 .carCard:hover .carImage {
-    transform: scale(1.08);
+    transform: scale(1.05);
+    filter: brightness(1) contrast(1.2);
 }
 
-/* Owner Name Below Image - Always Visible */
-.ownerName {
-    background: linear-gradient(135deg, #1a0000 0%, #330000 100%);
-    color: white;
-    padding: 10px 12px;
-    text-align: center;
-    font-size: 0.85rem;
-    border-top: 2px solid #ff0000;
-    position: relative;
+/* Corner Accents */
+.cornerTL,
+.cornerTR,
+.cornerBL,
+.cornerBR {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #ff0000;
     z-index: 2;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transition: all 0.4s;
 }
 
-.ownerName i {
-    color: #ff0000;
+.cornerTL {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+}
+
+.cornerTR {
+    top: 0;
+    right: 0;
+    border-left: none;
+    border-bottom: none;
+}
+
+.cornerBL {
+    bottom: 0;
+    left: 0;
+    border-right: none;
+    border-top: none;
+}
+
+.cornerBR {
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: none;
+}
+
+.carCard:hover .cornerTL,
+.carCard:hover .cornerTR,
+.carCard:hover .cornerBL,
+.carCard:hover .cornerBR {
+    width: 30px;
+    height: 30px;
+    border-color: #fff;
 }
 
 /* Shine Effect */
@@ -110,113 +327,173 @@
     position: absolute;
     top: 0;
     left: -100%;
-    width: 50px;
+    width: 100px;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
     transform: skewX(-20deg);
+    pointer-events: none;
+    z-index: 3;
+}
+
+/* Owner Card */
+.ownerCard {
+    padding: 20px;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+    position: relative;
+}
+
+.ownerLabel {
+    font-family: 'Teko', sans-serif;
+    font-size: 0.75rem;
+    color: #666;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.ownerName {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.ownerUnderline {
+    height: 3px;
+    width: 50px;
+    background: linear-gradient(90deg, #ff0000, transparent);
+    margin-top: 8px;
+    transition: width 0.4s;
+}
+
+.carCard:hover .ownerUnderline {
+    width: 100px;
+}
+
+/* Hover Overlay */
+.hoverOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 0, 0, 0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    opacity: 0;
+    transition: opacity 0.4s;
+    z-index: 10;
+}
+
+.hoverOverlay i {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.hoverOverlay span {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    letter-spacing: 3px;
+}
+
+.carCard:hover .hoverOverlay {
+    opacity: 1;
+}
+
+/* Floating Shapes */
+.floatingShape {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgba(255, 0, 0, 0.2);
+    border-radius: 20px;
     pointer-events: none;
     z-index: 1;
 }
 
-/* Animated Lines */
+/* Animated Line */
 .animatedLine {
     position: absolute;
     width: 100%;
-    height: 1px;
+    height: 2px;
     background: linear-gradient(90deg, transparent, #ff0000, transparent);
     opacity: 0.3;
+    z-index: 1;
 }
 
 /* Tablet (768px+) */
 @media screen and (min-width: 768px) {
     .royalParkSection {
-        padding: 80px 0;
+        padding: 100px 0 60px;
+    }
+
+    .heroHeader {
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    .dateDay {
+        font-size: 3.5rem;
     }
 
     .pageTitle {
-        font-size: 3.5rem;
-        letter-spacing: 3px;
-    }
-    
-    .verticalCard {
-        height: 350px;
-    }
-    
-    .horizontalCard {
-        height: 220px;
+        font-size: 5rem;
+        letter-spacing: 12px;
     }
 
-    .imageWrapper {
-        height: calc(100% - 50px);
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .carsGallery {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
+    .carCardWrapper {
+        width: calc(50% - 12.5px);
+    }
+
+    .cardNumber {
+        font-size: 3.5rem;
+        top: 20px;
+        left: 20px;
     }
 
     .ownerName {
-        font-size: 1rem;
-        padding: 12px 15px;
-        height: 50px;
-    }
-
-    .sparkle {
-        width: 4px;
-        height: 4px;
-    }
-
-    .animatedLine {
-        height: 2px;
+        font-size: 1.8rem;
     }
 }
 
 /* Desktop (992px+) */
 @media screen and (min-width: 992px) {
-    .royalParkSection {
-        padding: 100px 0;
+    .carCardWrapper {
+        width: calc(33.333% - 17px);
     }
 
     .pageTitle {
-        font-size: 4.5rem;
-        letter-spacing: 4px;
-    }
-    
-    .verticalCard {
-        height: 420px;
-    }
-    
-    .horizontalCard {
-        height: 260px;
+        font-size: 6rem;
+        letter-spacing: 15px;
     }
 
-    .imageWrapper {
-        height: calc(100% - 55px);
-    }
-
-    .ownerName {
-        font-size: 1.1rem;
-        padding: 15px 20px;
-        height: 55px;
+    .dateDay {
+        font-size: 4rem;
     }
 }
 
 /* Large Desktop (1200px+) */
 @media screen and (min-width: 1200px) {
+    .carCardWrapper {
+        width: calc(25% - 18.75px);
+    }
+
     .pageTitle {
-        font-size: 5rem;
-        letter-spacing: 5px;
-    }
-    
-    .verticalCard {
-        height: 480px;
-    }
-    
-    .horizontalCard {
-        height: 300px;
-    }
-
-    .imageWrapper {
-        height: calc(100% - 60px);
-    }
-
-    .ownerName {
-        font-size: 1.2rem;
-        height: 60px;
+        font-size: 7rem;
     }
 }

@@ -76,7 +76,10 @@ let handleLogout=()=>
                 <a className="nav-link dropdown-toggle text-center main-font pt-4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Events
                 </a>
-                <ul className="dropdown-menu bg-black ">
+                <ul className="dropdown-menu dropdown-menu-end bg-black">
+                <li className="nav-item mt-3">
+                    <NavLink className="nav-link text-center main-font" to="/laCasa" onClick={closeNavbar}>La Casa Event</NavLink>
+                  </li>
                 <li className="nav-item mt-3">
                     <NavLink className="nav-link text-center main-font" to="/newAlalmein" onClick={closeNavbar}>New Alalamein Event</NavLink>
                   </li>
