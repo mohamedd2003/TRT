@@ -42,6 +42,13 @@ export default function RoyalParkCars() {
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761245401/Abo_Sleim_fiwejl.jpg', owner: 'Abo sleim' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761245462/UK_EYAD_s0rvvm.jpg', owner: 'uk_Eyad   ' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761245462/Eslam_Ufa_xs7i2t.jpg', owner: 'eslam ufa' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247042/mostafa_sho3la_fmsmvo.jpg', owner: 'Mostafa sho3la' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247044/esmail_lathi_iu3v1v.jpg', owner: 'eslam lathi' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247043/eyad_hany_tdptds.jpg', owner: 'eyad hany' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247045/youssef_sh3ban_zehlaw.jpg', owner: 'youssef sh3ban' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247044/soly_sayed_df4xvg.jpg', owner: 'Soly sayed' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247045/ahmed_hamada_jtll0n.jpg', owner: 'ahmed hamada' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247049/alaa_eldin_hamed_hfwyd5.jpg', owner: 'all eldin hamed' },
   ];
 
   const horizontal = [
@@ -80,7 +87,7 @@ export default function RoyalParkCars() {
 
       <div className="container-fluid position-relative z-2 py-4 py-md-5">
         {/* Hero Header Section */}
-        <div className={styles.heroHeader} data-aos="fade-down" data-aos-duration="800">
+        <div className={styles.heroHeader} data-aos="fade-down" data-aos-duration="600">
           <motion.div 
             className={styles.dateStamp}
             animate={{ rotate: [0, 5, 0, -5, 0] }}
@@ -123,7 +130,7 @@ export default function RoyalParkCars() {
               whileHover={{ scale: 1.02 }}
             >
               <div className={styles.carCard}>
-                <div className={styles.cardNumber}>{String(index + 1).padStart(2, '0')}</div>
+               
                 
                 <div className={styles.imageContainer}>
                   <motion.div className={styles.imageBorder}>
