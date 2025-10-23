@@ -49,12 +49,21 @@ export default function RoyalParkCars() {
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247044/soly_sayed_df4xvg.jpg', owner: 'Soly sayed' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247045/ahmed_hamada_jtll0n.jpg', owner: 'ahmed hamada' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247049/alaa_eldin_hamed_hfwyd5.jpg', owner: 'all eldin hamed' },
+    
   ];
 
   const horizontal = [
-    { src: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&h=400&fit=crop', owner: 'Omar Khaled' },
-    { src: 'https://images.unsplash.com/photo-1542362567-b07e54358753?w=600&h=400&fit=crop', owner: 'Lina Hassan' },
-    { src: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600&h=400&fit=crop', owner: 'Ahmed Mostafa' }
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247750/hossam_abd_Elghany_zcvq3b.jpg', owner: 'Hossam Abd elghany' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247751/Abdelaziz_Ahmed_ajigai.jpg', owner: 'Abdelaziz ahmed' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247750/Billy_w5ygng.jpg', owner: 'Billy' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247757/Youssef_joo_ryoghy.jpg', owner: 'youssef joo' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247768/mohamed_elmahdy_ixmnbm.jpg', owner: 'mohamed elmahdy' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247768/mohamed_ayman_wpnv6v.jpg', owner: 'mohamed ayman' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247768/hesham_ismail_hvpc3u.jpg', owner: 'hesham ismail ' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247758/no_name_nxdwzx.jpg', owner: '' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247766/malek_mohamed_fqbtqu.jpg', owner: 'malek mohamed' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247759/seif_salah_wwjlqu.jpg', owner: 'seif salah' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247765/elatar_hkniui.jpg', owner: 'alatar' },
   ];
 
   return (
