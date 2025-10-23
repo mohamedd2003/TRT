@@ -181,7 +181,7 @@ export default function RoyalParkCars() {
               whileHover={{ scale: 1.02 }}
             >
               <div className={styles.carCard}>
-                <div className={styles.cardNumber}>{String(vertical.length + index + 1).padStart(2, '0')}</div>
+                {/* <div className={styles.cardNumber}>{String(vertical.length + index + 1).padStart(2, '0')}</div> */}
                 
                 <div className={styles.imageContainer}>
                   <motion.div className={styles.imageBorder}>
