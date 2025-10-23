@@ -19,7 +19,11 @@ export default function RoyalParkCars() {
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761243605/MoatazMostafa_vgzlao.jpg', owner: 'Moataz Mostafa' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761243608/AMR_YEHIA_p5fvyg.jpg', owner: 'Amr yehia' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761243609/HAZIM_KHAIRY_wzr5rc.jpg', owner: 'HaZIM kHAIRY' },
-    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761243608/ESLAM_ROSHDY_hvniio.jpg', owner: 'Eslam roshdy' }
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761243608/ESLAM_ROSHDY_hvniio.jpg', owner: 'Eslam roshdy' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761243609/MEDO_MOSTAFA_osxqdj.jpg', owner: 'MEdo mostafa' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761243607/MO_AREF_dwpuuz.jpg', owner: 'MO AREF' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761243606/El_DOD_xvjib7.jpg', owner: 'El dod' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761243610/MEMO_c9skml.jpg', owner: 'memo' },
   ];
 
   const horizontal = [
