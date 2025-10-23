@@ -16,9 +16,12 @@ export default function RoyalParkCars() {
 
   // Dummy data for car images - replace with your actual event images
   const vertical = [
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761245413/Maroki_uqy9ku.jpg', owner: 'maroki' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761243609/HAZIM_KHAIRY_wzr5rc.jpg', owner: 'HaZIM kHAIRY' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761243605/MoatazMostafa_vgzlao.jpg', owner: 'Moataz Mostafa' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761243608/AMR_YEHIA_p5fvyg.jpg', owner: 'Amr yehia' },
-    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761243609/HAZIM_KHAIRY_wzr5rc.jpg', owner: 'HaZIM kHAIRY' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761245395/Amr_Kamal_v0kba5.jpg', owner: 'Amr kamal' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761245402/Ammar_Elganzoory_t6gw6s.jpg', owner: 'Ammar Alganzoory' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761243608/ESLAM_ROSHDY_hvniio.jpg', owner: 'Eslam roshdy' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761243609/MEDO_MOSTAFA_osxqdj.jpg', owner: 'MEdo mostafa' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761243607/MO_AREF_dwpuuz.jpg', owner: 'MO AREF' },
@@ -26,16 +29,19 @@ export default function RoyalParkCars() {
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761243610/MEMO_c9skml.jpg', owner: 'memo' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761245395/FEKRY_MOHMAMED_kik4gf.jpg', owner: 'fekry mohamed' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761245395/Elm3lm_sabry_bgonuf.jpg', owner: 'elm3lm sabry' },
-    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761245395/Amr_Kamal_v0kba5.jpg', owner: 'Amr kamal' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761245397/Hassan_elbe7ery_gv89hl.jpg', owner: 'Hassan elbe7ery' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761245396/Ahmed_elshemiy_kl78ol.jpg', owner: 'Ahmed elshemy' },
-    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761245401/Abo_Sleim_fiwejl.jpg', owner: 'Abo sleim' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761245402/OMAR_REDA_axpuis.jpg', owner: 'omar reda' },
-    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761245402/Ammar_Elganzoory_t6gw6s.jpg', owner: 'Ammar Alganzoory' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761245403/MOAMEN_MOHAMED_whajqe.jpg', owner: 'moamen Mohamed' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761245404/shebaa_zd0mw9.jpg', owner: 'Shebaa ' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761245405/Mohamed_bekhet_acqtlz.jpg', owner: 'Mohamed bekhet ' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761245412/sameer_talaat_uyze6x.jpg', owner: 'sameer talaat ' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761245412/Hussein_Ali_rpkdoh.jpg', owner: 'Hussein Ali ' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761245413/Elzaem_x0t5sc.jpg', owner: 'ELZAEM  ' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761245458/Hossam_3sar_xfztsf.jpg', owner: 'Hossam 3sar  ' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761245401/Abo_Sleim_fiwejl.jpg', owner: 'Abo sleim' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761245462/UK_EYAD_s0rvvm.jpg', owner: 'uk_Eyad   ' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761245462/Eslam_Ufa_xs7i2t.jpg', owner: 'eslam ufa' },
   ];
 
   const horizontal = [
@@ -100,7 +106,7 @@ export default function RoyalParkCars() {
               ROYAL PARK
             </motion.h1>
             <div className={styles.titleAccent}></div>
-            <p className={styles.subtitle}>MODIFIED CARS SHOWCASE</p>
+            <p className={styles.subtitle}>Elsheikh Zayed</p>
           </div>
         </div>
 
