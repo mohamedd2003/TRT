@@ -20,6 +20,8 @@ export default function RoyalParkCars() {
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761243609/HAZIM_KHAIRY_wzr5rc.jpg', owner: 'HaZIM kHAIRY' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761243605/MoatazMostafa_vgzlao.jpg', owner: 'Moataz Mostafa' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761243608/AMR_YEHIA_p5fvyg.jpg', owner: 'Amr yehia' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761293473/mo_ezzat_wsxqgu.jpg', owner: 'mo ezzat' },
+
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761245395/Amr_Kamal_v0kba5.jpg', owner: 'Amr kamal' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761245402/Ammar_Elganzoory_t6gw6s.jpg', owner: 'Ammar Alganzoory' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761243608/ESLAM_ROSHDY_hvniio.jpg', owner: 'Eslam roshdy' },
@@ -48,12 +50,16 @@ export default function RoyalParkCars() {
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247045/youssef_sh3ban_zehlaw.jpg', owner: 'youssef sh3ban' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247044/soly_sayed_df4xvg.jpg', owner: 'Soly sayed' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247045/ahmed_hamada_jtll0n.jpg', owner: 'ahmed hamada' },
-    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247049/alaa_eldin_hamed_hfwyd5.jpg', owner: 'all eldin hamed' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247049/alaa_eldin_hamed_hfwyd5.jpg', owner: 'alaa eldin hamed' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761293461/wael_nour_z9wg1z.jpg', owner: 'wael nour' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761293463/Abodesabbagh_vrn0lr.jpg', owner: 'Abodesabbagh' },
     
   ];
 
   const horizontal = [
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247750/hossam_abd_Elghany_zcvq3b.jpg', owner: 'Hossam Abd elghany' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761293602/zoz_ysizyx.jpg', owner: 'zoz' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761293602/fares_yasser_h5vp19.jpg', owner: 'fares yasser' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247751/Abdelaziz_Ahmed_ajigai.jpg', owner: 'Abdelaziz ahmed' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247750/Billy_w5ygng.jpg', owner: 'Billy' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247757/Youssef_joo_ryoghy.jpg', owner: 'youssef joo' },
@@ -62,6 +68,7 @@ export default function RoyalParkCars() {
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247768/hesham_ismail_hvpc3u.jpg', owner: 'hesham ismail ' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247758/no_name_nxdwzx.jpg', owner: '' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247766/malek_mohamed_fqbtqu.jpg', owner: 'malek mohamed' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761293602/mahmoud_elhabashy_t1p4sn.jpg', owner: 'mahmoud elhabashy' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247759/seif_salah_wwjlqu.jpg', owner: 'seif salah' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247765/elatar_hkniui.jpg', owner: 'alatar' },
   ];
