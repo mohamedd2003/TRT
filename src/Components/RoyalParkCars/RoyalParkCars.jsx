@@ -52,7 +52,8 @@ export default function RoyalParkCars() {
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247045/ahmed_hamada_jtll0n.jpg', owner: 'ahmed hamada' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247049/alaa_eldin_hamed_hfwyd5.jpg', owner: 'alaa eldin hamed' },
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761293461/wael_nour_z9wg1z.jpg', owner: 'wael nour' },
-    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761293463/Abodesabbagh_vrn0lr.jpg', owner: 'Abodesabbagh' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761293463/Abodesabbagh_vrn0lr.jpg', owner: 'Abode sabbagh' },
+    { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761384803/BJLG_nmtm8i.jpg', owner: 'BJLG' },
     
   ];
 
