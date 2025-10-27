@@ -50,7 +50,142 @@
     box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
 }
 
-/* Hero Header Section */
+/* Hero Header */
+.heroHeader {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+/* Search Container */
+.searchContainer {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    padding: 0 15px;
+}
+
+.searchWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(255, 0, 0, 0.3);
+    border-radius: 50px;
+    padding: 8px 20px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.searchWrapper:focus-within {
+    border-color: rgba(255, 0, 0, 0.8);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
+}
+
+.searchWrapper i {
+    color: #ff0000;
+    font-size: 1.2rem;
+    margin-right: 15px;
+}
+
+.searchInput {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1.1rem;
+    font-family: 'Teko', sans-serif;
+    letter-spacing: 1px;
+    padding: 12px 0;
+}
+
+.searchInput::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.clearButton {
+    background: rgba(255, 0, 0, 0.2);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.clearButton:hover {
+    background: rgba(255, 0, 0, 0.4);
+    transform: rotate(90deg);
+}
+
+.searchResults {
+    text-align: center;
+    margin-top: 15px;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.3rem;
+    color: #ff0000;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.noResults {
+    text-align: center;
+    padding: 80px 20px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.noResults i {
+    color: rgba(255, 0, 0, 0.5);
+}
+
+.noResults h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: white;
+    letter-spacing: 3px;
+}
+
+.noResults p {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .searchWrapper {
+        padding: 6px 15px;
+    }
+
+    .searchInput {
+        font-size: 0.95rem;
+        padding: 10px 0;
+    }
+
+    .searchWrapper i {
+        font-size: 1rem;
+        margin-right: 10px;
+    }
+
+    .searchResults {
+        font-size: 1.1rem;
+        margin-top: 10px;
+    }
+
+    .noResults h3 {
+        font-size: 2rem;
+    }
+
+    .noResults p {
+        font-size: 1rem;
+    }
+}
+
+/* Hero Header */
 .heroHeader {
     display: flex;
     flex-direction: column;

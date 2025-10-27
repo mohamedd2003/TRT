@@ -1,8 +1,10 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import styles from './RoyalParkCars.module.css'
 
 export default function RoyalParkCars() {
+  const [searchQuery, setSearchQuery] = useState('');
+
   // Initialize AOS (loaded from CDN in index.html)
   useEffect(() => {
     if (window.AOS) {
@@ -74,6 +76,17 @@ export default function RoyalParkCars() {
     { src: 'https://res.cloudinary.com/dd5zgwygh/image/upload/v1761247765/elatar_hkniui.jpg', owner: 'alatar' },
   ];
 
+  // Filter cars based on search query
+  const filteredVertical = searchQuery.trim() 
+    ? vertical.filter(car => car.owner.toLowerCase().includes(searchQuery.toLowerCase().trim()))
+    : vertical;
+
+  const filteredHorizontal = searchQuery.trim()
+    ? horizontal.filter(car => car.owner.toLowerCase().includes(searchQuery.toLowerCase().trim()))
+    : horizontal;
+
+  const totalResults = filteredVertical.length + filteredHorizontal.length;
+
   return (
     <section className={`${styles.royalParkSection} position-relative overflow-hidden`}>
       {/* Animated Background Elements */}
@@ -103,6 +116,33 @@ export default function RoyalParkCars() {
       </div>
 
       <div className="container-fluid position-relative z-2 py-4 py-md-5">
+        {/* Search Bar */}
+        <div className={styles.searchContainer} data-aos="fade-down" data-aos-duration="500">
+          <div className={styles.searchWrapper}>
+            <i className="fa-solid fa-search"></i>
+            <input
+              type="text"
+              placeholder="Search for your car by owner name..."
+              className={styles.searchInput}
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            {searchQuery && (
+              <button 
+                className={styles.clearButton}
+                onClick={() => setSearchQuery('')}
+              >
+                <i className="fa-solid fa-times"></i>
+              </button>
+            )}
+          </div>
+          {searchQuery && (
+            <div className={styles.searchResults}>
+              {totalResults} {totalResults === 1 ? 'car' : 'cars'} found
+            </div>
+          )}
+        </div>
+
         {/* Hero Header Section */}
         <div className={styles.heroHeader} data-aos="fade-down" data-aos-duration="600">
           <motion.div 
@@ -136,8 +176,17 @@ export default function RoyalParkCars() {
 
         {/* Cars Gallery - Mobile Gallery Style */}
         <div className={styles.carsGallery}>
+          {/* Show message if no results found */}
+          {totalResults === 0 && searchQuery && (
+            <div className={styles.noResults} data-aos="fade-up">
+              <i className="fa-solid fa-search fa-3x mb-3"></i>
+              <h3>No cars found</h3>
+              <p>Try searching with a different name</p>
+            </div>
+          )}
+
           {/* Vertical Cars Section */}
-          {vertical.map((car, index) => (
+          {filteredVertical.map((car, index) => (
             <motion.div
               key={`vertical-${index}`}
               className={`${styles.carCardWrapper} ${styles.verticalCard}`}
@@ -179,17 +228,17 @@ export default function RoyalParkCars() {
           ))}
 
           {/* Horizontal Cars Section */}
-          {horizontal.map((car, index) => (
+          {filteredHorizontal.map((car, index) => (
             <motion.div
               key={`horizontal-${index}`}
               className={`${styles.carCardWrapper} ${styles.horizontalCard}`}
               data-aos="fade-up"
-              data-aos-delay={(vertical.length + index) * 100}
+              data-aos-delay={(filteredVertical.length + index) * 100}
               data-aos-duration="800"
               whileHover={{ scale: 1.02 }}
             >
               <div className={styles.carCard}>
-                {/* <div className={styles.cardNumber}>{String(vertical.length + index + 1).padStart(2, '0')}</div> */}
+                {/* <div className={styles.cardNumber}>{String(filteredVertical.length + index + 1).padStart(2, '0')}</div> */}
                 
                 <div className={styles.imageContainer}>
                   <motion.div className={styles.imageBorder}>
