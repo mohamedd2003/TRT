@@ -4,16 +4,29 @@ import styles from './RoyalParkCars.module.css'
 
 export default function RoyalParkCars() {
   const [searchQuery, setSearchQuery] = useState('');
+  const [showFloatingSearch, setShowFloatingSearch] = useState(false);
 
   // Initialize AOS (loaded from CDN in index.html)
   useEffect(() => {
     if (window.AOS) {
       window.AOS.init({
-        duration: 1000,
+        duration: 500,
         once: false,
         mirror: true
       });
     }
+
+    // Handle scroll to show/hide floating search button
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowFloatingSearch(true);
+      } else {
+        setShowFloatingSearch(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   // Dummy data for car images - replace with your actual event images
@@ -86,6 +99,19 @@ export default function RoyalParkCars() {
     : horizontal;
 
   const totalResults = filteredVertical.length + filteredHorizontal.length;
+
+  // Scroll to search bar when floating button is clicked
+  const scrollToSearch = () => {
+    const searchElement = document.querySelector(`.${styles.searchContainer}`);
+    if (searchElement) {
+      searchElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Focus the input after scrolling
+      setTimeout(() => {
+        const input = document.querySelector(`.${styles.searchInput}`);
+        if (input) input.focus();
+      }, 500);
+    }
+  };
 
   return (
     <section className={`${styles.royalParkSection} position-relative overflow-hidden`}>
@@ -299,6 +325,21 @@ export default function RoyalParkCars() {
         animate={{ x: ['-100%', '100%'] }}
         transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
       />
+
+      {/* Floating Search Button */}
+      {showFloatingSearch && (
+        <motion.button
+          className={styles.floatingSearchBtn}
+          onClick={scrollToSearch}
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          exit={{ scale: 0, opacity: 0 }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <i className="fa-solid fa-search"></i>
+        </motion.button>
+      )}
     </section>
   )
 }
